@@ -1,0 +1,24 @@
+%META {"title":"Cặp góc so le ngoài","note":"Hai góc được đánh dấu nằm ở hai phía khác nhau của đường thẳng c và bên ngoài khoảng giữa a, b; chúng bằng nhau → a // b. HS trả lời miệng: một cặp góc so le ngoài bằng nhau thì hai đường thẳng song song."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (A) at (-0.6,0);
+  \coordinate (B) at (4,0);
+  \coordinate (C) at (-0.6,1.7);
+  \coordinate (D) at (4,1.7);
+  \coordinate (E) at (-0.5,3.2);
+  \coordinate (F) at (3.6,-0.5);
+  \tkzInterLL(A,B)(E,F) \tkzGetPoint{P}
+  \tkzInterLL(C,D)(E,F) \tkzGetPoint{Q}
+  \draw[tmblue] (A) -- (B) node[right=2pt]{$a$};
+  \draw[tmblue] (C) -- (D) node[right=2pt]{$b$};
+  \draw[tminc] (E) -- (F) node[below=2pt]{$c$};
+  \tkzMarkAngles[size=0.5,arc=l,color=tmpink,line width=1pt](A,P,F)
+  \tkzMarkAngles[size=0.5,arc=l,color=tmpink,line width=1pt](D,Q,E)
+  \tkzDrawPoints[size=3,color=tminc,fill=tminc](P,Q)
+  \tkzLabelPoint[below left=1pt](P){$H$}
+  \tkzLabelPoint[above left=1pt](Q){$K$}
+\end{tikzpicture}
+\end{document}

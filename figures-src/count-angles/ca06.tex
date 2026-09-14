@@ -1,0 +1,18 @@
+%META {"question":"Tứ giác ABCD trên hình có tất cả bao nhiêu góc trong (không kể góc bẹt)?","options":["4 góc","3 góc","6 góc","8 góc"],"answer":0,"note":"Tứ giác có 4 góc trong tại 4 đỉnh: góc ABC, góc BCD, góc CDA và góc DAB."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3.6,0);
+  \coordinate (C) at (3,2.4);
+  \coordinate (D) at (0.6,2);
+  \tkzDrawPolygon[tmblue,line width=1.1pt](A,B,C,D)
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](A,B,C,D)
+  \tkzLabelPoint[below left=1pt](A){$A$}
+  \tkzLabelPoint[below right=1pt](B){$B$}
+  \tkzLabelPoint[above right=1pt](C){$C$}
+  \tkzLabelPoint[above left=1pt](D){$D$}
+\end{tikzpicture}
+\end{document}

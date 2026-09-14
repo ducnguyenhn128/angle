@@ -1,0 +1,22 @@
+%META {"question":"Từ điểm M kẻ nhiều đoạn thẳng xuống đường thẳng d. Đoạn nào NGẮN NHẤT?","options":["MH — đoạn vuông góc với d","MA — đoạn xiên xuống d","Mọi đoạn đều dài bằng nhau","Không so sánh được"],"answer":0,"note":"Trong các đoạn kẻ từ một điểm đến một đường thẳng, đoạn vuông góc là ngắn nhất. MH chính là khoảng cách từ M đến đường thẳng d."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (P) at (-0.6,0);
+  \coordinate (Q) at (4,0);
+  \coordinate (M) at (1.8,2.1);
+  \coordinate (H) at (1.8,0);
+  \coordinate (A) at (3.3,0);
+  \tkzDrawLine[tmblue,add=0.5 and 0.5](P,Q)
+  \draw[tminc] (M) -- (A);
+  \draw[tmpink] (M) -- (H);
+  \tkzMarkRightAngles[size=0.28,color=tmpink,line width=1pt](M,H,Q)
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](M,H,A)
+  \tkzLabelPoint[above=3pt](M){$M$}
+  \tkzLabelPoint[below=3pt](H){$H$}
+  \tkzLabelPoint[below=3pt](A){$A$}
+  \node[tminc] at (4.62,0.28) {$d$};
+\end{tikzpicture}
+\end{document}

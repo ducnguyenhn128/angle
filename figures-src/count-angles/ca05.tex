@@ -1,0 +1,19 @@
+%META {"question":"Hai đường thẳng a và b cắt nhau tại O. Trên hình có tất cả bao nhiêu góc (không kể góc bẹt)?","options":["4 góc","2 góc","8 góc","6 góc"],"answer":0,"note":"Hai đường thẳng cắt nhau tạo 4 góc tại O (gồm 2 cặp góc đối đỉnh). Hai góc bẹt nằm trên mỗi đường thẳng thì không kể."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (A) at (-2.2,0);
+  \coordinate (B) at (2.2,0);
+  \coordinate (C) at (-1.2,-1.7);
+  \coordinate (D) at (1.2,1.7);
+  \coordinate (O) at (0,0);
+  \tkzDrawLine[tmblue,add=0.5 and 0.5](A,B)
+  \tkzDrawLine[tmblue,add=0.5 and 0.5](C,D)
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](O)
+  \tkzLabelPoint[below left=1pt](O){$O$}
+  \node[tminc] at (2.82,0.28) {$a$};
+  \node[tminc] at (1.58,2.18) {$b$};
+\end{tikzpicture}
+\end{document}

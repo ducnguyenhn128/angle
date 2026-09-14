@@ -1,0 +1,16 @@
+%META {"question":"Tia Ox và tia OM chung gốc O, cùng đi qua điểm M. Hai tia này là hai tia gì?","options":["Trùng nhau","Đối nhau","Không chung gốc","Vuông góc với nhau"],"answer":0,"note":"Hai tia chung gốc và cùng hướng (cùng đi qua điểm M) thì trùng nhau."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\usetikzlibrary{arrows.meta}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt,>={Stealth[length=3.5mm]}]
+  \coordinate (O) at (0,0);
+  \coordinate (M) at (1.7,0);
+  \coordinate (X) at (3.4,0);
+  \draw[tmblue,->] (O) -- (X) node[below=3pt]{$x$};
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](O,M)
+  \tkzLabelPoint[below left](O){$O$}
+  \tkzLabelPoint[below=3pt](M){$M$}
+\end{tikzpicture}
+\end{document}

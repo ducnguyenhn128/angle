@@ -1,0 +1,17 @@
+%META {"question":"Trên đường thẳng a, hai điểm A và B cùng nằm một phía của điểm O. Tia OA và tia OB là hai tia gì?","options":["Trùng nhau — nên không phải hai tia đối nhau","Đối nhau","Không chung gốc O","Vuông góc với nhau"],"answer":0,"note":"A và B cùng phía của O nên tia OA và tia OB cùng hướng, tức trùng nhau. Hai tia đối nhau phải nằm khác phía của gốc chung."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (B) at (0.4,0);
+  \coordinate (A) at (1.5,0);
+  \coordinate (O) at (2.6,0);
+  \tkzDrawLine[tmblue,add=0.6 and 0.6](B,O)
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](B,A,O)
+  \tkzLabelPoint[below=3pt](B){$B$}
+  \tkzLabelPoint[below=3pt](A){$A$}
+  \tkzLabelPoint[below=3pt](O){$O$}
+  \node[tminc] at (3.3,0.28) {$a$};
+\end{tikzpicture}
+\end{document}

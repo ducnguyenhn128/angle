@@ -1,0 +1,20 @@
+%META {"question":"Hai đường thẳng a và b cắt nhau tại O, có ký hiệu góc vuông tại O. Kết luận nào ĐÚNG?","options":["a vuông góc với b","a song song với b","O là trung điểm của a","a trùng với b"],"answer":0,"note":"Ký hiệu góc vuông tại giao điểm nghĩa là hai đường thẳng vuông góc với nhau: a ⊥ b."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (A) at (-2.2,0);
+  \coordinate (B) at (2.2,0);
+  \coordinate (C) at (0,-1.6);
+  \coordinate (D) at (0,1.7);
+  \coordinate (O) at (0,0);
+  \draw[tmblue] (A) -- (B);
+  \draw[tmblue] (C) -- (D);
+  \tkzMarkRightAngles[size=0.3,color=tmpink,line width=1pt](B,O,D)
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](O)
+  \tkzLabelPoint[below left=1pt](O){$O$}
+  \node[tminc] at (2.55,0.28) {$a$};
+  \node[tminc] at (0.32,1.95) {$b$};
+\end{tikzpicture}
+\end{document}
