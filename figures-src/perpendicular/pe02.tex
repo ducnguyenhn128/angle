@@ -1,0 +1,20 @@
+%META {"question":"Tam giác ABC (nhọn). Đoạn thẳng BH có là đường cao của tam giác ABC không?","options":["Có — vì BH ⊥ AC và đi từ đỉnh B xuống cạnh đối diện AC","Không — vì H không là trung điểm của AC","Không — vì BH không đi qua đỉnh A","Không — vì BH không nằm trong tam giác"],"answer":0,"note":"Đường cao từ đỉnh B phải vuông góc với cạnh đối diện AC. H nằm trên AC và BH ⊥ AC (dấu góc vuông tại H) → BH là đường cao ứng với cạnh AC."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3.8,0);
+  \coordinate (C) at (2.2,2.8);
+  \tkzDefPointBy[projection=onto A--C](B) \tkzGetPoint{H}
+  \tkzDrawPolygon[tmblue,line width=1.1pt](A,B,C)
+  \draw[tmpink] (B) -- (H);
+  \tkzMarkRightAngles[size=0.28,color=tmpink,line width=1pt](B,H,A)
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](A,B,C,H)
+  \tkzLabelPoint[below left=1pt](A){$A$}
+  \tkzLabelPoint[below right=1pt](B){$B$}
+  \tkzLabelPoint[above right=1pt](C){$C$}
+  \tkzLabelPoint[above=3pt](H){$H$}
+\end{tikzpicture}
+\end{document}

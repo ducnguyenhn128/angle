@@ -1,0 +1,8 @@
+node_modules
+dist
+figures-src/_build
+figures-src/**/*.aux
+figures-src/**/*.pdf
+figures-src/**/*.dvisvgm.log
+*.log
+.netlify

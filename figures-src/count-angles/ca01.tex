@@ -1,0 +1,18 @@
+%META {"question":"Trên hình có ba tia Ox, Oy, Oz chung gốc O. Trên hình có tất cả bao nhiêu góc (không kể góc bẹt)?","options":["3 góc","4 góc","5 góc","6 góc"],"answer":0,"note":"Mỗi cặp tia tạo đúng một góc: góc xOy, yOz và xOz nên có 3 góc."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (3.6,0);
+  \coordinate (B) at (2.9,1.9);
+  \coordinate (C) at (1.1,2.9);
+  \draw[tmblue] (O) -- (A) (O) -- (B) (O) -- (C);
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](O,A,B,C)
+  \tkzLabelPoint[below left](O){$O$}
+  \tkzLabelPoint[below=2pt](A){$x$}
+  \tkzLabelPoint[right=2pt](B){$y$}
+  \tkzLabelPoint[above=2pt](C){$z$}
+\end{tikzpicture}
+\end{document}

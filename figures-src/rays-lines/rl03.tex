@@ -1,0 +1,17 @@
+%META {"question":"Quan sát hình: đường thẳng a chứa ba điểm M, A, N (A ở giữa). Nhận xét nào ĐÚNG?","options":["A nằm giữa M và N nên MA + AN = MN","Tia NM và tia NA là hai tia đối nhau","Đoạn thẳng MA và đoạn thẳng AN không có gì chung","Điểm N nằm giữa M và A"],"answer":0,"note":"A nằm giữa hai điểm M, N trên cùng đường thẳng nên MA + AN = MN; tia NM và tia NA có gốc khác nhau nên không là tia đối nhau (tia đối phải chung gốc)."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (M) at (0,0);
+  \coordinate (A) at (1.7,0);
+  \coordinate (N) at (3.4,0);
+  \tkzDrawLine[tmblue,add=0.7 and 0.7](M,N)
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](M,A,N)
+  \tkzLabelPoint[below left=1pt](M){$M$}
+  \tkzLabelPoint[below=3pt](A){$A$}
+  \tkzLabelPoint[below right=1pt](N){$N$}
+  \node[tminc] at (4.05,0.28) {$a$};
+\end{tikzpicture}
+\end{document}

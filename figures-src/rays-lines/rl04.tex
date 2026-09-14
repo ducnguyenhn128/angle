@@ -1,0 +1,20 @@
+%META {"question":"Quan sát hình: đường thẳng d, tia Tv và đoạn thẳng PQ. Có bao nhiêu đỉnh (điểm gốc) của tia trên đường thẳng d?","options":["1 đỉnh (T)","2 đỉnh","3 đỉnh","0 đỉnh"],"answer":0,"note":"Tia Tv có gốc T nằm trên đường thẳng d; chỉ có 1 gốc tia trên d. Đoạn PQ và hai đầu P, Q cũng thuộc d."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\usetikzlibrary{arrows.meta}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt,>={Stealth[length=3.5mm]}]
+  \coordinate (P) at (0,0);
+  \coordinate (Q) at (3,0);
+  \coordinate (T) at (1.4,0);
+  \coordinate (V) at (2.5,1.8);
+  \tkzDrawLine[tmblue,add=0.55 and 0.55](P,Q)
+  \draw[tmpink,->] (T) -- (V) node[above=3pt]{$v$};
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](P,Q,T)
+  \tkzLabelPoint[below left=1pt](P){$P$}
+  \tkzLabelPoint[below right=1pt](Q){$Q$}
+  \tkzLabelPoint[below=3pt](T){$T$}
+  \node[tminc] at (3.78,0.28) {$d$};
+\end{tikzpicture}
+\end{document}

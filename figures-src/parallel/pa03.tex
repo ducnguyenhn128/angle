@@ -1,0 +1,24 @@
+%META {"title":"Cùng vuông góc với đường thẳng thứ ba","note":"a ⊥ c và b ⊥ c (hai dấu góc vuông) → a // b. HS trả lời miệng: hai đường thẳng phân biệt cùng vuông góc với một đường thẳng thứ ba thì song song với nhau."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (A) at (0.9,-1);
+  \coordinate (B) at (0.9,2.5);
+  \coordinate (C) at (3.1,-1);
+  \coordinate (D) at (3.1,2.5);
+  \coordinate (E) at (-0.5,0);
+  \coordinate (F) at (4,0);
+  \coordinate (I) at (0.9,0);
+  \coordinate (J) at (3.1,0);
+  \coordinate (U) at (0.9,0.6);
+  \coordinate (R) at (1.5,0);
+  \coordinate (V) at (3.1,0.6);
+  \coordinate (S) at (2.5,0);
+  \draw[tmblue] (A) -- (B) node[above=2pt]{$a$};
+  \draw[tmblue] (C) -- (D) node[above=2pt]{$b$};
+  \draw[tminc] (E) -- (F) node[right=2pt]{$c$};
+  \tkzMarkRightAngles[size=0.3,color=tmpink,line width=1pt](U,I,R V,J,S)
+\end{tikzpicture}
+\end{document}

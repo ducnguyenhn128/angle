@@ -1,0 +1,205 @@
+{
+    "bisector":  [
+                     {
+                         "question":  "Quan sát hình: hai góc được đánh dấu bằng ký hiệu giống nhau. Oz là tia gì?",
+                         "options":  [
+                                         "Tia phân giác của góc xOy",
+                                         "Tia đối của tia Ox",
+                                         "Tia vuông góc với tia Ox",
+                                         "Một tia bất kỳ nằm trong góc xOy"
+                                     ],
+                         "answer":  0,
+                         "note":  "Oz nằm giữa Ox và Oy và chia góc xOy thành hai góc bằng nhau (góc xOz = góc zOy, ký hiệu cung giống nhau) → Oz là tia phân giác của góc xOy.",
+                         "file":  "bi01",
+                         "id":  "bi01"
+                     },
+                     {
+                         "question":  "Quan sát hình: hai góc xOz và zOy được đánh dấu KHÁC nhau. Oz có là tia phân giác của góc xOy không?",
+                         "options":  [
+                                         "Không — vì Oz chia góc xOy thành hai góc không bằng nhau",
+                                         "Có — vì Oz nằm giữa Ox và Oy",
+                                         "Có — vì cặp cung được đánh dấu giống nhau",
+                                         "Không thể xác định"
+                                     ],
+                         "answer":  0,
+                         "note":  "Tia phân giác phải chia góc thành HAI PHẦN BẰNG NHAU. Hai cung được đánh dấu khác nhau nghĩa là góc xOz ≠ góc zOy → Oz không là tia phân giác.",
+                         "file":  "bi02",
+                         "id":  "bi02"
+                     },
+                     {
+                         "question":  "Tia Oz nằm trong góc vuông xOy, chia góc vuông thành hai phần bằng nhau. Nếu gọi số đo của mỗi góc nhỏ tạo bởi Oz là k°, khẳng định nào ĐÚNG?",
+                         "options":  [
+                                         "k = 45 — Oz là tia phân giác của góc vuông xOy",
+                                         "k = 90 — Oz là tia phân giác của góc vuông xOy",
+                                         "k = 60 — Oz không là tia phân giác",
+                                         "k = 30 — Oz là tia phân giác"
+                                     ],
+                         "answer":  0,
+                         "note":  "Góc vuông bằng 90°; chia đôi thì mỗi góc bằng 45°. Tia nằm giữa hai tia gốc và tạo hai góc bằng nhau (45° = 45°) là tia phân giác.",
+                         "file":  "bi03",
+                         "id":  "bi03"
+                     }
+                 ],
+    "count-angles":  [
+                         {
+                             "question":  "Trên hình có ba tia Ox, Oy, Oz chung gốc O. Trên hình có tất cả bao nhiêu góc (không kể góc bẹt)?",
+                             "options":  [
+                                             "3 góc",
+                                             "4 góc",
+                                             "5 góc",
+                                             "6 góc"
+                                         ],
+                             "answer":  0,
+                             "note":  "Mỗi cặp tia tạo đúng một góc: góc xOy, yOz và xOz nên có 3 góc.",
+                             "file":  "ca01",
+                             "id":  "ca01"
+                         },
+                         {
+                             "question":  "Trên hình có bốn tia Ox, Oy, Oz, Ot chung gốc O, trong đó không có tia nào là tia đối của tia nào. Trên hình có tất cả bao nhiêu góc (không kể góc bẹt)?",
+                             "options":  [
+                                             "4 góc",
+                                             "5 góc",
+                                             "6 góc",
+                                             "8 góc"
+                                         ],
+                             "answer":  2,
+                             "note":  "Mỗi cặp tia cho đúng một góc. Chọn 2 trong 4 tia: 4 × 3 : 2 = 6 góc: xOy, xOz, xOt, yOz, yOt, zOt.",
+                             "file":  "ca02",
+                             "id":  "ca02"
+                         },
+                         {
+                             "question":  "Tam giác ABC trên hình có tất cả bao nhiêu góc (kể các góc trong của tam giác, không kể góc bẹt)?",
+                             "options":  [
+                                             "2 góc",
+                                             "3 góc",
+                                             "4 góc",
+                                             "6 góc"
+                                         ],
+                             "answer":  1,
+                             "note":  "Tam giác có 3 góc trong: góc BAC (tại A), góc ABC (tại B) và góc ACB (tại C).",
+                             "file":  "ca03",
+                             "id":  "ca03"
+                         }
+                     ],
+    "parallel":  [
+                     {
+                         "title":  "Cặp góc so le trong",
+                         "note":  "Hai góc được đánh dấu là một cặp góc SO LE TRONG bằng nhau (đều bằng 138°) → a // b. HS trả lời miệng: hai đường thẳng cắt bởi đường thẳng thứ ba, nếu một cặp góc so le trong bằng nhau thì hai đường thẳng song song.",
+                         "file":  "pa01",
+                         "id":  "pa01"
+                     },
+                     {
+                         "title":  "Cặp góc đồng vị",
+                         "note":  "Hai góc được đánh dấu ở vị trí tương ứng là một cặp góc ĐỒNG VỊ bằng nhau (đều 42°) → a // b. HS trả lời miệng: một cặp góc đồng vị bằng nhau thì hai đường thẳng song song.",
+                         "file":  "pa02",
+                         "id":  "pa02"
+                     },
+                     {
+                         "title":  "Cùng vuông góc với đường thẳng thứ ba",
+                         "note":  "a ⊥ c và b ⊥ c (hai dấu góc vuông) → a // b. HS trả lời miệng: hai đường thẳng phân biệt cùng vuông góc với một đường thẳng thứ ba thì song song với nhau.",
+                         "file":  "pa03",
+                         "id":  "pa03"
+                     },
+                     {
+                         "title":  "Hình bình hành",
+                         "note":  "AB // DC và AD // BC (hai cặp cạnh đối của hình bình hành). HS trả lời miệng: dùng góc so le trong với đường chéo BD, hoặc đồng vị — vì sao hai cạnh đối song song.",
+                         "file":  "pa04",
+                         "id":  "pa04"
+                     }
+                 ],
+    "perpendicular":  [
+                          {
+                              "question":  "Tam giác ABC vuông tại A, đường cao AH hạ từ A xuống cạnh BC. Đoạn thẳng AH là gì của tam giác ABC?",
+                              "options":  [
+                                              "Đường cao ứng với cạnh BC",
+                                              "Trung tuyến ứng với cạnh BC",
+                                              "Đường phân giác của góc vuông A",
+                                              "Cạnh huyền của tam giác"
+                                          ],
+                              "answer":  0,
+                              "note":  "Đường cao là đoạn vuông góc nối từ một đỉnh xuống cạnh đối diện. AH ⊥ BC tại H → AH là đường cao ứng với cạnh BC (cạnh huyền).",
+                              "file":  "pe01",
+                              "id":  "pe01"
+                          },
+                          {
+                              "question":  "Tam giác ABC (nhọn). Đoạn thẳng BH có là đường cao của tam giác ABC không?",
+                              "options":  [
+                                              "Có — vì BH ⊥ AC và đi từ đỉnh B xuống cạnh đối diện AC",
+                                              "Không — vì H không là trung điểm của AC",
+                                              "Không — vì BH không đi qua đỉnh A",
+                                              "Không — vì BH không nằm trong tam giác"
+                                          ],
+                              "answer":  0,
+                              "note":  "Đường cao từ đỉnh B phải vuông góc với cạnh đối diện AC. H nằm trên AC và BH ⊥ AC (dấu góc vuông tại H) → BH là đường cao ứng với cạnh AC.",
+                              "file":  "pe02",
+                              "id":  "pe02"
+                          },
+                          {
+                              "question":  "Tam giác ABC có góc A tù. Hình vẽ cho thấy đường cao hạ từ đỉnh B. Đường cao ứng với cạnh AC là đoạn nào?",
+                              "options":  [
+                                              "Đoạn BH — chân cao nằm trên phần kéo dài của cạnh AC",
+                                              "Không tồn tại — vì tam giác có góc tù",
+                                              "Đoạn AH",
+                                              "Đoạn BA"
+                                          ],
+                              "answer":  0,
+                              "note":  "Tam giác tù tại A → đường cao từ B rơi ra ngoài cạnh AC, nằm trên phần kéo dài của AC (phần nét đứt). BH vẫn là đường cao hợp lệ vì BH ⊥ đường thẳng AC.",
+                              "file":  "pe03",
+                              "id":  "pe03"
+                          }
+                      ],
+    "rays-lines":  [
+                       {
+                           "question":  "Nhận xét nào ĐÚNG về hai tia Ox và Oy trong hình?",
+                           "options":  [
+                                           "Ox và Oy là hai tia đối nhau vì chung gốc O và hợp thành một đường thẳng",
+                                           "Ox và Oy không là hai tia đối nhau vì chúng tạo thành góc nhỏ hơn 180°",
+                                           "Ox và Oy trùng nhau",
+                                           "Không thể xác định"
+                                       ],
+                           "answer":  0,
+                           "note":  "Hai tia đối nhau: chung gốc O và cùng nằm trên một đường thẳng — ở đây góc xOy bằng 180°.",
+                           "file":  "rl01",
+                           "id":  "rl01"
+                       },
+                       {
+                           "question":  "Hai tia Ox và Oy trong hình có là hai tia đối nhau không?",
+                           "options":  [
+                                           "Không — vì Ox và Oy không cùng nằm trên một đường thẳng",
+                                           "Có — vì chúng chung gốc O",
+                                           "Có — vì góc xOy bé hơn 180°",
+                                           "Không thể xác định"
+                                       ],
+                           "answer":  0,
+                           "note":  "Tia đối yêu cầu: chung gốc VÀ cùng nằm trên một đường thẳng. Ở đây góc xOy nhọn hơn 180° nên không phải tia đối.",
+                           "file":  "rl02",
+                           "id":  "rl02"
+                       },
+                       {
+                           "question":  "Quan sát hình: đường thẳng a chứa ba điểm M, A, N (A ở giữa). Nhận xét nào ĐÚNG?",
+                           "options":  [
+                                           "A nằm giữa M và N nên MA + AN = MN",
+                                           "Tia NM và tia NA là hai tia đối nhau",
+                                           "Đoạn thẳng MA và đoạn thẳng AN không có gì chung",
+                                           "Điểm N nằm giữa M và A"
+                                       ],
+                           "answer":  0,
+                           "note":  "A nằm giữa hai điểm M, N trên cùng đường thẳng nên MA + AN = MN; tia NM và tia NA có gốc khác nhau nên không là tia đối nhau (tia đối phải chung gốc).",
+                           "file":  "rl03",
+                           "id":  "rl03"
+                       },
+                       {
+                           "question":  "Quan sát hình: đường thẳng d, tia Tv và đoạn thẳng PQ. Có bao nhiêu đỉnh (điểm gốc) của tia trên đường thẳng d?",
+                           "options":  [
+                                           "1 đỉnh (T)",
+                                           "2 đỉnh",
+                                           "3 đỉnh",
+                                           "0 đỉnh"
+                                       ],
+                           "answer":  0,
+                           "note":  "Tia Tv có gốc T nằm trên đường thẳng d; chỉ có 1 gốc tia trên d. Đoạn PQ và hai đầu P, Q cũng thuộc d.",
+                           "file":  "rl04",
+                           "id":  "rl04"
+                       }
+                   ]
+}
