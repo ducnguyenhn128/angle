@@ -103,6 +103,32 @@
                          "note":  "Đường thẳng chứa tia phân giác của một góc gọi là đường phân giác của góc đó.",
                          "file":  "bi08",
                          "id":  "bi08"
+                     },
+                     {
+                         "question":  "Oz là tia phân giác của góc xOy, góc zOy bằng 50°. Góc xOz bằng bao nhiêu?",
+                         "options":  [
+                                         "50°",
+                                         "100°",
+                                         "25°",
+                                         "130°"
+                                     ],
+                         "answer":  0,
+                         "note":  "Tia phân giác chia góc thành hai phần bằng nhau nên góc xOz = góc zOy = 50°.",
+                         "file":  "bi09",
+                         "id":  "bi09"
+                     },
+                     {
+                         "question":  "Ot và Ou lần lượt là tia phân giác của hai góc kề bù xOz và zOy. Góc tOu bằng bao nhiêu?",
+                         "options":  [
+                                         "90°",
+                                         "45°",
+                                         "180°",
+                                         "60°"
+                                     ],
+                         "answer":  0,
+                         "note":  "Góc tOu = một nửa góc xOz cộng một nửa góc zOy, tức bằng một nửa góc bẹt xOy: 180° : 2 = 90°. Hai tia phân giác của hai góc kề bù luôn vuông góc với nhau.",
+                         "file":  "bi10",
+                         "id":  "bi10"
                      }
                  ],
     "count-angles":  [
@@ -209,6 +235,32 @@
                              "note":  "Tại A có 3 góc (BAD, DAC, BAC); tại B và C mỗi nơi 1 góc; tại D có 2 góc (ADB, ADC). Tổng: 3 + 1 + 1 + 2 = 7 góc.",
                              "file":  "ca08",
                              "id":  "ca08"
+                         },
+                         {
+                             "question":  "Ngũ giác ABCDE trên hình có tất cả bao nhiêu góc trong (không kể góc bẹt)?",
+                             "options":  [
+                                             "5 góc",
+                                             "4 góc",
+                                             "6 góc",
+                                             "10 góc"
+                                         ],
+                             "answer":  0,
+                             "note":  "Ngũ giác có 5 đỉnh, mỗi đỉnh cho một góc trong: tổng 5 góc trong.",
+                             "file":  "ca09",
+                             "id":  "ca09"
+                         },
+                         {
+                             "question":  "Trên hình có sáu tia chung gốc O, không có cặp tia nào đối nhau. Có tất cả bao nhiêu góc (không kể góc bẹt)?",
+                             "options":  [
+                                             "15 góc",
+                                             "12 góc",
+                                             "6 góc",
+                                             "10 góc"
+                                         ],
+                             "answer":  0,
+                             "note":  "Mỗi cặp tia tạo đúng một góc: chọn 2 trong 6 tia được 6 × 5 : 2 = 15 góc.",
+                             "file":  "ca10",
+                             "id":  "ca10"
                          }
                      ],
     "parallel":  [
@@ -259,6 +311,18 @@
                          "note":  "Cặp góc so le trong được đánh dấu KHÁC nhau (70° và 110°) nên dấu hiệu không thỏa → a KHÔNG song song với b. HS trả lời miệng: chỉ khi cặp góc so le trong bằng nhau mới được kết luận song song.",
                          "file":  "pa08",
                          "id":  "pa08"
+                     },
+                     {
+                         "title":  "Hình chữ nhật",
+                         "note":  "AB // CD và AD // BC (hai cặp cạnh đối của hình chữ nhật song song với nhau). HS trả lời miệng: bốn góc của hình chữ nhật đều là góc vuông nên mỗi cạnh đều vuông góc với hai cạnh kề, từ đó suy ra các cặp cạnh đối song song.",
+                         "file":  "pa09",
+                         "id":  "pa09"
+                     },
+                     {
+                         "title":  "Không song song — đồng vị không bằng nhau",
+                         "note":  "Cặp góc đồng vị được đánh dấu KHÁC nhau (60° và 120°) nên dấu hiệu không thỏa → a KHÔNG song song với b. HS trả lời miệng: chỉ khi cặp góc đồng vị bằng nhau mới được kết luận song song.",
+                         "file":  "pa10",
+                         "id":  "pa10"
                      }
                  ],
     "perpendicular":  [
@@ -365,6 +429,32 @@
                               "note":  "Giao điểm của ba đường cao trong một tam giác gọi là trực tâm của tam giác đó.",
                               "file":  "pe08",
                               "id":  "pe08"
+                          },
+                          {
+                              "question":  "Tam giác ABC cân tại A, AH vuông góc với BC tại trung điểm H của BC. Đoạn thẳng AH là đường gì của tam giác?",
+                              "options":  [
+                                              "Đường cao (đồng thời là đường trung tuyến)",
+                                              "Chỉ là trung tuyến, không phải đường cao",
+                                              "Đường phân giác của góc B",
+                                              "Cạnh đáy của tam giác"
+                                          ],
+                              "answer":  0,
+                              "note":  "AH vuông góc với BC tại H nên AH là đường cao ứng với cạnh BC. Vì H là trung điểm của BC nên AH đồng thời là đường trung tuyến.",
+                              "file":  "pe09",
+                              "id":  "pe09"
+                          },
+                          {
+                              "question":  "Trong hình vuông ABCD, cạnh AB và cạnh BC có quan hệ gì với nhau?",
+                              "options":  [
+                                              "Vuông góc với nhau",
+                                              "Song song với nhau",
+                                              "Trùng nhau",
+                                              "Không liên quan đến nhau"
+                                          ],
+                              "answer":  0,
+                              "note":  "Hai cạnh kề của hình vuông vuông góc với nhau (ký hiệu góc vuông tại B): AB ⊥ BC.",
+                              "file":  "pe10",
+                              "id":  "pe10"
                           }
                       ],
     "rays-lines":  [
@@ -471,6 +561,32 @@
                            "note":  "A và B cùng phía của O nên tia OA và tia OB cùng hướng, tức trùng nhau. Hai tia đối nhau phải nằm khác phía của gốc chung.",
                            "file":  "rl08",
                            "id":  "rl08"
+                       },
+                       {
+                           "question":  "Hai tia Ox và Oy đối nhau (chung gốc O, nằm trên một đường thẳng). Hai tia này hợp thành hình gì?",
+                           "options":  [
+                                           "Đường thẳng xy",
+                                           "Đoạn thẳng xy",
+                                           "Tia Ox",
+                                           "Góc vuông xOy"
+                                       ],
+                           "answer":  0,
+                           "note":  "Hai tia đối nhau chung gốc O hợp thành một đường thẳng (ở đây là đường thẳng xy).",
+                           "file":  "rl09",
+                           "id":  "rl09"
+                       },
+                       {
+                           "question":  "Trên hình có ba tia Ox, Oy, Oz chung gốc O (Ox và Oy đối nhau). Có tất cả bao nhiêu tia chung gốc O?",
+                           "options":  [
+                                           "3 tia",
+                                           "2 tia",
+                                           "6 tia",
+                                           "1 tia"
+                                       ],
+                           "answer":  0,
+                           "note":  "Mỗi tia được xác định bởi gốc O và một hướng: Ox, Oy, Oz là 3 tia khác nhau. Ox và Oy đối nhau nhưng vẫn là hai tia riêng biệt.",
+                           "file":  "rl10",
+                           "id":  "rl10"
                        }
                    ]
 }

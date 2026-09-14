@@ -1,0 +1,20 @@
+%META {"question":"Ngũ giác ABCDE trên hình có tất cả bao nhiêu góc trong (không kể góc bẹt)?","options":["5 góc","4 góc","6 góc","10 góc"],"answer":0,"note":"Ngũ giác có 5 đỉnh, mỗi đỉnh cho một góc trong: tổng 5 góc trong."}
+\documentclass[border=5pt]{standalone}
+\usepackage{tkz-euclide}
+\input{_theme.tex}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt]
+  \coordinate (A) at (1.8,3.1);
+  \coordinate (B) at (0.28,1.99);
+  \coordinate (C) at (0.86,0.21);
+  \coordinate (D) at (2.74,0.21);
+  \coordinate (E) at (3.32,1.99);
+  \tkzDrawPolygon[tmblue,line width=1.1pt](A,B,C,D,E)
+  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](A,B,C,D,E)
+  \tkzLabelPoint[above=2pt](A){$A$}
+  \tkzLabelPoint[left=2pt](B){$B$}
+  \tkzLabelPoint[below left=1pt](C){$C$}
+  \tkzLabelPoint[below right=1pt](D){$D$}
+  \tkzLabelPoint[right=2pt](E){$E$}
+\end{tikzpicture}
+\end{document}
