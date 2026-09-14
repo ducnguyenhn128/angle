@@ -1,17 +1,16 @@
 %META {"question":"Quan sát hình: hai góc được đánh dấu bằng ký hiệu giống nhau. Oz là tia gì?","options":["Tia phân giác của góc xOy","Tia đối của tia Ox","Tia vuông góc với tia Ox","Một tia bất kỳ nằm trong góc xOy"],"answer":0,"note":"Oz nằm giữa Ox và Oy và chia góc xOy thành hai góc bằng nhau (góc xOz = góc zOy, ký hiệu cung giống nhau) → Oz là tia phân giác của góc xOy."}
 \documentclass[border=5pt]{standalone}
 \usepackage{tkz-euclide}
-\usetikzlibrary{arrows.meta}
 \input{_theme.tex}
 \begin{document}
-\begin{tikzpicture}[line width=1.1pt,>={Stealth[length=3.5mm]}]
+\begin{tikzpicture}[line width=1.1pt]
   \coordinate (O) at (0,0);
   \coordinate (X) at (3.6,0);
   \coordinate (Y) at (1.5,2.9);
   \coordinate (Z) at (3.1,1.87);
-  \draw[tmblue,->] (O) -- (X) node[below=3pt]{$x$};
-  \draw[tmblue,->] (O) -- (Y) node[above right=1pt]{$y$};
-  \draw[tmpink,->] (O) -- (Z) node[right=3pt]{$z$};
+  \draw[tmblue] (O) -- (X) node[below=3pt]{$x$};
+  \draw[tmblue] (O) -- (Y) node[above right=1pt]{$y$};
+  \draw[tmpink] (O) -- (Z) node[right=3pt]{$z$};
   \tkzMarkAngles[size=0.75,arc=l,color=tmgreen,line width=1pt](X,O,Z)
   \tkzMarkAngles[size=0.75,arc=l,color=tmgreen,line width=1pt](Z,O,Y)
 \end{tikzpicture}

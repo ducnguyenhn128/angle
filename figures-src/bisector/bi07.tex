@@ -1,17 +1,16 @@
 %META {"question":"Oz là tia phân giác của góc xOy, góc xOz bằng 35°. Góc xOy bằng bao nhiêu?","options":["70°","35°","105°","140°"],"answer":0,"note":"Góc xOy gấp đôi góc xOz: 35° × 2 = 70°."}
 \documentclass[border=5pt]{standalone}
 \usepackage{tkz-euclide}
-\usetikzlibrary{arrows.meta}
 \input{_theme.tex}
 \begin{document}
-\begin{tikzpicture}[line width=1.1pt,>={Stealth[length=3.5mm]}]
+\begin{tikzpicture}[line width=1.1pt]
   \coordinate (O) at (0,0);
   \coordinate (X) at (3.6,0);
   \coordinate (Y) at (1.16,3.2);
   \coordinate (Z) at (2.54,1.78);
-  \draw[tmblue,->] (O) -- (X) node[below=3pt]{$x$};
-  \draw[tmblue,->] (O) -- (Y) node[above=3pt]{$y$};
-  \draw[tmpink,->] (O) -- (Z) node[right=3pt]{$z$};
+  \draw[tmblue] (O) -- (X) node[below=3pt]{$x$};
+  \draw[tmblue] (O) -- (Y) node[above=3pt]{$y$};
+  \draw[tmpink] (O) -- (Z) node[right=3pt]{$z$};
   \tkzMarkAngles[size=0.7,arc=l,color=tmgreen,line width=1pt](X,O,Z)
   \tkzMarkAngles[size=0.7,arc=l,color=tmgreen,line width=1pt](Z,O,Y)
 \end{tikzpicture}

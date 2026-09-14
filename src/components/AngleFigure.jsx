@@ -9,8 +9,6 @@ export default function AngleFigure({ degrees = 60, rotate = 0 }) {
   const C = 160;
   const R = 118;
   const rayLen = R + 12;      // điểm cuối của tia
-  const arrowLen = 12;        // độ dài mũi tên nhô ra
-  const arrowSpread = 7;      // góc mở mũi tên
   const rMark = Math.min(44, 16 + degrees * 0.22);
 
   // Hai tia xuất phát từ O, Oy xoay -degrees (SVG y đi xuống)
@@ -19,31 +17,6 @@ export default function AngleFigure({ degrees = 60, rotate = 0 }) {
 
   const oxEnd = { x: C + rayLen, y: C };
   const oyEnd = { x: C + rayLen * uy.x, y: C + rayLen * uy.y };
-
-  // Mũi tên tia Ox (nằm trên hướng 0°)
-  const oxTip = { x: C + rayLen + arrowLen, y: C };
-  const oxBase1 = {
-    x: C + rayLen * Math.cos(deg2rad(arrowSpread)),
-    y: C - rayLen * Math.sin(deg2rad(arrowSpread)),
-  };
-  const oxBase2 = {
-    x: C + rayLen * Math.cos(deg2rad(-arrowSpread)),
-    y: C - rayLen * Math.sin(deg2rad(-arrowSpread)),
-  };
-
-  // Mũi tên tia Oy (nằm trên hướng -degrees)
-  const oyTip = {
-    x: C + (rayLen + arrowLen) * uy.x,
-    y: C + (rayLen + arrowLen) * uy.y,
-  };
-  const oyBase1 = {
-    x: C + rayLen * Math.cos(deg2rad(-degrees - arrowSpread)),
-    y: C + rayLen * Math.sin(deg2rad(-degrees - arrowSpread)),
-  };
-  const oyBase2 = {
-    x: C + rayLen * Math.cos(deg2rad(-degrees + arrowSpread)),
-    y: C + rayLen * Math.sin(deg2rad(-degrees + arrowSpread)),
-  };
 
   // Cung đánh dấu góc (đi từ tia Ox ngược chiều kim đồng hồ tới tia Oy)
   const a1 = { x: C + rMark, y: C };
@@ -78,10 +51,6 @@ export default function AngleFigure({ degrees = 60, rotate = 0 }) {
       {/* Tia Ox và Oy */}
       <line x1={C} y1={C} x2={oxEnd.x} y2={oxEnd.y} stroke="#e2e8f0" strokeWidth="3" strokeLinecap="round" />
       <line x1={C} y1={C} x2={oyEnd.x} y2={oyEnd.y} stroke="#e2e8f0" strokeWidth="3" strokeLinecap="round" />
-
-      {/* Mũi tên */}
-      <polygon points={`${oxTip.x},${oxTip.y} ${oxBase1.x},${oxBase1.y} ${oxBase2.x},${oxBase2.y}`} fill="#e2e8f0" />
-      <polygon points={`${oyTip.x},${oyTip.y} ${oyBase1.x},${oyBase1.y} ${oyBase2.x},${oyBase2.y}`} fill="#e2e8f0" />
 
       {degrees === 90 ? (
         <path

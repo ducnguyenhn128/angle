@@ -1,17 +1,16 @@
 %META {"question":"Tia Oz nằm trong góc vuông xOy, chia góc vuông thành hai phần bằng nhau. Nếu gọi số đo của mỗi góc nhỏ tạo bởi Oz là k°, khẳng định nào ĐÚNG?","options":["k = 45 — Oz là tia phân giác của góc vuông xOy","k = 90 — Oz là tia phân giác của góc vuông xOy","k = 60 — Oz không là tia phân giác","k = 30 — Oz là tia phân giác"],"answer":0,"note":"Góc vuông bằng 90°; chia đôi thì mỗi góc bằng 45°. Tia nằm giữa hai tia gốc và tạo hai góc bằng nhau (45° = 45°) là tia phân giác."}
 \documentclass[border=5pt]{standalone}
 \usepackage{tkz-euclide}
-\usetikzlibrary{arrows.meta}
 \input{_theme.tex}
 \begin{document}
-\begin{tikzpicture}[line width=1.1pt,>={Stealth[length=3.5mm]}]
+\begin{tikzpicture}[line width=1.1pt]
   \coordinate (O) at (0,0);
   \coordinate (X) at (3.6,0);
   \coordinate (Y) at (0,3.4);
   \coordinate (Z) at (2.45,2.45);
-  \draw[tmblue,->] (O) -- (X) node[below=3pt]{$x$};
-  \draw[tmblue,->] (O) -- (Y) node[left=3pt]{$y$};
-  \draw[tmpink,->] (O) -- (Z) node[above right=1pt]{$z$};
+  \draw[tmblue] (O) -- (X) node[below=3pt]{$x$};
+  \draw[tmblue] (O) -- (Y) node[left=3pt]{$y$};
+  \draw[tmpink] (O) -- (Z) node[above right=1pt]{$z$};
   \tkzMarkAngles[size=0.7,arc=l,color=tmgreen,line width=1pt](X,O,Z)
   \tkzMarkAngles[size=0.7,arc=l,color=tmgreen,line width=1pt](Z,O,Y)
 \end{tikzpicture}
