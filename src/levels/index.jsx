@@ -2,7 +2,7 @@ export { default as Level1 } from './Level1';
 export { default as Level5 } from './Level5';
 
 import QuizLevel from './QuizLevel';
-import { makeLevel2Question, makeBankQuestion } from '../game/generators';
+import { makeLevel2Question, makeBankQuestion, makeLevel8Question } from '../game/generators';
 
 export function Level2({ onQuit }) {
   return (
@@ -54,6 +54,15 @@ export function Level7({ onQuit }) {
     <QuizLevel
       level={{ id: '7', name: 'Tia phân giác', title: 'Nhận biết tia phân giác', target: 150, onQuit }}
       makeQuestion={() => makeBankQuestion('bisector')}
+    />
+  );
+}
+
+export function Level8({ onQuit }) {
+  return (
+    <QuizLevel
+      level={{ id: '8', name: 'So sánh góc', title: 'Quan sát hình và chọn câu đúng', target: 150, onQuit }}
+      makeQuestion={makeLevel8Question}
     />
   );
 }

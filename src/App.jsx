@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Proportions, Ruler, Sigma, Spline, Users, MoveDiagonal, Scissors,
+  Proportions, Ruler, Sigma, Spline, Users, MoveDiagonal, Scissors, Scale,
 } from 'lucide-react';
-import { Level1, Level2, Level2Hard, Level3, Level4, Level6, Level7 } from './levels';
+import { Level1, Level2, Level2Hard, Level3, Level4, Level6, Level7, Level8 } from './levels';
 import Level5 from './levels/Level5';
 
 const LEVELS = [
@@ -38,6 +38,10 @@ const LEVELS = [
   {
     id: '7', name: 'Tia phân giác', desc: 'Nhận biết tia chia góc thành hai phần bằng nhau',
     icon: Scissors, component: Level7, color: 'text-neon-blue',
+  },
+  {
+    id: '8', name: 'So sánh góc', desc: 'Góc nào lớn hơn · tia nào phân giác · đường nào vuông góc · kề bù/đối đỉnh',
+    icon: Scale, component: Level8, color: 'text-neon-green',
   },
 ];
 

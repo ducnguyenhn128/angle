@@ -1,4 +1,8 @@
 import AngleFigure from '../components/AngleFigure';
+import AngleCompareFigure from '../components/AngleCompareFigure';
+import BisectorPickFigure from '../components/BisectorPickFigure';
+import { PerpFromPointFigure, PerpFourLinesFigure } from '../components/PerpendicularPickFigure';
+import IntersectLinesFigure from '../components/IntersectLinesFigure';
 import manifest from '../data/figures-manifest.json';
 
 export function randInt(min, max) {
@@ -147,4 +151,191 @@ export function makeBankFigure(topic) {
     title: entry.title || null,
     note: entry.note || null,
   };
+}
+
+/* ========== Level 8: So sánh góc ========== */
+
+const LABEL_PAIRS = [
+  { r1: 'a', v: 'O', r2: 'b' },
+  { r1: 'c', v: 'O', r2: 'd' },
+  { r1: 'x', v: 'O', r2: 'y' },
+  { r1: 'u', v: 'O', r2: 'v' },
+  { r1: 'm', v: 'A', r2: 'n' },
+  { r1: 'p', v: 'A', r2: 'q' },
+];
+
+/* ---------- 8a: So sánh 2 góc ---------- */
+function makeCompareAnglesQuestion() {
+  const deg1 = 5 * randInt(5, 32);
+  let deg2 = 5 * randInt(5, 32);
+  while (Math.abs(deg1 - deg2) < 15) {
+    deg2 = 5 * randInt(5, 32);
+  }
+
+  const pairs = shuffle([...LABEL_PAIRS]);
+  const labels1 = pairs[0];
+  const labels2 = pairs[1];
+
+  const rotate1 = randInt(-30, 30);
+  const rotate2 = randInt(-30, 30);
+
+  const bigger = deg1 > deg2 ? deg1 : deg2;
+  const smaller = deg1 > deg2 ? deg1 : deg2;
+  const askBigger = Math.random() < 0.5;
+  const askDeg = askBigger ? bigger : smaller;
+  const askLabels = askDeg === deg1 ? labels1 : labels2;
+  const otherLabels = askDeg === deg1 ? labels2 : labels1;
+  const word = askBigger ? 'lớn hơn' : 'nhỏ hơn';
+
+  return {
+    key: uid('cmp'),
+    figure: (
+      <AngleCompareFigure
+        deg1={deg1} deg2={deg2}
+        labels1={labels1} labels2={labels2}
+        rotate1={rotate1} rotate2={rotate2}
+      />
+    ),
+    text: `Góc nào ${word}?`,
+    options: shuffle([
+      { label: `Góc ${askLabels.r1}${askLabels.v}${askLabels.r2}`, correct: true },
+      { label: `Góc ${otherLabels.r1}${otherLabels.v}${otherLabels.r2}`, correct: false },
+    ]),
+    note: `Góc ${labels1.r1}${labels1.v}${labels1.r2} = ${deg1}°, góc ${labels2.r1}${labels2.v}${labels2.r2} = ${deg2}° → ${askLabels.r1}${askLabels.v}${askLabels.r2} ${word} (${askDeg}°).`,
+  };
+}
+
+/* ---------- 8b: Tia nào là tia phân giác ---------- */
+function makeBisectorPickQuestion() {
+  const deg = 5 * randInt(14, 26); // 70..130
+  const correctFrac = 0.5;
+  const delta1 = 0.18 + Math.random() * 0.12; // 0.18..0.30
+  let d2 = 0.18 + Math.random() * 0.12;
+  while (Math.abs(d2 - delta1) < 0.08) {
+    d2 = 0.18 + Math.random() * 0.12;
+  }
+
+  const fracs = [
+    correctFrac,
+    Math.min(0.88, correctFrac + delta1),
+    Math.max(0.12, correctFrac - d2),
+  ];
+  const names = ['z', 't', 'u'];
+  // shuffle
+  for (let i = names.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [fracs[i], fracs[j]] = [fracs[j], fracs[i]];
+    [names[i], names[j]] = [names[j], names[i]];
+  }
+  const correctIdx = fracs.indexOf(correctFrac);
+
+  const options = names.map((n) => ({
+    label: `Tia O${n}`,
+    correct: false,
+  }));
+  options[correctIdx].correct = true;
+
+  return {
+    key: uid('bis'),
+    figure: (
+      <BisectorPickFigure deg={deg} fracs={fracs} correctIdx={correctIdx} rayNames={names} />
+    ),
+    text: 'Tia nào là tia phân giác của góc xOy?',
+    options: shuffle(options),
+    note: `Tia phân giác chia góc xOy thành hai phần bằng nhau (${deg}° : 2 = ${deg / 2}°). Tia O${names[correctIdx]} nằm chính giữa nên là tia phân giác.`,
+  };
+}
+
+/* ---------- 8c: Đường vuông góc ---------- */
+function makePerpPickQuestion() {
+  const variant = Math.random() < 0.5 ? 'A' : 'B';
+
+  if (variant === 'A') {
+    // Từ điểm M kẻ 4 đoạn xuống d, đúng 1 vuông góc — tên điểm uppercase
+    const ptNames = shuffle(['A', 'B', 'C', 'H', 'K', 'E', 'P']);
+    const perpIdx = randInt(0, 3);
+    const angles = [0, 0, 0, 0];
+    const segNames = ptNames.slice(0, 4);
+    for (let i = 0; i < 4; i++) {
+      if (i === perpIdx) {
+        angles[i] = 90;
+      } else {
+        angles[i] = 55 + randInt(0, 20); // 55°–75° (nghiêng rõ)
+        if (angles[i] >= 90) angles[i] -= 40;
+      }
+    }
+    return {
+      key: uid('perp'),
+      figure: <PerpFromPointFigure footAngles={angles} names={segNames} />,
+      text: 'Đoạn thẳng nào vuông góc với đường thẳng d?',
+      options: shuffle(segNames.map((n, i) => ({
+        label: `Đoạn M${n}`,
+        correct: i === perpIdx,
+      }))),
+      note: `Đoạn M${segNames[perpIdx]} vuông góc với d (có ký hiệu góc vuông tại chân). Đoạn vuông góc là đoạn ngắn nhất từ M xuống d.`,
+    };
+  }
+
+  // Variant B: 4 đường cắt d, 3 vuông góc, 1 xiên — tên đường lowercase
+  const lineNames = shuffle(['a', 'b', 'c', 'e', 'm', 'n']).slice(0, 4);
+  const slantIdx = randInt(0, 3);
+  const angles = [90, 90, 90, 90];
+  angles[slantIdx] = 55 + randInt(0, 25); // 55°–80°
+  if (angles[slantIdx] >= 90) angles[slantIdx] -= 35;
+
+  return {
+    key: uid('perp'),
+    figure: <PerpFourLinesFigure angles={angles} names={lineNames} slantIdx={slantIdx} />,
+    text: 'Đường thẳng nào KHÔNG vuông góc với d?',
+    options: shuffle(lineNames.map((n, i) => ({
+      label: `Đường thẳng ${n}`,
+      correct: i === slantIdx,
+    }))),
+    note: `Đường ${lineNames[slantIdx]} không vuông góc với d vì không có ký hiệu góc vuông (${angles[slantIdx]}° ≠ 90°). Ba đường còn lại đều có ký hiệu vuông góc.`,
+  };
+}
+
+/* ---------- 8d: Góc kề bù / đối đỉnh ---------- */
+function makeSupplementVerticalQuestion() {
+  const x = 5 * randInt(6, 30); // 30°–150°, bước 5
+  const isDoiDinh = Math.random() < 0.5;
+  const askDeg = isDoiDinh ? x : 180 - x;
+
+  const wrong1 = 180 - x;
+  const wrong2 = x / 2;
+  const wrong3 = 90 - Math.round(x / 10) * 10;
+  const candidates = new Set([askDeg, wrong1, wrong2, wrong3].filter((v) => v >= 10 && v <= 170 && v !== askDeg));
+  const extra = shuffle([...candidates]).slice(0, 3);
+  while (extra.length < 3) {
+    const v = 10 + randInt(0, 16);
+    if (v !== askDeg && !extra.includes(v)) extra.push(v);
+  }
+
+  const options = shuffle([
+    { label: `${askDeg}°`, correct: true },
+    ...extra.slice(0, 3).map((v) => ({ label: `${v}°`, correct: false })),
+  ]);
+
+  return {
+    key: uid('sup'),
+    figure: (
+      <IntersectLinesFigure givenAngle={x} />
+    ),
+    text: isDoiDinh
+      ? `Hai đường thẳng cắt nhau tại O, góc O₁ = ${x}°. Góc O₂ (đối đỉnh O₁) bằng bao nhiêu?`
+      : `Hai đường thẳng cắt nhau tại O, góc O₁ = ${x}°. Góc O₃ (kề bù với O₁) bằng bao nhiêu?`,
+    options,
+    note: isDoiDinh
+      ? `Hai góc đối đỉnh luôn bằng nhau: O₂ = O₁ = ${x}°.`
+      : `Hai góc kề bù có tổng bằng 180°: O₃ = 180° − ${x}° = ${180 - x}°.`,
+  };
+}
+
+/* ---------- 8: Level tổng hợp ---------- */
+export function makeLevel8Question() {
+  const r = Math.random();
+  if (r < 0.28) return makeCompareAnglesQuestion();
+  if (r < 0.56) return makeBisectorPickQuestion();
+  if (r < 0.78) return makePerpPickQuestion();
+  return makeSupplementVerticalQuestion();
 }
