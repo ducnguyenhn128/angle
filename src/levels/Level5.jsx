@@ -56,7 +56,7 @@ export default function Level5({ onQuit }) {
         </div>
 
         <p className="text-center text-text-secondary text-sm">
-          Gợi ý: HS nêu lý do — hai góc so le trong bằng nhau · hai góc đồng vị bằng nhau ·
+          ID hình: <span className="font-mono text-neon-blue">{fig.qid || fig.key || '—'}</span> · Gợi ý: HS nêu lý do — hai góc so le trong bằng nhau · hai góc đồng vị bằng nhau ·
           cùng vuông góc với đường thẳng thứ ba · hai góc trong cùng phía bù nhau…
         </p>
 

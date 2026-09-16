@@ -6,13 +6,13 @@
 \begin{tikzpicture}[line width=1.1pt]
   \coordinate (C) at (0,0);
   \coordinate (B) at (3.6,0);
-  \coordinate (A) at (0.5,1.1);
+  \coordinate (A) at (0.4,0.75);  % A tù sâu hơn → H rơi xa A, nhãn chữ không chồng
   \tkzDefPointBy[projection=onto C--A](B) \tkzGetPoint{H}
   \tkzDrawPolygon[tmblue,line width=1.1pt](A,B,C)
   \draw[tmblue,dashed] (A) -- (H);
   \draw[tmpink] (B) -- (H);
   \tkzMarkRightAngles[size=0.26,color=tmpink,line width=1pt](B,H,C)
-  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](A,B,C,H)
+  \tkzDrawPoints[size=4.5,color=tmpoint,fill=tmpoint](A,B,C,H)
   \tkzLabelPoint[below left=1pt](C){$C$}
   \tkzLabelPoint[below right=1pt](B){$B$}
   \tkzLabelPoint[above left=1pt](A){$A$}

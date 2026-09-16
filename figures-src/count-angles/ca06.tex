@@ -4,12 +4,12 @@
 \input{_theme.tex}
 \begin{document}
 \begin{tikzpicture}[line width=1.1pt]
-  \coordinate (A) at (0,0);
-  \coordinate (B) at (3.6,0);
-  \coordinate (C) at (3,2.4);
-  \coordinate (D) at (0.6,2);
+  \coordinate (A) at (2.8,0);
+  \coordinate (B) at (8.4,0);
+  \coordinate (C) at (7.2,3.1);
+  \coordinate (D) at (0.5,1.3);  % hướng DA nghiêng 150° so với AB → góc A = 150°
   \tkzDrawPolygon[tmblue,line width=1.1pt](A,B,C,D)
-  \tkzDrawPoints[size=3.5,color=tminc,fill=tminc](A,B,C,D)
+  \tkzDrawPoints[size=4.5,color=tmpoint,fill=tmpoint](A,B,C,D)
   \tkzLabelPoint[below left=1pt](A){$A$}
   \tkzLabelPoint[below right=1pt](B){$B$}
   \tkzLabelPoint[above right=1pt](C){$C$}

@@ -45,7 +45,7 @@ export function makeLevel1Question() {
   else if (deg < 170) rotate = randInt(-12, 12);
 
   return {
-    key: uid('l1'),
+    key: uid('L1'),
     figure: <AngleFigure degrees={deg} rotate={rotate} />,
     text: 'Góc xOy trong hình là góc gì?',
     options: shuffle(
@@ -89,7 +89,7 @@ export function makeLevel2Question(difficulty = 'easy') {
 
   const values = shuffle([deg, ...dist]);
   return {
-    key: uid('l2'),
+    key: uid(difficulty === 'hard' ? 'L2hard' : 'L2'),
     figure: <AngleFigure degrees={deg} rotate={0} />,
     text: 'Số đo của góc xOy gần nhất với số nào?',
     options: values.map((v) => ({ label: `${v}°`, correct: v === deg })),
@@ -123,7 +123,8 @@ export function makeBankQuestion(topic) {
   used.add(entry.id);
 
   return {
-    key: uid('bank'),
+    key: uid(`bank-${topic}`),
+    qid: `${topic}-${entry.id}`,
     figureUrl: `/figures/${topic}/${entry.file}.svg`,
     text: entry.question,
     options: shuffle(
@@ -146,7 +147,8 @@ export function makeBankFigure(topic) {
   } while (used.has(entry.id));
   used.add(entry.id);
   return {
-    key: uid('fig'),
+    key: uid(`bank-${topic}`),
+    qid: `${topic}-${entry.id}`,
     figureUrl: `/figures/${topic}/${entry.file}.svg`,
     title: entry.title || null,
     note: entry.note || null,
@@ -188,7 +190,7 @@ function makeCompareAnglesQuestion() {
   const word = askBigger ? 'lớn hơn' : 'nhỏ hơn';
 
   return {
-    key: uid('cmp'),
+    key: uid('L8-compare'),
     figure: (
       <AngleCompareFigure
         deg1={deg1} deg2={deg2}
@@ -236,7 +238,7 @@ function makeBisectorPickQuestion() {
   options[correctIdx].correct = true;
 
   return {
-    key: uid('bis'),
+    key: uid('L8-bisector'),
     figure: (
       <BisectorPickFigure deg={deg} fracs={fracs} correctIdx={correctIdx} rayNames={names} />
     ),
@@ -265,7 +267,7 @@ function makePerpPickQuestion() {
       }
     }
     return {
-      key: uid('perp'),
+      key: uid(`L8-perp${variant}`),
       figure: <PerpFromPointFigure footAngles={angles} names={segNames} />,
       text: 'Đoạn thẳng nào vuông góc với đường thẳng d?',
       options: shuffle(segNames.map((n, i) => ({
@@ -284,7 +286,7 @@ function makePerpPickQuestion() {
   if (angles[slantIdx] >= 90) angles[slantIdx] -= 35;
 
   return {
-    key: uid('perp'),
+    key: uid(`L8-perp${variant}`),
     figure: <PerpFourLinesFigure angles={angles} names={lineNames} slantIdx={slantIdx} />,
     text: 'Đường thẳng nào KHÔNG vuông góc với d?',
     options: shuffle(lineNames.map((n, i) => ({
@@ -317,7 +319,7 @@ function makeSupplementVerticalQuestion() {
   ]);
 
   return {
-    key: uid('sup'),
+    key: uid('L8-kubu'),
     figure: (
       <IntersectLinesFigure givenAngle={x} />
     ),

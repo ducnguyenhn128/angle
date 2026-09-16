@@ -77,6 +77,9 @@ export default function QuizLevel({ level, makeQuestion }) {
         </div>
 
         <p className="text-center font-semibold text-base sm:text-lg shrink-0">{q.text}</p>
+        <p className="text-center text-xs text-text-secondary shrink-0 -mt-2">
+          ID: <span className="font-mono text-neon-blue">{q.qid || q.key || '—'}</span>
+        </p>
 
         <AnswerOptions options={q.options} phase={phase === 'wrong' ? 'wrong' : phase === 'correct' ? 'answered' : 'idle'} picked={picked} onPick={handlePick} />
         <Feedback phase={phase === 'wrong' ? 'wrong' : phase === 'correct' ? 'correct' : 'idle'} note={q.note} onNext={next} />
