@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ScoreBar from '../components/ScoreBar';
 import WinScreen from '../components/WinScreen';
 import AnswerOptions, { Feedback } from '../components/AnswerOptions';
@@ -15,13 +15,6 @@ export default function QuizLevel({ level, makeQuestion }) {
   const [phase, setPhase] = useState('idle'); // idle | correct | wrong | answered
   const [picked, setPicked] = useState(null);
   const [imgError, setImgError] = useState(false);
-
-  useEffect(() => {
-    setQ(makeQuestion());
-    setPhase('idle');
-    setPicked(null);
-    setImgError(false);
-  }, [level.id]);
 
   const handlePick = (opt) => {
     if (phase !== 'idle') return;

@@ -17,7 +17,7 @@ export function preloadTopic(topic) {
   }
 }
 
-/** Nạp trước toàn bộ kho hình (tổng chỉ ~110KB / 18 file). */
+/** Nạp trước toàn bộ kho hình (~50 file SVG). */
 export function preloadAllFigures() {
   for (const topic of Object.keys(manifest)) {
     preloadTopic(topic);

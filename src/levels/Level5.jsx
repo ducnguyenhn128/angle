@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import FigureViewer from '../components/FigureViewer';
 import { makeBankFigure } from '../game/generators';
-import { ArrowLeft, RefreshCw, Mic, Lightbulb, EyeOff } from 'lucide-react';
+import BackButton from '../components/BackButton';
+import { RefreshCw, Mic, Lightbulb, EyeOff } from 'lucide-react';
 
 /**
  * Cấp độ 5 — chế độ GV: chỉ hiển thị hình ngẫu nhiên từ kho,
@@ -22,12 +23,7 @@ export default function Level5({ onQuit }) {
   return (
     <div className="flex-1 flex flex-col min-h-0 p-3 sm:p-4 gap-3 sm:gap-4">
       <div className="glass-panel p-3 sm:p-4 flex items-center gap-3 shrink-0">
-        <button
-          onClick={onQuit}
-          className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-dark-bg/60 transition-colors"
-        >
-          <ArrowLeft className="w-5 h-5" />
-        </button>
+        <BackButton onClick={onQuit} />
         <div className="flex-1">
           <h2 className="font-bold">Hai đường thẳng song song</h2>
           <p className="text-xs text-text-secondary flex items-center gap-1.5 mt-0.5">

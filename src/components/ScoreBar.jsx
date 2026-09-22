@@ -1,16 +1,11 @@
-import { Flame, Trophy, ArrowLeft } from 'lucide-react';
+import { Flame, Trophy } from 'lucide-react';
+import BackButton from './BackButton';
 
 export default function ScoreBar({ score, streak, target, onQuit }) {
   const pct = Math.min(100, Math.round((score / target) * 100));
   return (
     <div className="glass-panel p-3 sm:p-4 flex items-center gap-3 sm:gap-4 shrink-0">
-      <button
-        onClick={onQuit}
-        className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-dark-bg/60 transition-colors shrink-0"
-        title="Quay lại chọn cấp độ"
-      >
-        <ArrowLeft className="w-5 h-5" />
-      </button>
+      <BackButton onClick={onQuit} />
 
       <div className="flex-1 min-w-0">
         <div className="flex items-baseline justify-between gap-2 mb-1">

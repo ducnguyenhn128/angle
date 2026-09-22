@@ -182,7 +182,7 @@ function makeCompareAnglesQuestion() {
   const rotate2 = randInt(-30, 30);
 
   const bigger = deg1 > deg2 ? deg1 : deg2;
-  const smaller = deg1 > deg2 ? deg1 : deg2;
+  const smaller = deg1 > deg2 ? deg2 : deg1;
   const askBigger = Math.random() < 0.5;
   const askDeg = askBigger ? bigger : smaller;
   const askLabels = askDeg === deg1 ? labels1 : labels2;
@@ -211,11 +211,8 @@ function makeCompareAnglesQuestion() {
 function makeBisectorPickQuestion() {
   const deg = 5 * randInt(14, 26); // 70..130
   const correctFrac = 0.5;
-  const delta1 = 0.18 + Math.random() * 0.12; // 0.18..0.30
-  let d2 = 0.18 + Math.random() * 0.12;
-  while (Math.abs(d2 - delta1) < 0.08) {
-    d2 = 0.18 + Math.random() * 0.12;
-  }
+  // Hai độ lệch lấy từ hai khoảng tách rời → luôn khác nhau ≥ 0.04 (không lặp vô hạn)
+  const [delta1, d2] = shuffle([0.16 + Math.random() * 0.06, 0.26 + Math.random() * 0.06]);
 
   const fracs = [
     correctFrac,
@@ -256,15 +253,12 @@ function makePerpPickQuestion() {
     // Từ điểm M kẻ 4 đoạn xuống d, đúng 1 vuông góc — tên điểm uppercase
     const ptNames = shuffle(['A', 'B', 'C', 'H', 'K', 'E', 'P']);
     const perpIdx = randInt(0, 3);
-    const angles = [0, 0, 0, 0];
     const segNames = ptNames.slice(0, 4);
+    // 3 đoạn xiên lấy từ các khoảng cách nhau ≥ 10°, có cả bên trái lẫn bên phải
+    const slants = shuffle([randInt(45, 55), randInt(65, 75), randInt(105, 115), randInt(125, 135)]).slice(0, 3);
+    const angles = [];
     for (let i = 0; i < 4; i++) {
-      if (i === perpIdx) {
-        angles[i] = 90;
-      } else {
-        angles[i] = 55 + randInt(0, 20); // 55°–75° (nghiêng rõ)
-        if (angles[i] >= 90) angles[i] -= 40;
-      }
+      angles.push(i === perpIdx ? 90 : slants.pop());
     }
     return {
       key: uid(`L8-perp${variant}`),
@@ -283,7 +277,6 @@ function makePerpPickQuestion() {
   const slantIdx = randInt(0, 3);
   const angles = [90, 90, 90, 90];
   angles[slantIdx] = 55 + randInt(0, 25); // 55°–80°
-  if (angles[slantIdx] >= 90) angles[slantIdx] -= 35;
 
   return {
     key: uid(`L8-perp${variant}`),
@@ -303,13 +296,12 @@ function makeSupplementVerticalQuestion() {
   const isDoiDinh = Math.random() < 0.5;
   const askDeg = isDoiDinh ? x : 180 - x;
 
-  const wrong1 = 180 - x;
-  const wrong2 = x / 2;
-  const wrong3 = 90 - Math.round(x / 10) * 10;
-  const candidates = new Set([askDeg, wrong1, wrong2, wrong3].filter((v) => v >= 10 && v <= 170 && v !== askDeg));
+  // Nhiễu: nhầm kề bù ↔ đối đỉnh (x hoặc 180 − x), nhầm với phụ nhau, lấy nửa góc
+  const wrongs = [x, 180 - x, Math.abs(90 - x), 5 * Math.round(x / 10)];
+  const candidates = new Set(wrongs.filter((v) => v >= 10 && v <= 170 && v !== askDeg));
   const extra = shuffle([...candidates]).slice(0, 3);
   while (extra.length < 3) {
-    const v = 10 + randInt(0, 16);
+    const v = 5 * randInt(2, 34);
     if (v !== askDeg && !extra.includes(v)) extra.push(v);
   }
 

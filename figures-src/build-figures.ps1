@@ -14,6 +14,11 @@ New-Item -ItemType Directory -Force -Path $pub, $data | Out-Null
 $env:TEXINPUTS = "$figuresSrc;" + $env:TEXINPUTS
 
 $manifest = [ordered]@{}
+# Chi build 1 topic -> giu nguyen cac topic khac trong manifest cu
+if ($Topic -and (Test-Path $manifestPath)) {
+    $old = [IO.File]::ReadAllText($manifestPath, (New-Object System.Text.UTF8Encoding $false)) | ConvertFrom-Json
+    foreach ($p in $old.PSObject.Properties) { $manifest[$p.Name] = @($p.Value) }
+}
 foreach ($dirInfo in (Get-ChildItem $figuresSrc -Directory)) {
     $t = $dirInfo.Name
     if ($Topic -and $t -ne $Topic) { continue }

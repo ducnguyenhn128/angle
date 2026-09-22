@@ -1,6 +1,6 @@
 # Thử Thách Hình Học
 
-Ứng dụng web luyện tập nền tảng hình học THCS dưới dạng mini-game: học sinh chọn cấp độ, trả lờicâu hỏi trắc nghiệm, tích lũy điểm để hoàn thành thử thách. Dành cho giáo viên và học sinh muốn ôn tập nhanh các khái niệm cơ bản như góc nhọn/vuông/tù/bẹt, ước lượng số đo góc, đếm góc, tia/đường thẳng/đoạn thẳng, đường song song, đường vuông góc/đường cao, tia phân giác, so sánh góc, góc kề bù/đối đỉnh.
+Ứng dụng web luyện tập nền tảng hình học THCS dưới dạng mini-game: học sinh chọn cấp độ, trả lời câu hỏi trắc nghiệm, tích lũy điểm để hoàn thành thử thách. Dành cho giáo viên và học sinh muốn ôn tập nhanh các khái niệm cơ bản như góc nhọn/vuông/tù/bẹt, ước lượng số đo góc, đếm góc, tia/đường thẳng/đoạn thẳng, đường song song, đường vuông góc/đường cao, tia phân giác, so sánh góc, góc kề bù/đối đỉnh.
 
 ---
 
@@ -15,7 +15,7 @@
   | `2h` | Ước lượng số đo góc (khó) | Sai số hẹp, đòi hỏi quan sát chính xác hơn |
   | `3` | Đếm số góc trên hình | Dùng kho hình `count-angles` |
   | `4` | Đường thẳng · Tia · Đoạn thẳng | Dùng kho hình `rays-lines` |
-  | `5` | Hai đường thẳng song song | Chế độ giáo viên, HS trả lờimiệng, có gợi ý đáp án |
+  | `5` | Hai đường thẳng song song | Chế độ giáo viên, HS trả lời miệng, có gợi ý đáp án |
   | `6` | Đường vuông góc · Đường cao | Dùng kho hình `perpendicular` |
   | `7` | Tia phân giác | Dùng kho hình `bisector` |
   | `8` | So sánh góc | 4 dạng trộn: so sánh 2 góc, tia phân giác, đường vuông góc, góc kề bù/đối đỉnh (SVG động) |
@@ -238,32 +238,31 @@ Cũng có thể triển khai trên Vercel, GitHub Pages hoặc bất kỳ static
 
 ### Ngắn hạn (dễ làm, tác động lớn)
 
-1. **Mở rộng kho hình**: mỗi chủ đề hiện có 3–4 hình, nên khi chơi dài HS sẽ gặp lại hình. Mục tiêu nên có 8–12 hình/topic.
-2. **Chế độ thử thách theo thờigian**: giới hạn thờigian trả lờimỗi câu, tính điểm bonus cho câu trả lờinhanh.
-3. **Lưu tiến độ**: dùng `localStorage` để nhớ điểm cao nhất, cấp độ đã mở khóa, và lỗi sai thường gặp của từng HS.
-4. **Trang tổng kết lỗi sai**: sau mỗi lượt chơi, liệt kê các câu sai và đưa lại lý do giải thích.
-5. **Cải thiện chế độ GV**: cho phép GV tự thêm ghi chú, đánh dấu hình đã dùng, hoặc xuất danh sách hình ra PDF/phiếu in.
+1. **Chế độ thử thách theo thời gian**: giới hạn thời gian trả lời mỗi câu, tính điểm bonus cho câu trả lời nhanh.
+2. **Lưu tiến độ**: dùng `localStorage` để nhớ điểm cao nhất, cấp độ đã mở khóa, và lỗi sai thường gặp của từng HS.
+3. **Trang tổng kết lỗi sai**: sau mỗi lượt chơi, liệt kê các câu sai và đưa lại lý do giải thích.
+4. **Cải thiện chế độ GV**: cho phép GV tự thêm ghi chú, đánh dấu hình đã dùng, hoặc xuất danh sách hình ra PDF/phiếu in.
 
 ### Trung hạn (tính năng mới)
 
-6. **Thêm chủ đề hình học mới**:
+5. **Thêm chủ đề hình học mới**:
    - Tứ giác, hình bình hành, hình thang
    - Tam giác đồng dạng
    - Đường tròn, cung, dây cung
    - Diện tích, chu vi
    - Lượng giác cơ bản
-7. **Chế độ luyện tập theo lỗi**: tự động tạo thêm câu hỏi từ những chủ đề HS hay sai.
-8. **Hệ thống tài khoản đơn giản**: GV tạo lớp, xem tiến độ của từng HS, giao bài tập theo chủ đề.
-9. **PWA (Progressive Web App)**: cài đặt trên điện thoại, hoạt động offline sau lần tải đầu.
-10. **Hỗ trợ đa ngôn ngữ**: tiếng Việt, tiếng Anh, dễ dàng mở rộng thêm ngôn ngữ khác.
+6. **Chế độ luyện tập theo lỗi**: tự động tạo thêm câu hỏi từ những chủ đề HS hay sai.
+7. **Hệ thống tài khoản đơn giản**: GV tạo lớp, xem tiến độ của từng HS, giao bài tập theo chủ đề.
+8. **PWA (Progressive Web App)**: cài đặt trên điện thoại, hoạt động offline sau lần tải đầu.
+9. **Hỗ trợ đa ngôn ngữ**: tiếng Việt, tiếng Anh, dễ dàng mở rộng thêm ngôn ngữ khác.
 
 ### Dài hạn (nền tảng hóa)
 
-11. **Trang admin quản lý hình**: giao diện web cho phép upload `.tex`, xem trước SVG, chỉnh sửa `%META` mà không cần mở code.
-12. **Sinh câu hỏi tự động bằng AI/GeoGebra**: tạo hình và câu hỏi biến thể từ template, giảm thiểu trùng lặp.
-13. **Xuất bộ đề in**: tạo file PDF chứa hình + câu hỏi + đáp án để GV in ra làm bài tập trên lớp.
-14. **Tích hợp học liệu số**: liên kết với video bài giảng, bài tập bổ sung, hoặc LMS (Google Classroom, Moodle).
-15. **Phân tích dữ liệu học tập**: dashboard thống kê thờigian làm bài, chủ đề yếu, xu hướng tiến bộ theo tuần/tháng.
+10. **Trang admin quản lý hình**: giao diện web cho phép upload `.tex`, xem trước SVG, chỉnh sửa `%META` mà không cần mở code.
+11. **Sinh câu hỏi tự động bằng AI/GeoGebra**: tạo hình và câu hỏi biến thể từ template, giảm thiểu trùng lặp.
+12. **Xuất bộ đề in**: tạo file PDF chứa hình + câu hỏi + đáp án để GV in ra làm bài tập trên lớp.
+13. **Tích hợp học liệu số**: liên kết với video bài giảng, bài tập bổ sung, hoặc LMS (Google Classroom, Moodle).
+14. **Phân tích dữ liệu học tập**: dashboard thống kê thời gian làm bài, chủ đề yếu, xu hướng tiến bộ theo tuần/tháng.
 
 ---
 

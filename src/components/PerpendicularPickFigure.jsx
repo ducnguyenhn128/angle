@@ -30,8 +30,8 @@ export const PerpFromPointFigure = memo(function PerpFromPointFigure({ footAngle
           <g key={i}>
             <line
               x1={Mx} y1={My} x2={fx} y2={footY}
-              stroke={isPerp ? '#00ff88' : '#e2e8f0'}
-              strokeWidth={isPerp ? 3 : 2.5}
+              stroke="#e2e8f0"
+              strokeWidth="2.5"
               strokeLinecap="round"
             />
             {/* Nhãn điểm chân */}
@@ -92,7 +92,7 @@ export const PerpFourLinesFigure = memo(function PerpFourLinesFigure({ angles, n
           <g key={i}>
             <line
               x1={topX} y1={topY} x2={botX} y2={botY}
-              stroke={isSlant ? '#ff00c8' : '#e2e8f0'}
+              stroke="#e2e8f0"
               strokeWidth="2.5"
               strokeLinecap="round"
             />

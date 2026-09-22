@@ -28,10 +28,11 @@ export default memo(function IntersectLinesFigure({ givenAngle }) {
 
   const labelR = 70;
 
+  // Nhãn đặt ở đường phân giác của mỗi góc (4 góc cách nhau 90° theo hướng phân giác)
   const o1Angle = (alpha + beta) / 2;
-  const o3Angle = o1Angle + 90 + (90 - halfA);
+  const o3Angle = o1Angle + 90;
   const o2Angle = o1Angle + 180;
-  const o4Angle = o1Angle - 90 - (90 - halfA);
+  const o4Angle = o1Angle - 90;
 
   const positions = [o1Angle, o3Angle, o2Angle, o4Angle];
   const labelNames = ['O₁', 'O₃', 'O₂', 'O₄'];
@@ -47,7 +48,8 @@ export default memo(function IntersectLinesFigure({ givenAngle }) {
   const arcX2 = Cx + markR * cosA2;
   const arcY2 = Cy + markR * sinA2;
   const largeArc = givenAngle > 180 ? 1 : 0;
-  const givenArc = `M ${arcX1} ${arcY1} A ${markR} ${markR} 0 ${largeArc} 0 ${arcX2} ${arcY2}`;
+  // Đi từ alpha (−) đến beta (+) là chiều kim đồng hồ trên màn hình → sweep-flag = 1
+  const givenArc = `M ${arcX1} ${arcY1} A ${markR} ${markR} 0 ${largeArc} 1 ${arcX2} ${arcY2}`;
 
   // Nhãn góc cho trước
   const midA = deg2rad((alpha + beta) / 2);
