@@ -3,6 +3,7 @@ export { default as Level5 } from './Level5';
 
 import QuizLevel from './QuizLevel';
 import { makeLevel2Question, makeBankQuestion, makeLevel8Question } from '../game/generators';
+import { makeLevel9Question } from '../game/computeAngles';
 
 export function Level2({ onQuit }) {
   return (
@@ -63,6 +64,15 @@ export function Level8({ onQuit }) {
     <QuizLevel
       level={{ id: '8', name: 'So sánh góc', title: 'Quan sát hình và chọn câu đúng', target: 150, onQuit }}
       makeQuestion={makeLevel8Question}
+    />
+  );
+}
+
+export function Level9({ onQuit }) {
+  return (
+    <QuizLevel
+      level={{ id: '9', name: 'Tính góc tổng hợp', title: 'Vận dụng tính chất để tính số đo góc', target: 150, onQuit }}
+      makeQuestion={makeLevel9Question}
     />
   );
 }

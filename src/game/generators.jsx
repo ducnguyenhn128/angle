@@ -19,7 +19,7 @@ export function shuffle(arr) {
 }
 
 let seq = 0;
-const uid = (p) => `${p}-${Date.now()}-${seq++}`;
+export const uid = (p) => `${p}-${Date.now()}-${seq++}`;
 
 /* ---------- Cấp độ 1: Nhận biết loại góc ---------- */
 export function makeLevel1Question() {

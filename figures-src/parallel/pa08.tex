@@ -1,22 +1,25 @@
-%META {"title":"Không song song — so le trong không bằng nhau","note":"Cặp góc so le trong được đánh dấu KHÁC nhau (70° và 110°) nên dấu hiệu không thỏa → a KHÔNG song song với b. HS trả lời miệng: chỉ khi cặp góc so le trong bằng nhau mới được kết luận song song."}
+%META {"title":"Không song song — so le trong không bằng nhau","note":"Cặp góc so le trong được đánh dấu KHÁC nhau (110° và 100°) nên dấu hiệu không thỏa → a KHÔNG song song với b. HS trả lời miệng: chỉ khi cặp góc so le trong bằng nhau mới được kết luận song song."}
 \documentclass[border=5pt]{standalone}
 \usepackage{tkz-euclide}
 \input{_theme.tex}
 \begin{document}
 \begin{tikzpicture}[line width=1.1pt]
+  % a nằm ngang; c tạo với a góc 110°; b nghiêng 10° so với a → so le trong 110° ≠ 100°
+  \coordinate (P) at (2.4,0);
   \coordinate (A) at (-0.6,0);
   \coordinate (B) at (4,0);
-  \coordinate (C) at (-0.6,1.7);
-  \coordinate (D) at (4,1.7);
-  \coordinate (E) at (-0.5,3.2);
-  \coordinate (F) at (3.6,-0.5);
-  \tkzInterLL(A,B)(E,F) \tkzGetPoint{P}
-  \tkzInterLL(C,D)(E,F) \tkzGetPoint{Q}
+  \coordinate (E) at ($(P)+(110:3.4)$);
+  \coordinate (F) at ($(P)+(290:0.9)$);
+  \coordinate (Q) at ($(P)+(110:1.809)$);
+  \coordinate (C) at ($(Q)+(190:2.4)$);
+  \coordinate (D) at ($(Q)+(10:2.3)$);
   \draw[tmblue] (A) -- (B) node[right=2pt]{$a$};
   \draw[tmblue] (C) -- (D) node[right=2pt]{$b$};
   \draw[tminc] (E) -- (F) node[below=2pt]{$c$};
-  \tkzMarkAngles[size=0.55,arc=l,color=tmpink,line width=1pt](B,P,Q)
-  \tkzMarkAngles[size=0.55,arc=ll,color=tmpink,line width=1pt](C,Q,P)
+  \tkzMarkAngles[size=0.5,arc=l,color=tmpink,line width=1pt](B,P,Q)
+  \tkzMarkAngles[size=0.5,arc=ll,color=tmpink,line width=1pt](C,Q,P)
+  \tkzLabelAngle[pos=0.95,color=tmpink](B,P,Q){$110^\circ$}
+  \tkzLabelAngle[pos=0.95,color=tmpink](C,Q,P){$100^\circ$}
   \tkzDrawPoints[size=3,color=tmpoint,fill=tmpoint](P,Q)
   \tkzLabelPoint[below right=1pt](P){$H$}
   \tkzLabelPoint[above right=1pt](Q){$K$}

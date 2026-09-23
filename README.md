@@ -1,12 +1,12 @@
 # Thử Thách Hình Học
 
-Ứng dụng web luyện tập nền tảng hình học THCS dưới dạng mini-game: học sinh chọn cấp độ, trả lời câu hỏi trắc nghiệm, tích lũy điểm để hoàn thành thử thách. Dành cho giáo viên và học sinh muốn ôn tập nhanh các khái niệm cơ bản như góc nhọn/vuông/tù/bẹt, ước lượng số đo góc, đếm góc, tia/đường thẳng/đoạn thẳng, đường song song, đường vuông góc/đường cao, tia phân giác, so sánh góc, góc kề bù/đối đỉnh.
+Ứng dụng web luyện tập nền tảng hình học THCS dưới dạng mini-game: học sinh chọn cấp độ, trả lời câu hỏi trắc nghiệm, tích lũy điểm để hoàn thành thử thách. Dành cho giáo viên và học sinh muốn ôn tập nhanh các khái niệm cơ bản như góc nhọn/vuông/tù/bẹt, ước lượng số đo góc, đếm góc, tia/đường thẳng/đoạn thẳng, đường song song, đường vuông góc/đường cao, tia phân giác, so sánh góc, góc kề bù/đối đỉnh, tính góc tổng hợp.
 
 ---
 
 ## Tính năng chính
 
-- **9 cấp độ** (7 cấp độ cơ bản + 1 cấp độ khó của phần ước lượng góc + 1 cấp độ tổng hợp):
+- **10 cấp độ** (8 cấp độ cơ bản + 1 cấp độ khó của phần ước lượng góc + 1 cấp độ tổng hợp):
 
   | ID | Tên | Mô tả |
   |----|-----|-------|
@@ -19,6 +19,7 @@
   | `6` | Đường vuông góc · Đường cao | Dùng kho hình `perpendicular` |
   | `7` | Tia phân giác | Dùng kho hình `bisector` |
   | `8` | So sánh góc | 4 dạng trộn: so sánh 2 góc, tia phân giác, đường vuông góc, góc kề bù/đối đỉnh (SVG động) |
+  | `9` | Tính góc tổng hợp | Tính số đo góc: kề bù, đối đỉnh, tia phân giác, so le trong/đồng vị/trong cùng phía, tổng 3 góc tam giác & góc ngoài, bài nhiều bước (SVG động) |
 
 - **Hệ thống điểm**: mỗi câu đúng +10 điểm, chuỗi từ 3 câu đúng liên tiếp trở lên được +15 điểm, sai không trừ điểm. Mục tiêu mỗi cấp độ là 150 điểm.
 - **Kho hình bằng TikZ / tkz-euclide**: hình học được vẽ chính xác, render ra SVG để tích hợp web.

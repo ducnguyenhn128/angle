@@ -1,24 +1,27 @@
-%META {"title":"Không song song — đồng vị không bằng nhau","note":"Cặp góc đồng vị được đánh dấu KHÁC nhau (60° và 120°) nên dấu hiệu không thỏa → a KHÔNG song song với b. HS trả lời miệng: chỉ khi cặp góc đồng vị bằng nhau mới được kết luận song song."}
+%META {"title":"Không song song — đồng vị không bằng nhau","note":"Cặp góc đồng vị được đánh dấu KHÁC nhau (60° và 70°) nên dấu hiệu không thỏa → a KHÔNG song song với b. HS trả lời miệng: chỉ khi cặp góc đồng vị bằng nhau mới được kết luận song song."}
 \documentclass[border=5pt]{standalone}
 \usepackage{tkz-euclide}
 \input{_theme.tex}
 \begin{document}
 \begin{tikzpicture}[line width=1.1pt]
+  % a nằm ngang; c tạo với a góc 60°; b nghiêng −10° so với a → đồng vị 60° ≠ 70°
+  \coordinate (P) at (1.2,0);
   \coordinate (A) at (-0.6,0);
   \coordinate (B) at (4,0);
-  \coordinate (C) at (-0.6,1.7);
-  \coordinate (D) at (4,1.7);
-  \coordinate (E) at (-0.5,3.2);
-  \coordinate (F) at (3.6,-0.5);
-  \tkzInterLL(A,B)(E,F) \tkzGetPoint{P}
-  \tkzInterLL(C,D)(E,F) \tkzGetPoint{Q}
+  \coordinate (E) at ($(P)+(60:3.5)$);
+  \coordinate (F) at ($(P)+(240:0.9)$);
+  \coordinate (Q) at ($(P)+(60:1.963)$);
+  \coordinate (C) at ($(Q)+(170:2.8)$);
+  \coordinate (D) at ($(Q)+(-10:1.9)$);
   \draw[tmblue] (A) -- (B) node[right=2pt]{$a$};
   \draw[tmblue] (C) -- (D) node[right=2pt]{$b$};
   \draw[tminc] (E) -- (F) node[below=2pt]{$c$};
-  \tkzMarkAngles[size=0.5,arc=l,color=tmpink,line width=1pt](A,P,Q)
-  \tkzMarkAngles[size=0.5,arc=ll,color=tmpink,line width=1pt](C,Q,E)
+  \tkzMarkAngles[size=0.5,arc=l,color=tmpink,line width=1pt](B,P,Q)
+  \tkzMarkAngles[size=0.5,arc=ll,color=tmpink,line width=1pt](D,Q,E)
+  \tkzLabelAngle[pos=0.95,color=tmpink](B,P,Q){$60^\circ$}
+  \tkzLabelAngle[pos=0.95,color=tmpink](D,Q,E){$70^\circ$}
   \tkzDrawPoints[size=3,color=tmpoint,fill=tmpoint](P,Q)
   \tkzLabelPoint[below left=1pt](P){$H$}
-  \tkzLabelPoint[below left=1pt](Q){$K$}
+  \tkzLabelPoint[above left=1pt](Q){$K$}
 \end{tikzpicture}
 \end{document}
