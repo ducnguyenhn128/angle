@@ -164,7 +164,9 @@ export default memo(function QuadFigure({ data, pick = [], states = {}, onPick, 
     if (m.t === 'arc') {
       const [V, u, w] = cornerRays(data, m.at, m.p, m.q);
       const n = m.n || 1;
-      const bis = unit(add(u, w));
+      // Đường chéo (nếu có) đi qua đỉnh gần như dọc phân giác → dời nhãn lệch về phía một cạnh để khỏi bị đè
+      const onDiag = diagonals.some(([a, b]) => a === m.at || b === m.at);
+      const bis = unit(onDiag ? add(mul(unit(add(u, w)), 0.55), mul(u, 0.45)) : add(u, w));
       const lp = add(V, mul(bis, 22 + 5 * n + 16));
       if (m.label) grow(lp, 14);
       return (
@@ -181,9 +183,13 @@ export default memo(function QuadFigure({ data, pick = [], states = {}, onPick, 
     }
     if (m.t === 'sideLabel') {
       const mid = lerp(P[m.a], P[m.b], 0.5);
-      const out = unit(sub(mid, centroid));
-      const lp = add(mid, mul(out, 16));
-      grow(lp, 20);
+      // Đẩy nhãn ra ngoài theo pháp tuyến của cạnh, đủ xa để bề ngang chữ không đè lên nét
+      const d = unit(sub(P[m.b], P[m.a]));
+      let out = perp(d);
+      if (out[0] * (mid[0] - centroid[0]) + out[1] * (mid[1] - centroid[1]) < 0) out = mul(out, -1);
+      const halfW = m.text.length * 3.8;
+      const lp = add(mid, mul(out, 8 + Math.abs(out[0]) * halfW + Math.abs(out[1]) * 8));
+      grow(lp, halfW + 4);
       return <text key={i} x={lp[0]} y={lp[1]} fontSize="14" fontWeight="700" fill={C.line}
         textAnchor="middle" dominantBaseline="central">{m.text}</text>;
     }

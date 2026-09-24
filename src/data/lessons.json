@@ -130,10 +130,51 @@
               "Tổng các góc của một tứ giác bằng 360°."
             ]
           },
-          { "id": "8-11", "name": "Bài 11. Hình thang cân", "skills": ["hinhthang.dinh-nghia", "thangcan.tinh-chat", "thangcan.dau-hieu"] },
-          { "id": "8-12", "name": "Bài 12. Hình bình hành", "skills": ["hbh.dinh-nghia", "hbh.tinh-chat", "hbh.dau-hieu"] },
-          { "id": "8-13", "name": "Bài 13. Hình chữ nhật", "skills": ["hcn.dinh-nghia", "hcn.tinh-chat", "hcn.dau-hieu", "hcn.trung-tuyen-vuong"] },
-          { "id": "8-14", "name": "Bài 14. Hình thoi và hình vuông", "skills": ["thoi.tinh-chat", "thoi.dau-hieu", "vuong.tinh-chat", "vuong.dau-hieu"] }
+          {
+            "id": "8-11", "name": "Bài 11. Hình thang cân",
+            "skills": ["hinhthang.dinh-nghia", "thangcan.tinh-chat", "thangcan.dau-hieu"],
+            "recap": [
+              "Hình thang: tứ giác có hai cạnh đối song song (hai cạnh đáy); hai cạnh còn lại là cạnh bên.",
+              "Trong hình thang, hai góc kề một cạnh bên có tổng 180°.",
+              "Hình thang vuông: hình thang có một góc vuông.",
+              "Hình thang cân: hình thang có hai góc kề một đáy bằng nhau.",
+              "Tính chất hình thang cân: hai cạnh bên bằng nhau; hai đường chéo bằng nhau.",
+              "Dấu hiệu: hình thang có hai đường chéo bằng nhau là hình thang cân."
+            ]
+          },
+          {
+            "id": "8-12", "name": "Bài 12. Hình bình hành",
+            "skills": ["hbh.dinh-nghia", "hbh.tinh-chat", "hbh.dau-hieu"],
+            "recap": [
+              "Hình bình hành: tứ giác có các cạnh đối song song.",
+              "Tính chất: các cạnh đối bằng nhau; các góc đối bằng nhau; hai đường chéo cắt nhau tại trung điểm mỗi đường.",
+              "Hai góc kề một cạnh của hình bình hành có tổng 180°.",
+              "Dấu hiệu nhận biết tứ giác là hình bình hành:",
+              "• các cạnh đối bằng nhau;  • hai cạnh đối song song và bằng nhau;",
+              "• các góc đối bằng nhau;  • hai đường chéo cắt nhau tại trung điểm mỗi đường."
+            ]
+          },
+          {
+            "id": "8-13", "name": "Bài 13. Hình chữ nhật",
+            "skills": ["hcn.dinh-nghia", "hcn.tinh-chat", "hcn.dau-hieu", "hcn.trung-tuyen-vuong"],
+            "recap": [
+              "Hình chữ nhật: tứ giác có bốn góc vuông. Hình chữ nhật cũng là hình bình hành và hình thang cân.",
+              "Tính chất: hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường.",
+              "Dấu hiệu: tứ giác có 3 góc vuông; hình thang cân có 1 góc vuông; hình bình hành có 1 góc vuông; hình bình hành có hai đường chéo bằng nhau.",
+              "Trong tam giác vuông, đường trung tuyến ứng với cạnh huyền bằng nửa cạnh huyền."
+            ]
+          },
+          {
+            "id": "8-14", "name": "Bài 14. Hình thoi và hình vuông",
+            "skills": ["thoi.tinh-chat", "thoi.dau-hieu", "vuong.tinh-chat", "vuong.dau-hieu"],
+            "recap": [
+              "Hình thoi: tứ giác có bốn cạnh bằng nhau. Hình thoi cũng là hình bình hành.",
+              "Tính chất hình thoi: hai đường chéo vuông góc với nhau và là các đường phân giác của các góc.",
+              "Dấu hiệu hình thoi: hình bình hành có hai cạnh kề bằng nhau / hai đường chéo vuông góc / một đường chéo là phân giác của một góc.",
+              "Hình vuông: tứ giác có bốn góc vuông và bốn cạnh bằng nhau — vừa là hình chữ nhật, vừa là hình thoi.",
+              "Dấu hiệu hình vuông: hình chữ nhật có hai cạnh kề bằng nhau / hai đường chéo vuông góc; hình thoi có một góc vuông / hai đường chéo bằng nhau."
+            ]
+          }
         ]
       },
       {
