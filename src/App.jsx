@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
   Proportions, Ruler, Sigma, Spline, Users, MoveDiagonal, Scissors, Scale, Calculator,
 } from 'lucide-react';
-import { Level1, Level2, Level2Hard, Level3, Level4, Level6, Level7, Level8, Level9 } from './levels';
+import { Level1, Level2, Level3, Level4, Level6, Level7, Level8, Level9 } from './levels';
 import Level5 from './levels/Level5';
 
 const LEVELS = [
@@ -14,10 +14,6 @@ const LEVELS = [
   {
     id: '2', name: 'Ước lượng số đo góc', desc: 'Nhìn hình đoán số đo — mắt nhìn phải chuẩn',
     icon: Ruler, component: Level2, color: 'text-neon-pink',
-  },
-  {
-    id: '2h', name: 'Ước lượng số đo góc (khó)', desc: 'Sai số chỉ ±10° — dành cho mắt nhìn tinh tường',
-    icon: Ruler, component: Level2Hard, color: 'text-neon-pink', badge: 'Khó',
   },
   {
     id: '3', name: 'Đếm số góc trên hình', desc: 'Đếm góc trên hình vẽ (không kể góc bẹt)',
@@ -45,7 +41,7 @@ const LEVELS = [
   },
   {
     id: '9', name: 'Tính góc tổng hợp', desc: 'Kề bù · đối đỉnh · phân giác · so le trong, đồng vị · tổng 3 góc tam giác · bài nhiều bước',
-    icon: Calculator, component: Level9, color: 'text-neon-pink', badge: 'Mới',
+    icon: Calculator, component: Level9, color: 'text-neon-pink',
   },
 ];
 

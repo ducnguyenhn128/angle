@@ -62,7 +62,7 @@ export default function QuizLevel({ level, makeQuestion }) {
                 Chưa có hình trong kho. Chạy <code className="text-neon-blue">npm run figures</code> để tạo.
               </p>
             ) : (
-              <FigureViewer src={q.figureUrl} onError={() => setImgError(true)} />
+              <FigureViewer src={q.figureUrl} scale={q.figureScale} onError={() => setImgError(true)} />
             )
           ) : (
             q.figure

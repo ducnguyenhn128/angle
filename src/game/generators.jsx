@@ -61,9 +61,9 @@ export function makeLevel1Question() {
 }
 
 /* ---------- Cấp độ 2: Ước lượng số đo góc ---------- */
-export function makeLevel2Question(difficulty = 'easy') {
+export function makeLevel2Question() {
   const deg = 5 * randInt(3, 35);
-  const spread = difficulty === 'easy' ? randInt(25, 55) : randInt(6, 15);
+  const spread = randInt(25, 55);
 
   const used = new Set([deg]);
   const offs = shuffle([spread, -spread, 2 * spread, -2 * spread, 3 * spread, -3 * spread]);
@@ -89,7 +89,7 @@ export function makeLevel2Question(difficulty = 'easy') {
 
   const values = shuffle([deg, ...dist]);
   return {
-    key: uid(difficulty === 'hard' ? 'L2hard' : 'L2'),
+    key: uid('L2'),
     figure: <AngleFigure degrees={deg} rotate={0} />,
     text: 'Số đo của góc xOy gần nhất với số nào?',
     options: values.map((v) => ({ label: `${v}°`, correct: v === deg })),
@@ -99,6 +99,9 @@ export function makeLevel2Question(difficulty = 'easy') {
 
 /* ---------- Các cấp độ dùng kho hình ---------- */
 const usedMap = new Map();
+
+// Hình gốc nhỏ/dẹt: hiển thị theo cỡ thật × hệ số thay vì kéo giãn theo khung
+const FIGURE_SCALE = { 'rays-lines': 1.4 };
 
 export function makeBankQuestion(topic) {
   const pool = manifest[topic] || [];
@@ -126,6 +129,7 @@ export function makeBankQuestion(topic) {
     key: uid(`bank-${topic}`),
     qid: `${topic}-${entry.id}`,
     figureUrl: `/figures/${topic}/${entry.file}.svg`,
+    figureScale: FIGURE_SCALE[topic],
     text: entry.question,
     options: shuffle(
       entry.options.map((label, i) => ({ label, correct: i === entry.answer })),

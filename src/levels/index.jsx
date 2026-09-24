@@ -9,16 +9,7 @@ export function Level2({ onQuit }) {
   return (
     <QuizLevel
       level={{ id: '2', name: 'Ước lượng số đo góc', title: 'Số đo góc xOy gần nhất với số nào?', target: 150, onQuit }}
-      makeQuestion={() => makeLevel2Question('easy')}
-    />
-  );
-}
-
-export function Level2Hard({ onQuit }) {
-  return (
-    <QuizLevel
-      level={{ id: '2h', name: 'Ước lượng số đo góc (khó)', title: 'Mắt nhìn chuẩn: góc xOy bằng bao nhiêu độ?', target: 150, onQuit }}
-      makeQuestion={() => makeLevel2Question('hard')}
+      makeQuestion={() => makeLevel2Question()}
     />
   );
 }

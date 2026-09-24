@@ -6,14 +6,13 @@
 
 ## Tính năng chính
 
-- **10 cấp độ** (8 cấp độ cơ bản + 1 cấp độ khó của phần ước lượng góc + 1 cấp độ tổng hợp):
+- **9 cấp độ**:
 
   | ID | Tên | Mô tả |
   |----|-----|-------|
   | `1` | Nhận biết loại góc | Góc nhọn, vuông, tù, bẹt - hình vẽ SVG sinh ngẫu nhiên |
   | `2` | Ước lượng số đo góc | Chọn đáp án gần đúng (sai số rộng) |
-  | `2h` | Ước lượng số đo góc (khó) | Sai số hẹp, đòi hỏi quan sát chính xác hơn |
-  | `3` | Đếm số góc trên hình | Dùng kho hình `count-angles` |
+    | `3` | Đếm số góc trên hình | Dùng kho hình `count-angles` |
   | `4` | Đường thẳng · Tia · Đoạn thẳng | Dùng kho hình `rays-lines` |
   | `5` | Hai đường thẳng song song | Chế độ giáo viên, HS trả lời miệng, có gợi ý đáp án |
   | `6` | Đường vuông góc · Đường cao | Dùng kho hình `perpendicular` |
