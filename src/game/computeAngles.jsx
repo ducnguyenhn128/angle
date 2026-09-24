@@ -48,7 +48,7 @@ function gapLabelAt(from, to, inner) {
 const vertexO = (deg) => ({ at: polar(O, deg, 18), text: 'O', tone: 'point' });
 
 /* ---------- 9a: Hai góc kề bù ---------- */
-function makeSupplementQ() {
+export function makeSupplementQ() {
   const [x, y, z] = pick([['x', 'y', 'z'], ['m', 'n', 't'], ['u', 'v', 'w']]);
   const a = 5 * randInt(5, 31); // xOy: 25°–155°
   const givenRight = Math.random() < 0.5;
@@ -81,7 +81,7 @@ function makeSupplementQ() {
 }
 
 /* ---------- 9b: Hai đường thẳng cắt nhau (đối đỉnh / kề bù) ---------- */
-function makeVerticalQ() {
+export function makeVerticalQ() {
   const a = 5 * randInt(6, 30); // xOy: 30°–150°
   // Bốn góc tạo bởi xx' và yy'
   const regions = [
@@ -118,7 +118,7 @@ function makeVerticalQ() {
 }
 
 /* ---------- 9c: Tia phân giác ---------- */
-function makeBisectorQ() {
+export function makeBisectorQ() {
   const a = 10 * randInt(4, 16); // xOy: 40°–160°
   const half = a / 2;
   const r = rays([[0, 'x'], [a, 'y'], [half, 't']]);
@@ -161,7 +161,7 @@ const PARALLEL_KINDS = {
   tcp: { name: 'trong cùng phía', pairs: [[3, 2], [4, 1]] },
 };
 
-function makeParallelQ() {
+export function makeParallelQ() {
   const theta = pick([45, 50, 55, 60, 65, 70, 110, 115, 120, 125, 130, 135]);
   const h = 80;
   const k = h / Math.tan((theta * Math.PI) / 180);
@@ -231,7 +231,7 @@ function makeParallelQ() {
 }
 
 /* ---------- 9e: Tổng ba góc trong tam giác / góc ngoài ---------- */
-function makeTriangleQ() {
+export function makeTriangleQ() {
   const w = 240;
   const rad = (d) => (d * Math.PI) / 180;
   let a0;

@@ -1,0 +1,135 @@
+[
+  {
+    "id": "goc-001",
+    "type": "mcq",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "stem": "Góc có số đo bằng 90° được gọi là góc gì?",
+    "options": ["Góc vuông", "Góc nhọn", "Góc tù", "Góc bẹt"],
+    "answer": 0,
+    "level": "NB",
+    "hints": ["Nhớ lại: góc nhọn < 90°, góc tù > 90°. Vậy đúng bằng 90° là góc gì?"],
+    "explanation": "Góc có số đo bằng 90° là góc vuông."
+  },
+  {
+    "id": "goc-002",
+    "type": "mcq",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "stem": "Góc bẹt có số đo bằng bao nhiêu?",
+    "options": ["180°", "90°", "360°", "0°"],
+    "answer": 0,
+    "level": "NB",
+    "explanation": "Góc bẹt là góc có hai cạnh là hai tia đối nhau, số đo bằng 180°."
+  },
+  {
+    "id": "goc-003",
+    "type": "mcq",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "stem": "Cho góc xOy = 70°. Góc xOy là góc gì?",
+    "options": ["Góc nhọn", "Góc vuông", "Góc tù", "Góc bẹt"],
+    "answer": 0,
+    "level": "NB",
+    "hints": ["So sánh 70° với 90°."],
+    "explanation": "0° < 70° < 90° nên góc xOy là góc nhọn."
+  },
+  {
+    "id": "goc-004",
+    "type": "true-false",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "stem": "Góc có số đo 95° là góc nhọn.",
+    "answer": false,
+    "level": "NB",
+    "hints": ["So sánh 95° với 90°: lớn hơn hay nhỏ hơn?"],
+    "explanation": "90° < 95° < 180° nên góc có số đo 95° là góc tù, không phải góc nhọn."
+  },
+  {
+    "id": "goc-005",
+    "type": "true-false",
+    "lesson": "goc",
+    "skills": ["goc.khai-niem"],
+    "stem": "Hai tia đối nhau tạo thành một góc bẹt.",
+    "answer": true,
+    "level": "NB",
+    "explanation": "Góc bẹt là góc có hai cạnh là hai tia đối nhau."
+  },
+  {
+    "id": "goc-006",
+    "type": "true-false",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "stem": "Góc vuông luôn lớn hơn mọi góc nhọn.",
+    "answer": true,
+    "level": "TH",
+    "explanation": "Góc nhọn có số đo nhỏ hơn 90°, còn góc vuông bằng 90°, nên góc vuông lớn hơn mọi góc nhọn."
+  },
+  {
+    "id": "goc-007",
+    "type": "multi-select",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "stem": "Chọn TẤT CẢ các số đo là số đo của góc tù.",
+    "options": ["100°", "179°", "90°", "45°", "180°"],
+    "answers": [0, 1],
+    "level": "TH",
+    "hints": ["Góc tù: lớn hơn 90° và nhỏ hơn 180°.", "Chú ý: 180° là góc bẹt, không phải góc tù."],
+    "explanation": "Góc tù có số đo lớn hơn 90° và nhỏ hơn 180°: 100° và 179°. 90° là góc vuông, 45° là góc nhọn, 180° là góc bẹt."
+  },
+  {
+    "id": "goc-008",
+    "type": "multi-select",
+    "lesson": "goc",
+    "skills": ["goc.khai-niem"],
+    "stem": "Chọn TẤT CẢ các khẳng định đúng về góc xOy.",
+    "options": ["O là đỉnh của góc", "Ox và Oy là hai cạnh của góc", "Góc xOy còn được gọi là góc yOx", "x là đỉnh của góc"],
+    "answers": [0, 1, 2],
+    "level": "TH",
+    "hints": ["Trong tên góc, chữ cái ở giữa là đỉnh."],
+    "explanation": "Trong tên góc xOy, chữ ở giữa (O) là đỉnh, Ox và Oy là hai cạnh. Đổi thứ tự hai cạnh không làm thay đổi góc: xOy cũng là yOx."
+  },
+  {
+    "id": "goc-009",
+    "type": "fill-blank",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "stem": "Góc nhọn là góc có số đo lớn hơn {{}}° và nhỏ hơn {{}}°.",
+    "blanks": [{"accept": ["0"]}, {"accept": ["90"]}],
+    "level": "NB",
+    "hints": ["Góc nhọn nhỏ hơn góc vuông. Góc vuông bằng bao nhiêu độ?"],
+    "explanation": "Góc nhọn: 0° < số đo < 90°."
+  },
+  {
+    "id": "goc-010",
+    "type": "fill-blank",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "stem": "Góc có số đo bằng {{}}° được gọi là góc bẹt.",
+    "blanks": [{"accept": ["180"]}],
+    "level": "NB",
+    "explanation": "Góc bẹt có số đo bằng 180°."
+  },
+  {
+    "id": "goc-011",
+    "type": "fill-blank",
+    "lesson": "goc",
+    "skills": ["goc.khai-niem"],
+    "stem": "Góc mAn có đỉnh là điểm {{}}.",
+    "blanks": [{"accept": ["A"]}],
+    "level": "NB",
+    "hints": ["Đỉnh là chữ cái ở giữa trong tên góc."],
+    "explanation": "Chữ cái ở giữa trong tên góc là đỉnh: góc mAn có đỉnh A, hai cạnh Am và An."
+  },
+  {
+    "id": "goc-012",
+    "type": "fill-blank",
+    "lesson": "goc",
+    "skills": ["goc.dem-goc"],
+    "stem": "Vẽ 3 tia chung gốc O, không có hai tia nào đối nhau. Trên hình có {{}} góc (không kể góc bẹt).",
+    "blanks": [{"accept": ["3"]}],
+    "level": "TH",
+    "hints": ["Mỗi cặp tia tạo thành 1 góc. Hãy đếm số cặp: Ox–Oy, Ox–Oz, …"],
+    "explanation": "Mỗi cặp tia tạo thành một góc. Có 3 tia nên có 3·2 : 2 = 3 góc."
+  }
+]

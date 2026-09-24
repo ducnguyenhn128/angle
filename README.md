@@ -178,6 +178,67 @@ Chạy `npm run dev` và vào cấp độ tương ứng để xem hình mới.
 
 ---
 
+## Luyện tập & kiểm tra theo bài (ngân hàng câu hỏi)
+
+Chức năng dành cho **học sinh trung bình và yếu, lớp 7 và lớp 8**. Bài học xếp theo **SGK Kết nối tri thức**, trong đó lớp 8 tập trung vào chương Tứ giác.
+
+- **Hai chế độ.** *Luyện tập*: sai được làm lại một lần, phương án đã chọn sai bị gạch và gợi ý tự mở. *Kiểm tra*: mỗi câu trả lời một lần, chấm theo thang 10.
+- **Gợi ý theo bậc** (`hints`), **thẻ "Nhắc lại kiến thức"** của từng bài (`recap` trong `lessons.json`) và nút **"Luyện lại câu sai"** ở màn kết quả. Khi luyện lại, câu được sinh lại với phương án trộn mới hoặc số liệu mới.
+- **Nguồn câu hỏi.** Câu soạn sẵn nằm trong `src/data/questions/<lesson>.json`. Câu có hình được sinh tự động từ generator của các level cũ, khai báo trong `src/quiz/bank.js`.
+
+`src/data/lessons.json` có cấu trúc Khối → Chương → Bài: `[{ grade, label, chapters: [{ id, name, lessons: [{ id, name, skills, recap? }] }] }]`. Mã bài có dạng `<lớp>-<số bài SGK>`, ví dụ `8-12` là Bài 12 lớp 8 (Hình bình hành). Bài chưa có câu hỏi hiện mờ, kèm chữ "sắp có".
+
+**Trường chung của mỗi câu:** `id`, `type`, `lesson`, `skills`, `level` (`NB` | `TH` | `VD` | `VDC`), `stem`, `hints?`, `figure?` (ví dụ `"bisector/bi01"` → `public/figures/bisector/bi01.svg`), `explanation`.
+
+| type | Trường riêng |
+|------|--------------|
+| `mcq` | `options: string[]`, `answer: number` |
+| `true-false` | `answer: boolean` |
+| `multi-select` | `options: string[]`, `answers: number[]`. App tự hiện "Chọn N đáp án" |
+| `fill-blank` | `stem` chứa ô `{{}}`, `blanks: [{ accept: string[], tol?: number }]` |
+| `hotspot` | `shape` (bắt buộc), `pick: ('vertex' \| 'side' \| 'diagonal' \| 'angle')[]`, `answers: string[]`. Mã phần tử: đỉnh `A`, cạnh `AB`, đường chéo `AC`, góc `∠A`. Có 1 đáp án thì chạm là chấm luôn |
+
+Mặc định phương án được trộn khi hiển thị; đặt `"shuffle": false` để giữ nguyên thứ tự. Với câu điền chỗ trống, đáp án được chuẩn hoá trước khi chấm: bỏ `°`, `độ`, chữ `góc`, bỏ dấu cách, không phân biệt hoa thường, dấu phẩy thập phân được hiểu như dấu chấm.
+
+**Hình tứ giác mô tả bằng dữ liệu** (trường `shape`, dùng được với mọi dạng câu; component `src/components/QuadFigure.jsx`):
+
+```json
+"shape": {
+  "kind": "hbh",
+  "names": "ABCD",
+  "marks": ["sides", "parallel", "right", "angles", "diagonals", "diag-marks"],
+  "center": "O",
+  "angleLabels": { "A": "{a}°", "C": "?" },
+  "sideLabels": { "AB": "6 cm" },
+  "highlight": ["AC"]
+}
+```
+
+`kind` nhận một trong các giá trị: `tu-giac`, `hinh-thang`, `thang-vuong`, `thang-can`, `hbh`, `hcn`, `thoi`, `vuong`, `dieu` (hình cánh diều, có hai đường chéo vuông góc). Các đỉnh được xếp ngược chiều kim đồng hồ, bắt đầu từ đỉnh dưới bên trái. Mỗi lần ra đề hình được sinh ngẫu nhiên, nhưng không vô tình mang tính chất của loại hình "mạnh hơn": hình bình hành không gần hình chữ nhật hay hình thoi, hình thang thường không gần hình thang cân hay hình thang vuông. Nhờ vậy học sinh không thể chỉ nhìn bằng mắt mà đoán ra loại hình. `marks` bật các ký hiệu vẽ sẵn theo loại hình: vạch cạnh bằng, mũi tên song song, góc vuông, cung góc bằng, đường chéo, vạch nửa đường chéo bằng. Hình vẽ chỉ để minh hoạ: số đo ghi trong `angleLabels` không nhất thiết đúng tỉ lệ.
+
+**Mẫu câu có tham số.** Khai báo `vars` rồi dùng `{a}` hoặc `{=biểu thức}` trong mọi chuỗi. Mỗi lần ra đề, app thay một bộ số mới vào:
+
+```json
+{
+  "id": "kbdd-t01", "type": "fill-blank", "lesson": "7-08", "level": "NB",
+  "vars": { "a": [35, 145, 5] }, "where": ["a != 90"],
+  "stem": "Hai góc xOy và yOz kề bù. Biết góc xOy = {a}°. Góc yOz = {{}}°.",
+  "blanks": [{ "accept": ["{=180 - a}"] }],
+  "hints": ["Hai góc kề bù có tổng bằng 180°."],
+  "explanation": "yOz = 180° − {a}° = {=180 - a}°."
+}
+```
+
+`vars.a = [từ, đến, bước]`. `where` là danh sách điều kiện mà bộ số phải thoả; bộ số không thoả thì app bốc lại. Biểu thức chỉ được dùng số, tên biến, `+ - * / %`, ngoặc và phép so sánh.
+
+Sau khi thêm hoặc sửa câu hỏi, chạy lệnh dưới. Với mẫu câu, script thử thay số nhiều lần để bắt lỗi như phương án bị trùng hoặc biến chưa khai báo.
+
+```bash
+npm run validate-questions
+```
+
+---
+
 ## Cách thêm cấp độ mới
 
 1. **Tạo component cấp độ** trong `src/levels/`, ví dụ `Level8.jsx`.

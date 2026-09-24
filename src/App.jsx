@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Proportions, Ruler, Sigma, Spline, Users, MoveDiagonal, Scissors, Scale, Calculator,
+  Proportions, Ruler, Sigma, Spline, Users, MoveDiagonal, Scissors, Scale, Calculator, ClipboardCheck,
 } from 'lucide-react';
 import { Level1, Level2, Level3, Level4, Level6, Level7, Level8, Level9 } from './levels';
 import Level5 from './levels/Level5';
+import LessonTest from './levels/LessonTest';
 
 const LEVELS = [
   {
@@ -42,6 +43,10 @@ const LEVELS = [
   {
     id: '9', name: 'Tính góc tổng hợp', desc: 'Kề bù · đối đỉnh · phân giác · so le trong, đồng vị · tổng 3 góc tam giác · bài nhiều bước',
     icon: Calculator, component: Level9, color: 'text-neon-pink',
+  },
+  {
+    id: 'test', name: 'Luyện tập & kiểm tra theo bài', desc: 'Lớp 7 · Lớp 8 (SGK Kết nối tri thức) — có gợi ý, luyện lại câu sai',
+    icon: ClipboardCheck, component: LessonTest, color: 'text-neon-green',
   },
 ];
 

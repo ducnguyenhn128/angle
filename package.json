@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "validate-questions": "node scripts/validate-questions.js",
     "figures": "powershell -ExecutionPolicy Bypass -File figures-src\\build-figures.ps1"
   },
   "dependencies": {

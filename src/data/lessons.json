@@ -1,0 +1,169 @@
+[
+  {
+    "grade": "on",
+    "label": "Ôn nền tảng",
+    "chapters": [
+      {
+        "id": "on-6",
+        "name": "Kiến thức nền từ lớp 6",
+        "lessons": [
+          {
+            "id": "goc", "name": "Góc · Các loại góc",
+            "skills": ["goc.khai-niem", "goc.phan-loai", "goc.dem-goc", "goc.uoc-luong"],
+            "recap": [
+              "Góc xOy: đỉnh là O (chữ ở giữa), hai cạnh là tia Ox và tia Oy.",
+              "Góc nhọn: lớn hơn 0° và nhỏ hơn 90°.",
+              "Góc vuông: bằng 90°.",
+              "Góc tù: lớn hơn 90° và nhỏ hơn 180°.",
+              "Góc bẹt: bằng 180° (hai cạnh là hai tia đối nhau)."
+            ]
+          },
+          {
+            "id": "tia-duong-thang", "name": "Đường thẳng · Tia · Đoạn thẳng",
+            "skills": ["tia.tia-doi", "tia.thang-hang", "tia.doc-ten"],
+            "recap": [
+              "Đường thẳng không bị giới hạn về hai phía.",
+              "Tia Ox: bắt đầu tại gốc O, kéo dài mãi về một phía.",
+              "Đoạn thẳng AB: gồm hai điểm A, B và các điểm nằm giữa A và B.",
+              "Hai tia chung gốc tạo thành một đường thẳng gọi là hai tia đối nhau."
+            ]
+          },
+          {
+            "id": "vuong-goc", "name": "Đường vuông góc · Đường cao",
+            "skills": ["vuonggoc.nhan-biet", "vuonggoc.duong-cao"],
+            "recap": [
+              "Hai đường thẳng vuông góc cắt nhau tạo thành góc vuông (ký hiệu ⊥, trên hình có dấu góc vuông).",
+              "Đường cao của tam giác: đoạn vuông góc kẻ từ một đỉnh xuống đường thẳng chứa cạnh đối diện."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 7,
+    "label": "Lớp 7",
+    "chapters": [
+      {
+        "id": "7-III",
+        "name": "Chương III. Góc và đường thẳng song song",
+        "lessons": [
+          {
+            "id": "7-08", "name": "Bài 8. Góc ở vị trí đặc biệt. Tia phân giác của một góc",
+            "skills": ["kebu.dinh-nghia", "kebu.tinh-goc", "doidinh.dinh-nghia", "doidinh.tinh-chat", "phangiac.dinh-nghia", "phangiac.tinh-goc"],
+            "recap": [
+              "Hai góc kề bù: có một cạnh chung, hai cạnh còn lại là hai tia đối nhau. Tổng = 180°.",
+              "Hai góc đối đỉnh: mỗi cạnh của góc này là tia đối của một cạnh của góc kia. Hai góc đối đỉnh bằng nhau.",
+              "Tia phân giác Oz của góc xOy: Oz nằm giữa Ox, Oy và xOz = zOy = xOy : 2."
+            ]
+          },
+          { "id": "7-09", "name": "Bài 9. Hai đường thẳng song song và dấu hiệu nhận biết", "skills": ["songsong.cap-goc", "songsong.dau-hieu"] },
+          {
+            "id": "7-10", "name": "Bài 10. Tiên đề Euclid. Tính chất của hai đường thẳng song song",
+            "skills": ["songsong.tien-de", "songsong.tinh-chat"],
+            "recap": [
+              "Nếu a ∥ b và đường thẳng c cắt cả a và b thì:",
+              "• Hai góc so le trong bằng nhau.",
+              "• Hai góc đồng vị bằng nhau.",
+              "• Hai góc trong cùng phía có tổng bằng 180°."
+            ]
+          },
+          { "id": "7-11", "name": "Bài 11. Định lí và chứng minh định lí", "skills": ["dinhli.gt-kl"] }
+        ]
+      },
+      {
+        "id": "7-IV",
+        "name": "Chương IV. Tam giác bằng nhau",
+        "lessons": [
+          {
+            "id": "7-12", "name": "Bài 12. Tổng các góc trong một tam giác",
+            "skills": ["tamgiac.tong-3-goc", "tamgiac.goc-ngoai"],
+            "recap": [
+              "Tổng ba góc trong một tam giác bằng 180°.",
+              "Tam giác vuông: hai góc nhọn có tổng bằng 90°."
+            ]
+          },
+          { "id": "7-13", "name": "Bài 13. Hai tam giác bằng nhau. Trường hợp bằng nhau thứ nhất (c.c.c)", "skills": ["tgbn.tuong-ung", "tgbn.ccc"] },
+          { "id": "7-14", "name": "Bài 14. Trường hợp bằng nhau thứ hai (c.g.c) và thứ ba (g.c.g)", "skills": ["tgbn.cgc", "tgbn.gcg"] },
+          { "id": "7-15", "name": "Bài 15. Các trường hợp bằng nhau của tam giác vuông", "skills": ["tgbn.vuong"] },
+          { "id": "7-16", "name": "Bài 16. Tam giác cân. Đường trung trực của đoạn thẳng", "skills": ["tgcan.tinh-chat", "trungtruc.tinh-chat"] }
+        ]
+      },
+      {
+        "id": "7-IX",
+        "name": "Chương IX. Quan hệ giữa các yếu tố trong một tam giác",
+        "lessons": [
+          { "id": "7-31", "name": "Bài 31. Quan hệ giữa góc và cạnh đối diện", "skills": ["qh.goc-canh"] },
+          { "id": "7-32", "name": "Bài 32. Quan hệ giữa đường vuông góc và đường xiên", "skills": ["qh.vuong-goc-xien"] },
+          { "id": "7-33", "name": "Bài 33. Quan hệ giữa ba cạnh của một tam giác", "skills": ["qh.bat-dang-thuc"] },
+          { "id": "7-34", "name": "Bài 34. Ba đường trung tuyến, ba đường phân giác", "skills": ["dongquy.trung-tuyen", "dongquy.phan-giac"] },
+          { "id": "7-35", "name": "Bài 35. Ba đường trung trực, ba đường cao", "skills": ["dongquy.trung-truc", "dongquy.duong-cao"] }
+        ]
+      },
+      {
+        "id": "7-X",
+        "name": "Chương X. Một số hình khối trong thực tiễn",
+        "lessons": [
+          { "id": "7-36", "name": "Bài 36. Hình hộp chữ nhật và hình lập phương", "skills": ["khoi.hop-chu-nhat", "khoi.lap-phuong"] },
+          { "id": "7-37", "name": "Bài 37. Hình lăng trụ đứng tam giác, lăng trụ đứng tứ giác", "skills": ["khoi.lang-tru"] }
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 8,
+    "label": "Lớp 8",
+    "chapters": [
+      {
+        "id": "8-III",
+        "name": "Chương III. Tứ giác",
+        "lessons": [
+          {
+            "id": "8-10", "name": "Bài 10. Tứ giác",
+            "skills": ["tugiac.khai-niem", "tugiac.tong-4-goc"],
+            "recap": [
+              "Tứ giác ABCD gồm 4 đoạn thẳng AB, BC, CD, DA, trong đó không có hai đoạn nào cùng nằm trên một đường thẳng.",
+              "Tứ giác lồi: luôn nằm về một phía của đường thẳng chứa bất kì cạnh nào.",
+              "Hai đỉnh cùng thuộc một cạnh là hai đỉnh kề (A và B). Hai đỉnh không kề là hai đỉnh đối (A và C).",
+              "Hai cạnh có chung một đỉnh là hai cạnh kề (AB và BC). Hai cạnh không kề là hai cạnh đối (AB và CD).",
+              "Đường chéo nối hai đỉnh đối: AC và BD.",
+              "Tổng các góc của một tứ giác bằng 360°."
+            ]
+          },
+          { "id": "8-11", "name": "Bài 11. Hình thang cân", "skills": ["hinhthang.dinh-nghia", "thangcan.tinh-chat", "thangcan.dau-hieu"] },
+          { "id": "8-12", "name": "Bài 12. Hình bình hành", "skills": ["hbh.dinh-nghia", "hbh.tinh-chat", "hbh.dau-hieu"] },
+          { "id": "8-13", "name": "Bài 13. Hình chữ nhật", "skills": ["hcn.dinh-nghia", "hcn.tinh-chat", "hcn.dau-hieu", "hcn.trung-tuyen-vuong"] },
+          { "id": "8-14", "name": "Bài 14. Hình thoi và hình vuông", "skills": ["thoi.tinh-chat", "thoi.dau-hieu", "vuong.tinh-chat", "vuong.dau-hieu"] }
+        ]
+      },
+      {
+        "id": "8-IV",
+        "name": "Chương IV. Định lí Thalès",
+        "lessons": [
+          { "id": "8-15", "name": "Bài 15. Định lí Thalès trong tam giác", "skills": ["thales.dinh-li"] },
+          { "id": "8-16", "name": "Bài 16. Đường trung bình của tam giác", "skills": ["trungbinh.tinh-chat"] },
+          { "id": "8-17", "name": "Bài 17. Tính chất đường phân giác của tam giác", "skills": ["phangiac-tg.tinh-chat"] }
+        ]
+      },
+      {
+        "id": "8-IX",
+        "name": "Chương IX. Tam giác đồng dạng",
+        "lessons": [
+          { "id": "8-33", "name": "Bài 33. Hai tam giác đồng dạng", "skills": ["dongdang.khai-niem"] },
+          { "id": "8-34", "name": "Bài 34. Ba trường hợp đồng dạng của hai tam giác", "skills": ["dongdang.truong-hop"] },
+          { "id": "8-35", "name": "Bài 35. Định lí Pythagore và ứng dụng", "skills": ["pythagore.tinh-canh", "pythagore.dao"] },
+          { "id": "8-36", "name": "Bài 36. Các trường hợp đồng dạng của hai tam giác vuông", "skills": ["dongdang.vuong"] },
+          { "id": "8-37", "name": "Bài 37. Hình đồng dạng", "skills": ["dongdang.hinh"] }
+        ]
+      },
+      {
+        "id": "8-X",
+        "name": "Chương X. Một số hình khối trong thực tiễn",
+        "lessons": [
+          { "id": "8-38", "name": "Bài 38. Hình chóp tam giác đều", "skills": ["khoi.chop-tam-giac"] },
+          { "id": "8-39", "name": "Bài 39. Hình chóp tứ giác đều", "skills": ["khoi.chop-tu-giac"] }
+        ]
+      }
+    ]
+  }
+]

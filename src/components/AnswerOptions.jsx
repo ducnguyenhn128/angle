@@ -32,7 +32,7 @@ export default function AnswerOptions({ options, phase, picked, onPick }) {
   );
 }
 
-export function Feedback({ phase, note, onNext }) {
+export function Feedback({ phase, note, onNext, nextLabel = 'Câu tiếp theo →' }) {
   if (phase === 'idle') return null;
   return (
     <motion.div
@@ -55,7 +55,7 @@ export function Feedback({ phase, note, onNext }) {
         onClick={onNext}
         className="shrink-0 px-5 py-2.5 rounded-lg bg-neon-blue/15 border border-neon-blue/40 text-neon-blue font-semibold hover:bg-neon-blue/25 transition-colors"
       >
-        Câu tiếp theo →
+        {nextLabel}
       </button>
     </motion.div>
   );
