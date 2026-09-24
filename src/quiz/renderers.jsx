@@ -44,7 +44,9 @@ function SingleChoice({ q, response, submitted, eliminated = [], onSubmit }) {
   );
 }
 
-function MultiChoice({ q, response = [], setResponse, submitted }) {
+function MultiChoice({ q, response: raw, setResponse, submitted }) {
+  // Câu mới bắt đầu với response = null (giá trị mặc định của tham số không áp dụng cho null)
+  const response = raw ?? [];
   const need = q.options.filter((o) => o.correct).length;
   const toggle = (i) =>
     setResponse(response.includes(i) ? response.filter((x) => x !== i) : [...response, i]);
@@ -85,7 +87,9 @@ function MultiChoice({ q, response = [], setResponse, submitted }) {
 }
 
 /** Điền vào chỗ trống: hiển thị stem kèm ô nhập tại vị trí {{}}. */
-function FillBlank({ q, response = [], setResponse, submitted, result, onSubmit }) {
+function FillBlank({ q, response: raw, setResponse, submitted, result, onSubmit }) {
+  // Câu mới bắt đầu với response = null (giá trị mặc định của tham số không áp dụng cho null)
+  const response = raw ?? [];
   const parts = q.stem.split(BLANK);
   const setAt = (i, v) => {
     const next = [...response];
@@ -137,7 +141,9 @@ function FillBlank({ q, response = [], setResponse, submitted, result, onSubmit 
 const PICK_WORD = { vertex: 'đỉnh', side: 'cạnh', diagonal: 'đường chéo', angle: 'góc' };
 
 /** Chạm vào hình: chọn đỉnh / cạnh / đường chéo / góc trên tứ giác. Chỉ 1 đáp án thì chạm là chấm luôn. */
-function Hotspot({ q, response = [], setResponse, submitted, onSubmit }) {
+function Hotspot({ q, response: raw, setResponse, submitted, onSubmit }) {
+  // Câu mới bắt đầu với response = null (giá trị mặc định của tham số không áp dụng cho null)
+  const response = raw ?? [];
   const need = q.answers.length;
   const onPick = (id) => {
     if (need === 1) {

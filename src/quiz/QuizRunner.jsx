@@ -130,7 +130,7 @@ export default function QuizRunner({ questions, mode = 'test', onQuit, onFinish 
         )}
 
         <Render
-          key={idx}
+          key={`q-${idx}`}
           q={q}
           response={response}
           setResponse={setResponse}
@@ -142,7 +142,7 @@ export default function QuizRunner({ questions, mode = 'test', onQuit, onFinish 
 
         {retrying && (
           <motion.p
-            key={tries}
+            key={`retry-${tries}`}
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center text-sm font-semibold text-orange-300"
