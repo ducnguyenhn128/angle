@@ -1,6 +1,6 @@
 # Tiến độ: Luyện tập & kiểm tra theo bài
 
-Cập nhật: 24/09/2026 · Nhánh: `feature/cau-hoi-theo-bai` (đã push, **chưa gộp vào `master`**)
+Cập nhật: 25/09/2026 · Nhánh: `master` (đã gộp từ `feature/cau-hoi-theo-bai`)
 
 **Đối tượng:** học sinh trung bình và yếu, lớp 7 và lớp 8. Lớp 8 tập trung vào chương **Tứ giác**.
 **Sách giáo khoa:** Kết nối tri thức với cuộc sống.
@@ -22,6 +22,7 @@ Cập nhật: 24/09/2026 · Nhánh: `feature/cau-hoi-theo-bai` (đã push, **ch�
 | Hình tứ giác vẽ từ dữ liệu | `QuadFigure` vẽ 9 loại hình: tứ giác, hình thang, hình thang vuông, hình thang cân, HBH, HCN, hình thoi, hình vuông, hình cánh diều. Ký hiệu bật theo nhóm: cạnh bằng, song song, góc vuông, góc bằng, đường chéo, nửa đường chéo bằng. Có nhãn số đo, nhãn độ dài, tô màu nổi bật. Hình sinh ngẫu nhiên nhưng **không vô tình mang tính chất của loại hình "mạnh hơn"** (đã kiểm tra 2000 lần cho mỗi loại) |
 | Dùng lại các level cũ | Câu có hình của Level 1–9 (loại góc, ước lượng, đếm góc, kề bù/đối đỉnh, phân giác, song song, tam giác) được trộn vào đề của bài tương ứng |
 | Kiểm tra ngân hàng câu | `npm run validate-questions`: kiểm tra đúng cấu trúc, id không trùng, hình có tồn tại; với mẫu câu thì **thử toàn bộ bộ số** để bắt phương án trùng hoặc biến chưa khai báo |
+| Chống trắng màn hình | Câu bị lỗi khi vẽ hoặc khi chấm hiện thông báo kèm nút **"Bỏ qua câu này"**; câu bỏ qua không tính điểm. Câu lỗi ngay lúc tạo đề thì bị loại khỏi đề. Nếu mọi câu đều lỗi thì quay về màn chọn đề |
 
 ### 1.2 Nội dung: 134 câu (trong đó 26 mẫu câu có tham số)
 
@@ -48,18 +49,23 @@ Nội dung chương Tứ giác:
 |---|---|
 | `a05538a` | Khung Luyện tập & kiểm tra, 5 dạng câu, `QuadFigure`, Bài 10 lớp 8 |
 | `eb120ab` | Nội dung Bài 11–14 lớp 8, sửa nhãn trên hình |
-| *(chưa commit)* | Sửa 2 lỗi trong `src/quiz/renderers.jsx` và `src/quiz/QuizRunner.jsx` (xem mục 2.1) |
+| `e39bdcd` | Sửa lỗi trắng màn hình (điền chỗ trống / chọn nhiều / chạm vào hình) và lỗi mất phương án ở chế độ Luyện tập |
+| *(commit Bước 0)* | Error boundary cho từng câu, bỏ qua câu lỗi khi tạo đề |
 
 ---
 
 ## 2. Chưa làm được / còn tồn tại
 
-### 2.1 Lỗi đã sửa nhưng chưa commit, chưa kiểm tra xong
+### 2.1 Kiểm thử tự động (25/09/2026)
 
-| Lỗi | Tình trạng |
-|---|---|
-| Câu **điền chỗ trống / chọn nhiều / chạm vào hình** làm trắng màn hình ngay khi hiện ra. Đây là lý do "Bài 12 không ra câu hỏi" | Đã sửa. Đã chạy thử tự động cả 11 bài ở chế độ **Kiểm tra** (20 câu mỗi bài, đủ 5 dạng): không còn lỗi |
-| Ở chế độ **Luyện tập**, sau khi trả lời sai có thể **mất các phương án** và bị kẹt (hai phần tử cùng cấp trùng khoá React) | Đã sửa, **chưa chạy lại test Luyện tập** |
+Đã chạy tự động toàn bộ 11 bài có câu hỏi, đề 20 câu, trả lời ngẫu nhiên, sau đó bấm "Luyện lại câu sai":
+
+| Chế độ | Số vòng | Số câu đã làm | Lần làm lại (sai lần 1) | Kết quả |
+|---|---|---|---|---|
+| Luyện tập | 4 | 1 188 | 947 | Không trắng màn hình, không mất phương án, không bị kẹt, không lỗi console |
+| Kiểm tra | 2 | 687 | — | Không lỗi |
+
+Cả 5 dạng câu đều được làm tới. Đã thử cài lỗi giả vào câu hỏi: câu lỗi hiện nút "Bỏ qua câu này", đề vẫn chạy tiếp tới màn kết quả.
 
 ### 2.2 Chưa làm
 
@@ -77,19 +83,17 @@ Nội dung chương Tứ giác:
 - **Tỉ lệ mức độ ở chương Tứ giác** là NB 44 · TH 50 · VD 2, lệch về TH so với mục tiêu NB 50% · TH 35% · VD 15%. Nguyên nhân là các câu "dấu hiệu nhận biết" đang xếp vào TH. Cần giáo viên quyết định giữ nhãn hay đổi, và có cần thêm câu VD 2 bước không.
 - **Số đo ghi trên hình không đúng tỉ lệ** (giống hình minh hoạ trong sách). Nếu học sinh yếu bị rối, có thể đổi sang cách dựng hình trước rồi lấy số đo thật từ hình để ra đề.
 - **Câu sinh tự động từ level cũ** chưa có gợi ý và chưa gắn mức độ. Bộ lọc mức độ không áp dụng cho các câu này.
-- Chưa có **error boundary**: một câu bị lỗi hiển thị sẽ làm trắng cả màn hình, thay vì chỉ bỏ qua câu đó.
 - **Giáo viên chưa duyệt** nội dung 134 câu.
-- Nhánh chưa được gộp vào `master`, nên bản trên Netlify (nếu deploy từ `master`) chưa có tính năng này.
 
 ---
 
 ## 3. Kế hoạch tiếp theo
 
-### Bước 0: Chốt phần đang dở (ngay)
-1. Chạy lại test tự động ở chế độ Luyện tập, gồm cả "Luyện lại câu sai", cho mọi bài.
-2. Thêm error boundary: câu lỗi hiện thông báo và nút "Bỏ qua câu này".
-3. Chạy lint, build, `validate-questions`, rồi commit và push.
-4. Giáo viên thử trên trình duyệt thật và duyệt nội dung chương Tứ giác. Sau đó tạo pull request và gộp vào `master`.
+### Bước 0: Chốt phần đang dở
+1. ~~Chạy lại test tự động ở chế độ Luyện tập, gồm cả "Luyện lại câu sai", cho mọi bài.~~ Xong (mục 2.1).
+2. ~~Thêm error boundary: câu lỗi hiện thông báo và nút "Bỏ qua câu này".~~ Xong.
+3. ~~Chạy lint, build, `validate-questions`, rồi commit và push.~~ Xong.
+4. **Còn lại:** giáo viên thử trên trình duyệt thật và duyệt nội dung chương Tứ giác.
 
 ### Bước 1: Hoàn thiện chương Tứ giác theo góp ý của giáo viên
 - Chỉnh nhãn mức độ; thêm 1–2 câu VD cho mỗi bài (tính 2 bước).
@@ -132,6 +136,7 @@ Chương IV (Thalès, đường trung bình), chương IX (Pythagore, tam giác 
 | `src/quiz/types.js` | Chấm điểm, validate, mẫu câu có tham số |
 | `src/quiz/shapes.js`, `src/components/QuadFigure.jsx` | Sinh toạ độ và vẽ tứ giác |
 | `src/quiz/renderers.jsx`, `src/quiz/QuizRunner.jsx` | Giao diện từng dạng câu, màn làm bài |
+| `src/quiz/QuestionErrorBoundary.jsx` | Bắt lỗi từng câu, nút "Bỏ qua câu này" |
 | `src/levels/LessonTest.jsx` | Màn chọn đề và màn kết quả |
 | `src/quiz/bank.js` | Nạp ngân hàng câu, gắn generator của các level cũ |
 | `scripts/validate-questions.js` | Script `npm run validate-questions` |

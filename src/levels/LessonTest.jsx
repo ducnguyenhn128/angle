@@ -265,7 +265,8 @@ export default function LessonTest({ onQuit }) {
         onQuit={() => setStage('setup')}
         onFinish={(res) => {
           setResults(res);
-          setStage('result');
+          // Mọi câu đều bị bỏ qua vì lỗi thì không có gì để chấm
+          setStage(res.length ? 'result' : 'setup');
         }}
       />
     );

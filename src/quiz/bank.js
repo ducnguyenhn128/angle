@@ -46,6 +46,16 @@ export function availableCount(config) {
   return BANK.filter((q) => inConfig(q, config)).length;
 }
 
+/** Chạy hàm tạo câu; câu bị lỗi (mẫu câu sai, generator hỏng) thì bỏ qua thay vì làm hỏng cả đề. */
+function safely(make, label) {
+  try {
+    return make();
+  } catch (err) {
+    console.error(`[quiz] Không tạo được câu ${label}:`, err);
+    return null;
+  }
+}
+
 /**
  * Tạo đề: trộn câu trong ngân hàng (lọc theo bài + dạng + mức độ) với câu sinh tự động (dạng mcq).
  * Trả về mảng câu đã prepare, có thể ít hơn count nếu không đủ nguồn.
@@ -58,12 +68,16 @@ export function buildTest(config) {
     : [];
 
   const nBank = Math.min(pool.length, gens.length ? Math.ceil(n * BANK_RATIO) : n);
-  const out = pool.slice(0, nBank).map(prepareQuestion);
+  const out = pool
+    .slice(0, nBank)
+    .map((q) => safely(() => prepareQuestion(q), q.id))
+    .filter(Boolean);
 
   const seen = new Set();
   for (let tries = 0; gens.length && out.length < n && tries < n * 5; tries++) {
     const [lesson, gen] = gens[Math.floor(Math.random() * gens.length)];
-    const q = fromLegacy(gen(), lesson, gen);
+    const q = safely(() => fromLegacy(gen(), lesson, gen), `sinh tự động (${lesson})`);
+    if (!q) continue;
     // Kho hình có thể lặp lại khi đề dài — bỏ câu trùng
     if (q.id && seen.has(q.id)) continue;
     seen.add(q.id);
