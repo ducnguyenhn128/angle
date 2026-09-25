@@ -206,5 +206,96 @@
     "blanks": [{"accept": ["{a}"]}],
     "hints": ["So sánh OA và OB (nhìn các vạch trên hình).", "Tam giác OAB cân tại O thì hai góc ở đáy bằng nhau."],
     "explanation": "Hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường nên OA = OB. Tam giác OAB cân tại O, suy ra góc OBA = góc OAB = {a}°."
+  },
+  {
+    "id": "hcn-018",
+    "type": "mcq",
+    "lesson": "8-13",
+    "skills": ["hcn.dinh-nghia"],
+    "level": "NB",
+    "stem": "Hình chữ nhật là tứ giác có …",
+    "options": ["Bốn góc vuông", "Bốn cạnh bằng nhau", "Hai đường chéo vuông góc", "Một góc vuông"],
+    "answer": 0,
+    "explanation": "Định nghĩa: hình chữ nhật là tứ giác có bốn góc vuông."
+  },
+  {
+    "id": "hcn-019",
+    "type": "true-false",
+    "lesson": "8-13",
+    "skills": ["hcn.dinh-nghia"],
+    "level": "NB",
+    "shape": {"kind": "hcn", "marks": ["right", "parallel"]},
+    "stem": "Hình chữ nhật cũng là hình bình hành.",
+    "answer": true,
+    "explanation": "Đúng. Hình chữ nhật có các cạnh đối song song nên là hình bình hành. Vì thế hình chữ nhật có mọi tính chất của hình bình hành."
+  },
+  {
+    "id": "hcn-020",
+    "type": "true-false",
+    "lesson": "8-13",
+    "skills": ["hcn.tinh-chat"],
+    "level": "NB",
+    "shape": {"kind": "hcn", "marks": ["right", "diagonals", "diag-marks"], "center": "O"},
+    "stem": "Trong hình chữ nhật, hai đường chéo cắt nhau tại trung điểm của mỗi đường.",
+    "answer": true,
+    "explanation": "Đúng. Hình chữ nhật có hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường."
+  },
+  {
+    "id": "hcn-021",
+    "type": "true-false",
+    "lesson": "8-13",
+    "skills": ["hcn.tinh-chat"],
+    "level": "TH",
+    "shape": {"kind": "hcn", "marks": ["right", "diagonals"]},
+    "stem": "Hai đường chéo của hình chữ nhật luôn vuông góc với nhau.",
+    "answer": false,
+    "hints": ["Nhìn hình: AC và BD có tạo thành góc vuông không?"],
+    "explanation": "Sai. Hai đường chéo của hình chữ nhật BẰNG nhau, nhưng thường không vuông góc. Hình chữ nhật có hai đường chéo vuông góc là hình vuông."
+  },
+  {
+    "id": "hcn-022",
+    "type": "true-false",
+    "lesson": "8-13",
+    "skills": ["hcn.dau-hieu"],
+    "level": "TH",
+    "shape": {"kind": "thang-vuong", "marks": ["parallel", "right"]},
+    "stem": "Tứ giác có một góc vuông là hình chữ nhật.",
+    "answer": false,
+    "hints": ["Quan sát hình: tứ giác này có góc vuông. Nó có phải hình chữ nhật không?"],
+    "explanation": "Sai. Hình thang vuông trên hình có góc vuông nhưng không phải hình chữ nhật. Cần thêm điều kiện: HÌNH BÌNH HÀNH có một góc vuông, hoặc HÌNH THANG CÂN có một góc vuông, thì mới là hình chữ nhật."
+  },
+  {
+    "id": "hcn-023",
+    "type": "true-false",
+    "lesson": "8-13",
+    "skills": ["hcn.dau-hieu"],
+    "level": "NB",
+    "stem": "Tứ giác có ba góc vuông là hình chữ nhật.",
+    "answer": true,
+    "hints": ["Tính góc thứ tư: 360° − 3 · 90° = ?"],
+    "explanation": "Đúng. Ba góc vuông có tổng 270° nên góc thứ tư bằng 360° − 270° = 90°. Tứ giác có bốn góc vuông là hình chữ nhật."
+  },
+  {
+    "id": "hcn-024",
+    "type": "multi-select",
+    "lesson": "8-13",
+    "skills": ["hcn.dau-hieu"],
+    "level": "TH",
+    "stem": "Chọn các dấu hiệu nhận biết HÌNH CHỮ NHẬT.",
+    "options": ["Hình bình hành có một góc vuông", "Hình thang cân có một góc vuông", "Hình bình hành có hai đường chéo bằng nhau", "Tứ giác có hai đường chéo bằng nhau"],
+    "answers": [0, 1, 2],
+    "hints": ["Dấu hiệu nào bắt đầu bằng “tứ giác” mà thiếu điều kiện?"],
+    "explanation": "Ba dấu hiệu đầu đều đúng. “Tứ giác có hai đường chéo bằng nhau” chưa đủ, vì hình thang cân cũng có hai đường chéo bằng nhau."
+  },
+  {
+    "id": "hcn-025",
+    "type": "true-false",
+    "lesson": "8-13",
+    "skills": ["hcn.trung-tuyen-vuong"],
+    "level": "TH",
+    "stem": "Trong tam giác vuông, đường trung tuyến ứng với cạnh huyền bằng cạnh huyền.",
+    "answer": false,
+    "hints": ["Nhớ lại: trung tuyến ứng với cạnh huyền bằng bao nhiêu phần cạnh huyền?"],
+    "explanation": "Sai. Đường trung tuyến ứng với cạnh huyền bằng NỬA cạnh huyền. Ví dụ cạnh huyền 10 cm thì trung tuyến dài 5 cm."
   }
 ]

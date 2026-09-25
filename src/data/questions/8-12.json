@@ -238,5 +238,97 @@
     "blanks": [{"accept": ["60"]}, {"accept": ["120"]}],
     "hints": ["Góc A và góc B có tổng bằng 180°.", "A = 2 · B nên B + 2 · B = 3 · B = 180°."],
     "explanation": "A + B = 180° (hai góc kề cạnh AB). A = 2B nên 3B = 180°, B = 60°, A = 120°."
+  },
+  {
+    "id": "hbh-020",
+    "type": "mcq",
+    "lesson": "8-12",
+    "skills": ["hbh.dinh-nghia"],
+    "level": "NB",
+    "stem": "Hình bình hành là tứ giác có …",
+    "options": ["Các cạnh đối song song", "Bốn cạnh bằng nhau", "Bốn góc vuông", "Hai đường chéo bằng nhau"],
+    "answer": 0,
+    "explanation": "Định nghĩa: hình bình hành là tứ giác có các cạnh đối song song. (Bốn cạnh bằng nhau là hình thoi; bốn góc vuông là hình chữ nhật.)"
+  },
+  {
+    "id": "hbh-021",
+    "type": "multi-select",
+    "lesson": "8-12",
+    "skills": ["hbh.dinh-nghia"],
+    "level": "NB",
+    "shape": {"kind": "hbh", "marks": ["parallel"]},
+    "stem": "Hình bình hành ABCD. Chọn các cặp cạnh SONG SONG.",
+    "options": ["AB và CD", "AD và BC", "AB và BC", "AC và BD"],
+    "answers": [0, 1],
+    "explanation": "Các cạnh đối của hình bình hành song song: AB ∥ CD và AD ∥ BC. AB và BC cắt nhau tại B; AC và BD là hai đường chéo, cắt nhau."
+  },
+  {
+    "id": "hbh-022",
+    "type": "true-false",
+    "lesson": "8-12",
+    "skills": ["hbh.tinh-chat"],
+    "level": "NB",
+    "shape": {"kind": "hbh", "marks": ["angles"]},
+    "stem": "Trong hình bình hành, các góc đối bằng nhau.",
+    "answer": true,
+    "explanation": "Đúng. Hình bình hành ABCD có góc A = góc C, góc B = góc D."
+  },
+  {
+    "id": "hbh-023",
+    "type": "true-false",
+    "lesson": "8-12",
+    "skills": ["hbh.tinh-chat"],
+    "level": "NB",
+    "shape": {"kind": "hbh", "marks": ["sides"]},
+    "stem": "Trong hình bình hành, các cạnh đối bằng nhau.",
+    "answer": true,
+    "explanation": "Đúng. Hình bình hành ABCD có AB = CD, AD = BC."
+  },
+  {
+    "id": "hbh-024",
+    "type": "true-false",
+    "lesson": "8-12",
+    "skills": ["hbh.tinh-chat"],
+    "level": "TH",
+    "shape": {"kind": "hbh", "marks": ["diagonals"]},
+    "stem": "Hình bình hành luôn có hai đường chéo vuông góc với nhau.",
+    "answer": false,
+    "hints": ["Nhìn hình: góc tạo bởi AC và BD có phải góc vuông không?"],
+    "explanation": "Sai. Hai đường chéo của hình bình hành cắt nhau tại trung điểm mỗi đường, nhưng thường không vuông góc. Hình bình hành có hai đường chéo vuông góc là hình thoi."
+  },
+  {
+    "id": "hbh-025",
+    "type": "true-false",
+    "lesson": "8-12",
+    "skills": ["hbh.dinh-nghia"],
+    "level": "TH",
+    "shape": {"kind": "hbh", "marks": ["parallel"]},
+    "stem": "Hình bình hành cũng là một hình thang.",
+    "answer": true,
+    "hints": ["Nhắc lại: hình thang cần có mấy cặp cạnh đối song song?"],
+    "explanation": "Đúng. Hình thang là tứ giác có hai cạnh đối song song. Hình bình hành có AB ∥ CD nên cũng là hình thang (và còn có thêm AD ∥ BC)."
+  },
+  {
+    "id": "hbh-026",
+    "type": "true-false",
+    "lesson": "8-12",
+    "skills": ["hbh.dau-hieu"],
+    "level": "TH",
+    "stem": "Tứ giác có hai cạnh đối vừa song song vừa bằng nhau là hình bình hành.",
+    "answer": true,
+    "hints": ["Xem lại các dấu hiệu nhận biết hình bình hành trong thẻ “Nhắc lại kiến thức”."],
+    "explanation": "Đúng. Đây là một dấu hiệu nhận biết hình bình hành, ví dụ AB ∥ CD và AB = CD."
+  },
+  {
+    "id": "hbh-027",
+    "type": "true-false",
+    "lesson": "8-12",
+    "skills": ["hbh.dau-hieu"],
+    "level": "TH",
+    "shape": {"kind": "dieu", "extra": [{"t": "arc", "at": "B", "n": 1}, {"t": "arc", "at": "D", "n": 1}]},
+    "stem": "Tứ giác có MỘT cặp góc đối bằng nhau là hình bình hành.",
+    "answer": false,
+    "hints": ["Quan sát hình: góc B = góc D. Các cạnh đối có song song không?"],
+    "explanation": "Sai. Tứ giác trên hình có góc B = góc D nhưng không phải hình bình hành. Dấu hiệu đúng là: CÁC góc đối bằng nhau (cả hai cặp: góc A = góc C và góc B = góc D)."
   }
 ]

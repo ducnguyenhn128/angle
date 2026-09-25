@@ -200,5 +200,97 @@
     "blanks": [{"accept": ["{=360 - 2 * a - c}"]}],
     "hints": ["Góc A và góc B đều bằng {a}°.", "D = 360° − ({a}° + {a}° + {c}°)."],
     "explanation": "D = 360° − ({a}° + {a}° + {c}°) = 360° − {=2 * a + c}° = {=360 - 2 * a - c}°."
+  },
+  {
+    "id": "tg-014",
+    "type": "true-false",
+    "lesson": "8-10",
+    "skills": ["tugiac.khai-niem"],
+    "level": "NB",
+    "shape": {"kind": "tu-giac", "marks": ["diagonals"]},
+    "stem": "Tứ giác ABCD có hai đường chéo là AC và BD.",
+    "answer": true,
+    "explanation": "Đúng. Đường chéo nối hai đỉnh đối nhau: A với C, B với D."
+  },
+  {
+    "id": "tg-015",
+    "type": "true-false",
+    "lesson": "8-10",
+    "skills": ["tugiac.khai-niem"],
+    "level": "NB",
+    "shape": {"kind": "tu-giac", "highlight": ["AB", "BC"]},
+    "stem": "Trong tứ giác ABCD, AB và BC là hai cạnh đối nhau.",
+    "answer": false,
+    "hints": ["Hai cạnh có chung một đỉnh thì gọi là gì?"],
+    "explanation": "Sai. AB và BC có chung đỉnh B nên là hai cạnh KỀ nhau. Cạnh đối của AB là CD."
+  },
+  {
+    "id": "tg-016",
+    "type": "mcq",
+    "lesson": "8-10",
+    "skills": ["tugiac.khai-niem"],
+    "level": "NB",
+    "shape": {"kind": "tu-giac", "marks": ["diagonals"]},
+    "stem": "Đoạn thẳng nối hai đỉnh ĐỐI nhau của một tứ giác gọi là gì?",
+    "options": ["Đường chéo", "Cạnh", "Cạnh đáy", "Đường cao"],
+    "answer": 0,
+    "explanation": "Đoạn thẳng nối hai đỉnh đối nhau là đường chéo. Tứ giác ABCD có hai đường chéo AC và BD."
+  },
+  {
+    "id": "tg-017",
+    "type": "multi-select",
+    "lesson": "8-10",
+    "skills": ["tugiac.khai-niem"],
+    "level": "NB",
+    "shape": {"kind": "tu-giac"},
+    "stem": "Tứ giác ABCD. Chọn các cặp cạnh KỀ nhau.",
+    "options": ["AB và BC", "BC và CD", "AB và CD", "AD và BC"],
+    "answers": [0, 1],
+    "hints": ["Hai cạnh kề thì có chung một đỉnh."],
+    "explanation": "AB và BC chung đỉnh B, BC và CD chung đỉnh C nên là các cặp cạnh kề. AB và CD, AD và BC là các cặp cạnh đối."
+  },
+  {
+    "id": "tg-018",
+    "type": "mcq",
+    "lesson": "8-10",
+    "skills": ["tugiac.tong-4-goc"],
+    "level": "NB",
+    "stem": "Tổng các góc của một tứ giác bằng bao nhiêu?",
+    "options": ["360°", "180°", "90°", "540°"],
+    "answer": 0,
+    "explanation": "Tổng các góc của một tứ giác bằng 360°. (Tổng các góc của một tam giác mới là 180°.)"
+  },
+  {
+    "id": "tg-019",
+    "type": "true-false",
+    "lesson": "8-10",
+    "skills": ["tugiac.tong-4-goc"],
+    "level": "TH",
+    "stem": "Một tứ giác có thể có cả 4 góc đều là góc nhọn.",
+    "answer": false,
+    "hints": ["Tổng 4 góc của tứ giác bằng bao nhiêu?", "Nếu mỗi góc đều nhỏ hơn 90° thì tổng 4 góc nhỏ hơn bao nhiêu?"],
+    "explanation": "Sai. Mỗi góc nhọn nhỏ hơn 90° nên tổng 4 góc nhọn nhỏ hơn 4 · 90° = 360°. Nhưng tổng các góc của tứ giác phải bằng 360°."
+  },
+  {
+    "id": "tg-020",
+    "type": "true-false",
+    "lesson": "8-10",
+    "skills": ["tugiac.tong-4-goc"],
+    "level": "TH",
+    "stem": "Một tứ giác có thể có 3 góc nhọn.",
+    "answer": true,
+    "hints": ["Thử chọn ba góc bằng 80° rồi tính góc còn lại."],
+    "explanation": "Đúng. Ví dụ ba góc 80°, 80°, 80° thì góc còn lại bằng 360° − 240° = 120°."
+  },
+  {
+    "id": "tg-021",
+    "type": "true-false",
+    "lesson": "8-10",
+    "skills": ["tugiac.khai-niem"],
+    "level": "NB",
+    "shape": {"kind": "tu-giac"},
+    "stem": "Tứ giác lồi luôn nằm về một phía của đường thẳng chứa bất kì cạnh nào của nó.",
+    "answer": true,
+    "explanation": "Đúng. Đó chính là cách hiểu tứ giác lồi trong SGK."
   }
 ]

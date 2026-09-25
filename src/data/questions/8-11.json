@@ -246,5 +246,98 @@
     "answer": 0,
     "hints": ["Hai góc kề một cạnh bên của hình thang có tổng 180°."],
     "explanation": "Góc A và góc D kề cạnh bên AD nên A + D = 180°. D = 180° − 90° = 90°."
+  },
+  {
+    "id": "ht-021",
+    "type": "true-false",
+    "lesson": "8-11",
+    "skills": ["thangcan.tinh-chat"],
+    "level": "NB",
+    "shape": {"kind": "thang-can", "marks": ["parallel", "sides"]},
+    "stem": "Hình thang cân có hai cạnh bên bằng nhau.",
+    "answer": true,
+    "explanation": "Đúng. Trong hình thang cân ABCD (AB ∥ CD): AD = BC."
+  },
+  {
+    "id": "ht-022",
+    "type": "true-false",
+    "lesson": "8-11",
+    "skills": ["hinhthang.dinh-nghia"],
+    "level": "NB",
+    "shape": {"kind": "hinh-thang", "marks": ["parallel"]},
+    "stem": "Trong hình thang, hai góc kề một cạnh bên có tổng bằng 180°.",
+    "answer": true,
+    "explanation": "Đúng. Hai đáy song song nên hai góc kề một cạnh bên là hai góc trong cùng phía, có tổng 180°. Ví dụ góc A + góc D = 180°."
+  },
+  {
+    "id": "ht-023",
+    "type": "true-false",
+    "lesson": "8-11",
+    "skills": ["thangcan.tinh-chat"],
+    "level": "TH",
+    "shape": {"kind": "thang-can", "marks": ["parallel", "diagonals"]},
+    "stem": "Hình thang cân luôn có hai đường chéo vuông góc với nhau.",
+    "answer": false,
+    "hints": ["Nhìn hình: hai đường chéo có tạo thành góc vuông không?"],
+    "explanation": "Sai. Hình thang cân có hai đường chéo BẰNG nhau, nhưng thường không vuông góc."
+  },
+  {
+    "id": "ht-024",
+    "type": "mcq",
+    "lesson": "8-11",
+    "skills": ["thangcan.dinh-nghia"],
+    "level": "NB",
+    "stem": "Hình thang cân là hình thang có …",
+    "options": ["Hai góc kề một đáy bằng nhau", "Hai cạnh đáy bằng nhau", "Hai đường chéo vuông góc", "Một góc vuông"],
+    "answer": 0,
+    "explanation": "Định nghĩa: hình thang cân là hình thang có hai góc kề một đáy bằng nhau. (Hình thang có một góc vuông là hình thang vuông.)"
+  },
+  {
+    "id": "ht-025",
+    "type": "multi-select",
+    "lesson": "8-11",
+    "skills": ["thangcan.tinh-chat"],
+    "level": "TH",
+    "shape": {"kind": "thang-can", "marks": ["parallel"]},
+    "stem": "Hình thang cân ABCD (AB ∥ CD). Chọn các cặp góc BẰNG nhau.",
+    "options": ["Góc A và góc B", "Góc C và góc D", "Góc A và góc C", "Góc A và góc D"],
+    "answers": [0, 1],
+    "hints": ["Hai góc bằng nhau phải kề cùng một ĐÁY."],
+    "explanation": "Hai góc kề đáy AB bằng nhau (góc A = góc B), hai góc kề đáy CD bằng nhau (góc C = góc D). Góc A và góc D kề cạnh bên nên có tổng 180°."
+  },
+  {
+    "id": "ht-026",
+    "type": "true-false",
+    "lesson": "8-11",
+    "skills": ["hinhthang.dinh-nghia"],
+    "level": "TH",
+    "shape": {"kind": "thang-vuong", "marks": ["parallel", "right"]},
+    "stem": "Hình thang vuông luôn có ít nhất hai góc vuông.",
+    "answer": true,
+    "hints": ["Hai góc kề một cạnh bên có tổng bằng bao nhiêu?"],
+    "explanation": "Đúng. Nếu góc A = 90° thì góc D = 180° − 90° = 90° (hai góc kề cạnh bên AD có tổng 180°)."
+  },
+  {
+    "id": "ht-027",
+    "type": "mcq",
+    "lesson": "8-11",
+    "skills": ["thangcan.dau-hieu"],
+    "level": "TH",
+    "stem": "Tứ giác ABCD có AB ∥ CD và góc C = góc D. ABCD là hình gì?",
+    "options": ["Hình thang cân", "Hình thang vuông", "Hình bình hành", "Hình thoi"],
+    "answer": 0,
+    "hints": ["AB ∥ CD cho biết ABCD là hình gì?", "Góc C và góc D cùng kề đáy nào?"],
+    "explanation": "AB ∥ CD nên ABCD là hình thang. Hai góc kề đáy CD bằng nhau nên đó là hình thang cân."
+  },
+  {
+    "id": "ht-028",
+    "type": "true-false",
+    "lesson": "8-11",
+    "skills": ["thangcan.dau-hieu"],
+    "level": "TH",
+    "stem": "Tứ giác có hai đường chéo bằng nhau thì luôn là hình thang cân.",
+    "answer": false,
+    "hints": ["Đọc kĩ dấu hiệu trong SGK: bắt đầu bằng chữ “hình thang” hay “tứ giác”?"],
+    "explanation": "Sai. Dấu hiệu chỉ đúng với HÌNH THANG: hình thang có hai đường chéo bằng nhau là hình thang cân. Một tứ giác không có cạnh nào song song thì không phải hình thang."
   }
 ]

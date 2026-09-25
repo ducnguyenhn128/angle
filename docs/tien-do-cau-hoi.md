@@ -24,17 +24,17 @@ Cập nhật: 25/09/2026 · Nhánh: `master` (đã gộp từ `feature/cau-hoi-t
 | Kiểm tra ngân hàng câu | `npm run validate-questions`: kiểm tra đúng cấu trúc, id không trùng, hình có tồn tại; với mẫu câu thì **thử toàn bộ bộ số** để bắt phương án trùng hoặc biến chưa khai báo |
 | Chống trắng màn hình | Câu bị lỗi khi vẽ hoặc khi chấm hiện thông báo kèm nút **"Bỏ qua câu này"**; câu bỏ qua không tính điểm. Câu lỗi ngay lúc tạo đề thì bị loại khỏi đề. Nếu mọi câu đều lỗi thì quay về màn chọn đề |
 
-### 1.2 Nội dung: 134 câu (trong đó 26 mẫu câu có tham số)
+### 1.2 Nội dung: 179 câu (trong đó 26 mẫu câu có tham số)
 
 | Bài | Số câu | Mẫu câu | Dạng câu | Mức độ |
 |---|---|---|---|---|
 | Ôn nền tảng: Góc · Các loại góc | 12 | 0 | TN 3 · Đ/S 3 · Chọn nhiều 2 · Điền 4 | NB 8 · TH 4 |
 | Lớp 7, Bài 8: Góc ở vị trí đặc biệt. Tia phân giác | 26 | 3 | TN 8 · Đ/S 7 · Chọn nhiều 2 · Điền 9 | NB 16 · TH 7 · VD 3 |
-| Lớp 8, Bài 10: Tứ giác | 16 | 3 | Chạm 6 · TN 3 · Đ/S 3 · Chọn nhiều 1 · Điền 3 | NB 12 · TH 4 |
-| Lớp 8, Bài 11: Hình thang cân | 20 | 5 | Chạm 3 · TN 7 · Đ/S 5 · Chọn nhiều 1 · Điền 4 | NB 11 · TH 9 |
-| Lớp 8, Bài 12: Hình bình hành | 19 | 5 | Chạm 2 · TN 6 · Đ/S 4 · Chọn nhiều 2 · Điền 5 | NB 7 · TH 11 · VD 1 |
-| Lớp 8, Bài 13: Hình chữ nhật | 17 | 5 | Chạm 1 · TN 5 · Đ/S 4 · Chọn nhiều 2 · Điền 5 | NB 5 · TH 11 · VD 1 |
-| Lớp 8, Bài 14: Hình thoi và hình vuông | 24 | 5 | Chạm 1 · TN 7 · Đ/S 5 · Chọn nhiều 4 · Điền 7 | NB 9 · TH 15 |
+| Lớp 8, Bài 10: Tứ giác | 24 | 3 | Chạm 6 · TN 5 · Đ/S 8 · Chọn nhiều 2 · Điền 3 | NB 18 · TH 6 |
+| Lớp 8, Bài 11: Hình thang cân | 28 | 5 | Chạm 3 · TN 9 · Đ/S 10 · Chọn nhiều 2 · Điền 4 | NB 14 · TH 14 |
+| Lớp 8, Bài 12: Hình bình hành | 27 | 5 | Chạm 2 · TN 7 · Đ/S 10 · Chọn nhiều 3 · Điền 5 | NB 11 · TH 15 · VD 1 |
+| Lớp 8, Bài 13: Hình chữ nhật | 25 | 5 | Chạm 1 · TN 6 · Đ/S 10 · Chọn nhiều 3 · Điền 5 | NB 9 · TH 15 · VD 1 |
+| Lớp 8, Bài 14: Hình thoi và hình vuông | 37 | 5 | Chạm 1 · TN 9 · Đ/S 14 · Chọn nhiều 6 · Điền 7 | NB 14 · TH 23 |
 
 Các bài chỉ có câu sinh tự động từ level cũ (trắc nghiệm có hình, chưa có gợi ý): *Ôn nền tảng: Đường thẳng · Tia · Đoạn thẳng*, *Ôn nền tảng: Đường vuông góc · Đường cao*, *Lớp 7 Bài 10: Tiên đề Euclid*, *Lớp 7 Bài 12: Tổng các góc trong tam giác*.
 
@@ -42,6 +42,7 @@ Nội dung chương Tứ giác:
 - Mỗi bài theo 5 bước: nhận biết trên hình → định nghĩa → tính chất → tính toán 1–2 bước → dấu hiệu nhận biết.
 - Không dùng Pythagore hay đường trung bình, vì theo sách Kết nối tri thức hai phần này học sau chương Tứ giác.
 - Các ngộ nhận hay gặp đều có câu Đúng/Sai kèm **hình phản ví dụ**, ví dụ "hai đường chéo bằng nhau là HCN" đi kèm hình thang cân, "hai đường chéo vuông góc là hình thoi" đi kèm hình cánh diều.
+- **Bổ sung 25/09/2026 — 45 câu lý thuyết** (Đúng/Sai, trắc nghiệm định nghĩa, chọn nhiều tính chất/dấu hiệu), mức NB/TH, câu nào cũng có giải thích, câu TH có gợi ý. Nội dung: cạnh kề/đối, đường chéo; tổng 4 góc (4 góc nhọn, 3 góc nhọn); định nghĩa từng hình; tính chất đường chéo và góc; hình này có phải hình kia không; dấu hiệu nhận biết. Hình phản ví dụ mới: cánh diều cho "một cặp góc đối bằng nhau là HBH" và "hai cạnh kề bằng nhau là hình thoi"; hình thang vuông cho "một góc vuông là HCN".
 
 ### 1.3 Commit
 
@@ -80,10 +81,10 @@ Cả 5 dạng câu đều được làm tới. Đã thử cài lỗi giả vào 
 
 ### 2.3 Tồn tại cần cân nhắc
 
-- **Tỉ lệ mức độ ở chương Tứ giác** là NB 44 · TH 50 · VD 2, lệch về TH so với mục tiêu NB 50% · TH 35% · VD 15%. Nguyên nhân là các câu "dấu hiệu nhận biết" đang xếp vào TH. Cần giáo viên quyết định giữ nhãn hay đổi, và có cần thêm câu VD 2 bước không.
+- **Tỉ lệ mức độ ở chương Tứ giác** là NB 66 · TH 73 · VD 2 (sau khi thêm 45 câu lý thuyết thì NB tăng từ 46% lên 47%), vẫn lệch về TH so với mục tiêu NB 50% · TH 35% · VD 15%. Nguyên nhân là các câu "dấu hiệu nhận biết" đang xếp vào TH. Cần giáo viên quyết định giữ nhãn hay đổi, và có cần thêm câu VD 2 bước không.
 - **Số đo ghi trên hình không đúng tỉ lệ** (giống hình minh hoạ trong sách). Nếu học sinh yếu bị rối, có thể đổi sang cách dựng hình trước rồi lấy số đo thật từ hình để ra đề.
 - **Câu sinh tự động từ level cũ** chưa có gợi ý và chưa gắn mức độ. Bộ lọc mức độ không áp dụng cho các câu này.
-- **Giáo viên chưa duyệt** nội dung 134 câu.
+- **Giáo viên chưa duyệt** nội dung 179 câu.
 
 ---
 
