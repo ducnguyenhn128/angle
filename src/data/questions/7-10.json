@@ -1,0 +1,320 @@
+[
+  {
+    "id": "ss10-001",
+    "type": "mcq",
+    "lesson": "7-10",
+    "skills": ["songsong.tien-de"],
+    "level": "NB",
+    "stem": "Qua điểm M nằm ngoài đường thẳng a, có bao nhiêu đường thẳng song song với a?",
+    "options": ["Chỉ có một", "Hai", "Vô số", "Không có"],
+    "answer": 0,
+    "hints": ["Nhớ lại tiên đề Euclid."],
+    "explanation": "Theo tiên đề Euclid: qua một điểm ở ngoài một đường thẳng chỉ có một đường thẳng song song với đường thẳng đó."
+  },
+  {
+    "id": "ss10-002",
+    "type": "true-false",
+    "lesson": "7-10",
+    "skills": ["songsong.tien-de"],
+    "level": "NB",
+    "stem": "Qua một điểm ở ngoài một đường thẳng có vô số đường thẳng song song với đường thẳng đó.",
+    "answer": false,
+    "hints": ["Tiên đề Euclid nói có bao nhiêu đường thẳng song song?"],
+    "explanation": "Sai. Theo tiên đề Euclid, qua một điểm ở ngoài một đường thẳng chỉ có MỘT đường thẳng song song với đường thẳng đó. (Có vô số đường thẳng đi qua điểm đó, nhưng chỉ một đường song song.)"
+  },
+  {
+    "id": "ss10-003",
+    "type": "true-false",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "NB",
+    "stem": "Nếu một đường thẳng cắt hai đường thẳng song song thì hai góc so le trong bằng nhau.",
+    "answer": true,
+    "explanation": "Đúng. Đây là tính chất của hai đường thẳng song song."
+  },
+  {
+    "id": "ss10-004",
+    "type": "true-false",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "NB",
+    "stem": "Nếu một đường thẳng cắt hai đường thẳng song song thì hai góc đồng vị bù nhau (tổng bằng 180°).",
+    "answer": false,
+    "hints": ["Hai góc đồng vị thì bằng nhau hay bù nhau?"],
+    "explanation": "Sai. Hai góc đồng vị thì BẰNG nhau. Cặp góc bù nhau (tổng 180°) là cặp góc trong cùng phía."
+  },
+  {
+    "id": "ss10-005",
+    "type": "true-false",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "stem": "Nếu một đường thẳng cắt hai đường thẳng song song thì hai góc trong cùng phía bằng nhau.",
+    "answer": false,
+    "hints": ["Cặp góc trong cùng phía bằng nhau hay có tổng 180°?"],
+    "explanation": "Sai. Hai góc trong cùng phía thì BÙ nhau (tổng bằng 180°). Chúng chỉ bằng nhau trong trường hợp đặc biệt khi cả hai đều bằng 90°."
+  },
+  {
+    "id": "ss10-006",
+    "type": "true-false",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "NB",
+    "stem": "Hai đường thẳng phân biệt cùng song song với một đường thẳng thứ ba thì song song với nhau.",
+    "answer": true,
+    "explanation": "Đúng. Nếu a ∥ c và b ∥ c (a, b phân biệt) thì a ∥ b."
+  },
+  {
+    "id": "ss10-007",
+    "type": "true-false",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "stem": "Cho a ∥ b. Nếu đường thẳng c vuông góc với a thì c cũng vuông góc với b.",
+    "answer": true,
+    "hints": ["c ⊥ a tạo góc 90°. Góc đồng vị với nó tại b bằng bao nhiêu?"],
+    "explanation": "Đúng. c ⊥ a nên góc tạo bởi c và a bằng 90°. Vì a ∥ b nên góc đồng vị tại b cũng bằng 90°, tức là c ⊥ b."
+  },
+  {
+    "id": "ss10-008",
+    "type": "true-false",
+    "lesson": "7-10",
+    "skills": ["songsong.tien-de"],
+    "level": "TH",
+    "stem": "Cho a ∥ b. Một đường thẳng c cắt a thì c có thể không cắt b.",
+    "answer": false,
+    "hints": ["Nếu c không cắt b thì c ∥ b. Khi đó qua giao điểm của c và a có mấy đường thẳng song song với b?"],
+    "explanation": "Sai. Nếu c không cắt b thì c ∥ b. Khi đó qua giao điểm của c và a có hai đường thẳng a và c cùng song song với b, trái với tiên đề Euclid. Vậy c phải cắt b."
+  },
+  {
+    "id": "ss10-009",
+    "type": "mcq",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "NB",
+    "figure": "parallel/pa01",
+    "stem": "Cho a ∥ b, đường thẳng c cắt a và b tại H và K. Hai góc được đánh dấu trên hình có quan hệ gì?",
+    "options": ["Bằng nhau", "Bù nhau (tổng 180°)", "Phụ nhau (tổng 90°)", "Không có quan hệ gì"],
+    "answer": 0,
+    "hints": ["Hai góc được đánh dấu là cặp góc so le trong."],
+    "explanation": "Hai góc được đánh dấu là cặp góc so le trong. Vì a ∥ b nên chúng bằng nhau."
+  },
+  {
+    "id": "ss10-010",
+    "type": "mcq",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "NB",
+    "figure": "parallel/pa02",
+    "stem": "Cho a ∥ b, đường thẳng c cắt a và b tại H và K. Hai góc được đánh dấu trên hình có quan hệ gì?",
+    "options": ["Bằng nhau", "Bù nhau (tổng 180°)", "Phụ nhau (tổng 90°)", "Không có quan hệ gì"],
+    "answer": 0,
+    "hints": ["Hai góc được đánh dấu là cặp góc đồng vị."],
+    "explanation": "Hai góc được đánh dấu là cặp góc đồng vị. Vì a ∥ b nên chúng bằng nhau."
+  },
+  {
+    "id": "ss10-011",
+    "type": "mcq",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "figure": "parallel/pa05",
+    "stem": "Cho a ∥ b, đường thẳng c cắt a và b tại H và K. Hai góc được đánh dấu trên hình có quan hệ gì?",
+    "options": ["Bù nhau (tổng 180°)", "Bằng nhau", "Phụ nhau (tổng 90°)", "Không có quan hệ gì"],
+    "answer": 0,
+    "hints": ["Hai góc được đánh dấu nằm giữa a và b, cùng một phía của c: đó là cặp góc gì?", "Một góc nhọn, một góc tù thì có bằng nhau được không?"],
+    "explanation": "Hai góc được đánh dấu là cặp góc trong cùng phía. Vì a ∥ b nên chúng bù nhau (tổng bằng 180°)."
+  },
+  {
+    "id": "ss10-012",
+    "type": "mcq",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "NB",
+    "stem": "Cho a ∥ b và c ⊥ a. Góc tạo bởi đường thẳng c và đường thẳng b bằng bao nhiêu?",
+    "options": ["90°", "180°", "45°", "0°"],
+    "answer": 0,
+    "hints": ["Một đường thẳng vuông góc với một trong hai đường thẳng song song thì nó cũng vuông góc với đường thẳng kia."],
+    "explanation": "Vì a ∥ b và c ⊥ a nên c ⊥ b. Góc tạo bởi c và b bằng 90°."
+  },
+  {
+    "id": "ss10-013",
+    "type": "mcq",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "stem": "Cho ba đường thẳng phân biệt a, b, c với a ∥ b và b ∥ c. Khẳng định nào đúng?",
+    "options": ["a ∥ c", "a ⊥ c", "a cắt c", "Chưa kết luận được"],
+    "answer": 0,
+    "hints": ["a và c cùng song song với đường thẳng nào?"],
+    "explanation": "a và c là hai đường thẳng phân biệt cùng song song với b, nên a ∥ c."
+  },
+  {
+    "id": "ss10-014",
+    "type": "multi-select",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "stem": "Cho a ∥ b, đường thẳng c cắt a và b. Chọn TẤT CẢ các khẳng định đúng.",
+    "options": [
+      "Hai góc so le trong bằng nhau",
+      "Hai góc đồng vị bằng nhau",
+      "Hai góc trong cùng phía bù nhau",
+      "Hai góc trong cùng phía bằng nhau",
+      "Hai góc đồng vị bù nhau"
+    ],
+    "answers": [0, 1, 2],
+    "hints": ["So le trong và đồng vị: BẰNG nhau. Trong cùng phía: BÙ nhau."],
+    "explanation": "Khi a ∥ b: hai góc so le trong bằng nhau, hai góc đồng vị bằng nhau, hai góc trong cùng phía bù nhau (tổng 180°)."
+  },
+  {
+    "id": "ss10-t01",
+    "type": "fill-blank",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "NB",
+    "vars": {"a": [35, 145, 5]},
+    "stem": "Cho a ∥ b, đường thẳng c cắt a và b. Một góc so le trong bằng {a}°. Góc so le trong còn lại bằng {{}}°.",
+    "blanks": [{"accept": ["{a}"]}],
+    "hints": ["a ∥ b thì hai góc so le trong bằng nhau."],
+    "explanation": "Vì a ∥ b nên hai góc so le trong bằng nhau: góc còn lại bằng {a}°."
+  },
+  {
+    "id": "ss10-t02",
+    "type": "fill-blank",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "NB",
+    "vars": {"a": [35, 145, 5]},
+    "stem": "Cho a ∥ b, đường thẳng c cắt a và b. Một góc bằng {a}°. Góc đồng vị với nó bằng {{}}°.",
+    "blanks": [{"accept": ["{a}"]}],
+    "hints": ["a ∥ b thì hai góc đồng vị bằng nhau."],
+    "explanation": "Vì a ∥ b nên hai góc đồng vị bằng nhau: góc cần tìm bằng {a}°."
+  },
+  {
+    "id": "ss10-t03",
+    "type": "fill-blank",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "vars": {"a": [35, 145, 5]},
+    "where": ["a != 90"],
+    "stem": "Cho a ∥ b, đường thẳng c cắt a và b. Một góc trong cùng phía bằng {a}°. Góc trong cùng phía còn lại bằng {{}}°.",
+    "blanks": [{"accept": ["{=180 - a}"]}],
+    "hints": ["a ∥ b thì hai góc trong cùng phía bù nhau (tổng 180°).", "Tính 180° − {a}°."],
+    "explanation": "Vì a ∥ b nên hai góc trong cùng phía bù nhau: góc còn lại bằng 180° − {a}° = {=180 - a}°."
+  },
+  {
+    "id": "ss10-t04",
+    "type": "mcq",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat", "kebu.tinh-goc"],
+    "level": "VD",
+    "vars": {"a": [40, 140, 5]},
+    "where": ["a != 90"],
+    "stem": "Cho a ∥ b, đường thẳng c cắt a tại A, cắt b tại B. Góc A₁ = {a}°, góc B₁ đồng vị với góc A₁. Góc B₂ kề bù với góc B₁. Tính góc B₂.",
+    "options": ["{=180 - a}°", "{a}°", "{=360 - a}°", "90°"],
+    "answer": 0,
+    "hints": ["Bước 1: B₁ đồng vị với A₁ nên B₁ = ?", "Bước 2: B₂ kề bù với B₁ nên B₂ = 180° − B₁."],
+    "explanation": "Vì a ∥ b nên B₁ = A₁ = {a}° (đồng vị). B₂ kề bù với B₁ nên B₂ = 180° − {a}° = {=180 - a}°."
+  },
+  {
+    "id": "ss10-t05",
+    "type": "fill-blank",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat", "doidinh.tinh-chat"],
+    "level": "VD",
+    "vars": {"a": [35, 145, 5]},
+    "where": ["a != 90"],
+    "stem": "Cho a ∥ b, đường thẳng c cắt a tại A, cắt b tại B. Góc A₁ = {a}°, góc B₁ và góc A₁ là cặp góc so le trong. Góc B₃ đối đỉnh với góc B₁. Vậy B₃ = {{}}°.",
+    "blanks": [{"accept": ["{a}"]}],
+    "hints": ["Bước 1: B₁ và A₁ so le trong nên B₁ = ?", "Bước 2: B₃ đối đỉnh với B₁ nên B₃ = B₁."],
+    "explanation": "Vì a ∥ b nên B₁ = A₁ = {a}° (so le trong). B₃ đối đỉnh với B₁ nên B₃ = B₁ = {a}°."
+  },
+  {
+    "id": "ss10-p4-01",
+    "type": "match",
+    "lesson": "7-10",
+    "skills": ["songsong.tien-de", "songsong.tinh-chat"],
+    "level": "NB",
+    "stem": "Nối mỗi điều đã cho với điều suy ra được.",
+    "pairs": [
+      {"left": "a ∥ b, c cắt a và b", "right": "Các cặp góc so le trong bằng nhau"},
+      {"left": "a ∥ b, c ⊥ a", "right": "c ⊥ b"},
+      {"left": "a ∥ c, b ∥ c (a, b phân biệt)", "right": "a ∥ b"},
+      {"left": "Điểm M nằm ngoài đường thẳng a", "right": "Qua M chỉ có một đường thẳng song song với a"}
+    ],
+    "extra": ["c ∥ b"],
+    "hints": ["Dòng cuối là tiên đề Euclid."],
+    "explanation": "a ∥ b, c cắt a, b → so le trong bằng nhau. a ∥ b, c ⊥ a → c ⊥ b. Hai đường thẳng cùng song song với đường thẳng thứ ba → song song với nhau. Qua điểm ngoài đường thẳng chỉ có một đường song song (tiên đề Euclid)."
+  },
+  {
+    "id": "ss10-p4-02",
+    "type": "classify",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "stem": "Cho a ∥ b, đường thẳng c cắt a và b. Mỗi cặp góc dưới đây bằng nhau hay bù nhau?",
+    "groups": ["Bằng nhau", "Bù nhau (tổng 180°)"],
+    "items": [
+      {"text": "Hai góc so le trong", "group": 0},
+      {"text": "Hai góc đồng vị", "group": 0},
+      {"text": "Hai góc đối đỉnh", "group": 0},
+      {"text": "Hai góc trong cùng phía", "group": 1},
+      {"text": "Hai góc kề bù", "group": 1}
+    ],
+    "hints": ["So le trong, đồng vị, đối đỉnh: bằng nhau.", "Trong cùng phía và kề bù: tổng 180°."],
+    "explanation": "Bằng nhau: so le trong, đồng vị (vì a ∥ b), đối đỉnh. Bù nhau: trong cùng phía (vì a ∥ b), kề bù."
+  },
+  {
+    "id": "ss10-p4-03",
+    "type": "order",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "vars": {"a": [40, 140, 5]},
+    "where": ["a != 90"],
+    "stem": "Cho a ∥ b, c cắt a tại A, cắt b tại B. Góc A₁ = {a}°, A₁ và B₁ là cặp góc trong cùng phía. Tính B₁. Sắp xếp các bước giải.",
+    "steps": [
+      "Vì a ∥ b",
+      "nên A₁ + B₁ = 180° (hai góc trong cùng phía).",
+      "Suy ra B₁ = 180° − {a}°",
+      "= {=180 - a}°."
+    ],
+    "hints": ["Bắt đầu bằng lý do (vì…), sau đó viết đẳng thức, cuối cùng mới thay số và tính."],
+    "explanation": "Vì a ∥ b nên A₁ + B₁ = 180° (hai góc trong cùng phía). Suy ra B₁ = 180° − {a}° = {=180 - a}°."
+  },
+  {
+    "id": "ss10-p4-04",
+    "type": "find-error",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "vars": {"a": [40, 80, 5]},
+    "stem": "Cho a ∥ b, c cắt a tại A, cắt b tại B. A₁ = {a}°, A₁ và B₁ là cặp góc đồng vị. Tính B₁. Bạn An giải như sau:",
+    "lines": [
+      "Vì a ∥ b và A₁, B₁ là hai góc đồng vị",
+      "nên A₁ + B₁ = 180°.",
+      "Suy ra B₁ = 180° − {a}° = {=180 - a}°."
+    ],
+    "answer": 1,
+    "hints": ["Khi a ∥ b, hai góc đồng vị bằng nhau hay bù nhau?"],
+    "explanation": "Dòng 2 sai: hai góc đồng vị thì BẰNG nhau, không phải có tổng 180°. Đúng là B₁ = A₁ = {a}°."
+  },
+  {
+    "id": "ss10-p4-05",
+    "type": "find-error",
+    "lesson": "7-10",
+    "skills": ["songsong.tinh-chat"],
+    "level": "TH",
+    "vars": {"a": [50, 80, 5]},
+    "stem": "Cho a ∥ b, c cắt a tại A, cắt b tại B. A₁ = {a}°, A₁ và B₁ là cặp góc trong cùng phía. Tính B₁. Bạn Bình giải như sau:",
+    "lines": [
+      "Vì a ∥ b nên hai góc trong cùng phía A₁ và B₁ bằng nhau.",
+      "Suy ra B₁ = A₁ = {a}°."
+    ],
+    "answer": 0,
+    "hints": ["Hai góc trong cùng phía thì bằng nhau hay có tổng 180°?"],
+    "explanation": "Dòng 1 sai: khi a ∥ b, hai góc trong cùng phía BÙ nhau. Đúng là B₁ = 180° − {a}° = {=180 - a}°."
+  }
+]

@@ -24,20 +24,22 @@ Cập nhật: 25/09/2026 · Nhánh: `master` (đã gộp từ `feature/cau-hoi-t
 | Kiểm tra ngân hàng câu | `npm run validate-questions`: kiểm tra đúng cấu trúc, id không trùng, hình có tồn tại; với mẫu câu thì **thử toàn bộ bộ số** để bắt phương án trùng hoặc biến chưa khai báo |
 | Chống trắng màn hình | Câu bị lỗi khi vẽ hoặc khi chấm hiện thông báo kèm nút **"Bỏ qua câu này"**; câu bỏ qua không tính điểm. Câu lỗi ngay lúc tạo đề thì bị loại khỏi đề. Nếu mọi câu đều lỗi thì quay về màn chọn đề |
 
-### 1.2 Nội dung: 229 câu (trong đó 44 mẫu câu có tham số)
+### 1.2 Nội dung: 273 câu (trong đó 52 mẫu câu có tham số)
 
 | Bài | Số câu | Mẫu câu | Dạng câu | Mức độ |
 |---|---|---|---|---|
 | Ôn nền tảng: Góc · Các loại góc | 14 | 0 | TN 3 · Đ/S 3 · Chọn nhiều 2 · Điền 4 · Phân loại 1 · Ghép nối 1 | NB 10 · TH 4 |
 | Lớp 7, Bài 8: Góc ở vị trí đặc biệt. Tia phân giác | 30 | 6 | TN 8 · Đ/S 7 · Chọn nhiều 2 · Điền 9 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 2 | NB 17 · TH 10 · VD 3 |
 | Lớp 7, Bài 9: Hai đường thẳng song song và dấu hiệu nhận biết *(26/09/2026)* | 26 | 8 | TN 10 · Đ/S 8 · Chọn nhiều 1 · Điền 2 · Phân loại 1 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 2 | NB 14 · TH 11 · VD 1 |
+| Lớp 7, Bài 10: Tiên đề Euclid. Tính chất của hai đường thẳng song song *(26/09/2026)* | 24 | 8 | TN 7 · Đ/S 7 · Chọn nhiều 1 · Điền 4 · Phân loại 1 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 2 | NB 11 · TH 11 · VD 2 |
+| Lớp 7, Bài 11: Định lí và chứng minh định lí *(26/09/2026)* | 20 | 0 | TN 6 · Đ/S 5 · Chọn nhiều 1 · Điền 1 · Phân loại 2 · Ghép nối 1 · Sắp xếp 2 · Tìm bước sai 2 | NB 8 · TH 12 |
 | Lớp 8, Bài 10: Tứ giác | 27 | 5 | Chạm 6 · TN 5 · Đ/S 8 · Chọn nhiều 2 · Điền 3 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 1 | NB 19 · TH 8 |
 | Lớp 8, Bài 11: Hình thang cân | 31 | 6 | Chạm 3 · TN 9 · Đ/S 10 · Chọn nhiều 2 · Điền 4 · Phân loại 1 · Sắp xếp 1 · Tìm bước sai 1 | NB 14 · TH 17 |
 | Lớp 8, Bài 12: Hình bình hành | 31 | 6 | Chạm 2 · TN 7 · Đ/S 10 · Chọn nhiều 3 · Điền 5 · Phân loại 1 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 1 | NB 12 · TH 18 · VD 1 |
 | Lớp 8, Bài 13: Hình chữ nhật | 28 | 6 | Chạm 1 · TN 6 · Đ/S 10 · Chọn nhiều 3 · Điền 5 · Phân loại 1 · Sắp xếp 1 · Tìm bước sai 1 | NB 9 · TH 18 · VD 1 |
 | Lớp 8, Bài 14: Hình thoi và hình vuông | 42 | 7 | Chạm 1 · TN 9 · Đ/S 14 · Chọn nhiều 6 · Điền 7 · Phân loại 1 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 2 | NB 16 · TH 26 |
 
-Các bài chỉ có câu sinh tự động từ level cũ (trắc nghiệm có hình, chưa có gợi ý): *Ôn nền tảng: Đường thẳng · Tia · Đoạn thẳng*, *Ôn nền tảng: Đường vuông góc · Đường cao*, *Lớp 7 Bài 10: Tiên đề Euclid*, *Lớp 7 Bài 12: Tổng các góc trong tam giác*.
+Các bài chỉ có câu sinh tự động từ level cũ (trắc nghiệm có hình, chưa có gợi ý): *Ôn nền tảng: Đường thẳng · Tia · Đoạn thẳng*, *Ôn nền tảng: Đường vuông góc · Đường cao*, *Lớp 7 Bài 12: Tổng các góc trong tam giác*.
 
 Nội dung chương Tứ giác:
 - Mỗi bài theo 5 bước: nhận biết trên hình → định nghĩa → tính chất → tính toán 1–2 bước → dấu hiệu nhận biết.
@@ -91,7 +93,7 @@ Cả 5 dạng câu đều được làm tới. Đã thử cài lỗi giả vào 
 - **Dạng câu:** đã đủ 4 dạng dự kiến (mục 1.4). Đã quyết định bỏ Assertion–Reason, bài nhiều ý và phản ví dụ mức VDC, vì không phù hợp học sinh yếu.
   - Mới có 1–2 câu mỗi dạng mới cho mỗi bài; chưa thử trên trình duyệt thật và điện thoại.
 - **Lớp 7:**
-  - Chưa có câu soạn sẵn cho Bài 10–11 (chương III), chương IV (Bài 13–16, tam giác bằng nhau), chương IX (Bài 31–35), chương X (Bài 36–37).
+  - Chương III đã đủ câu soạn sẵn (Bài 8–11). Chưa có câu soạn sẵn cho chương IV (Bài 13–16, tam giác bằng nhau), chương IX (Bài 31–35), chương X (Bài 36–37).
   - Chưa có `TriangleFigure` để vẽ tam giác có ký hiệu.
 - **Lớp 8:** chưa có nội dung cho chương IV (Thalès, đường trung bình, phân giác), chương IX (tam giác đồng dạng, Pythagore), chương X (hình chóp đều).
 - **Ra đề theo ma trận** (ví dụ tỉ lệ NB/TH/VD 50/35/15), thống kê các kỹ năng học sinh hay sai, xuất đề ra LaTeX để in.
@@ -102,7 +104,7 @@ Cả 5 dạng câu đều được làm tới. Đã thử cài lỗi giả vào 
 - **Tỉ lệ mức độ ở chương Tứ giác** là NB 66 · TH 73 · VD 2 (sau khi thêm 45 câu lý thuyết thì NB tăng từ 46% lên 47%), vẫn lệch về TH so với mục tiêu NB 50% · TH 35% · VD 15%. Nguyên nhân là các câu "dấu hiệu nhận biết" đang xếp vào TH. Cần giáo viên quyết định giữ nhãn hay đổi, và có cần thêm câu VD 2 bước không.
 - **Số đo ghi trên hình không đúng tỉ lệ** (giống hình minh hoạ trong sách). Nếu học sinh yếu bị rối, có thể đổi sang cách dựng hình trước rồi lấy số đo thật từ hình để ra đề.
 - **Câu sinh tự động từ level cũ** chưa có gợi ý và chưa gắn mức độ. Bộ lọc mức độ không áp dụng cho các câu này.
-- **Giáo viên chưa duyệt** nội dung 229 câu.
+- **Giáo viên chưa duyệt** nội dung 273 câu.
 
 ---
 
@@ -132,7 +134,7 @@ Kéo thả dùng `Reorder` của framer-motion (đã có trong dự án). Trên 
 ### Bước 3 (P5): Lớp 7
 1. `TriangleFigure`: vẽ tam giác, hai tam giác cạnh nhau, ký hiệu cạnh/góc bằng nhau, vùng chạm.
 2. Chương IV (trọng tâm): đọc ký hiệu để chọn trường hợp c.c.c / c.g.c / g.c.g; viết đúng các cạnh, góc tương ứng; tam giác cân; sắp xếp chứng minh 3 bước.
-3. Chương III: soạn thêm câu có gợi ý cho Bài 10–11 (Bài 10 đang chỉ có câu sinh tự động; Bài 9 đã có từ 26/09).
+3. ~~Chương III: soạn câu có gợi ý cho Bài 9–11.~~ Xong 26/09/2026 (Bài 10 vẫn trộn thêm câu sinh tự động có hình).
 4. Chương IX: bất đẳng thức tam giác; trọng tâm chia trung tuyến theo tỉ lệ 2/3.
 5. Chương X: đếm mặt, cạnh, đỉnh; tính thể tích 1 bước.
 

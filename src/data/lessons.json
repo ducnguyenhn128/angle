@@ -72,13 +72,25 @@
             "id": "7-10", "name": "Bài 10. Tiên đề Euclid. Tính chất của hai đường thẳng song song",
             "skills": ["songsong.tien-de", "songsong.tinh-chat"],
             "recap": [
+              "Tiên đề Euclid: qua một điểm ở ngoài một đường thẳng chỉ có một đường thẳng song song với đường thẳng đó.",
               "Nếu a ∥ b và đường thẳng c cắt cả a và b thì:",
               "• Hai góc so le trong bằng nhau.",
               "• Hai góc đồng vị bằng nhau.",
-              "• Hai góc trong cùng phía có tổng bằng 180°."
+              "• Hai góc trong cùng phía có tổng bằng 180°.",
+              "Nếu a ∥ b và c ⊥ a thì c ⊥ b.",
+              "Hai đường thẳng phân biệt cùng song song với đường thẳng thứ ba thì song song với nhau."
             ]
           },
-          { "id": "7-11", "name": "Bài 11. Định lí và chứng minh định lí", "skills": ["dinhli.gt-kl"] }
+          {
+            "id": "7-11", "name": "Bài 11. Định lí và chứng minh định lí",
+            "skills": ["dinhli.gt-kl", "dinhli.chung-minh"],
+            "recap": [
+              "Định lí là một khẳng định được suy ra từ những khẳng định được coi là đúng.",
+              "Định lí thường có dạng: Nếu [giả thiết] thì [kết luận].",
+              "GT (giả thiết): điều đã cho, nằm sau chữ \"Nếu\". KL (kết luận): điều phải suy ra, nằm sau chữ \"thì\".",
+              "Chứng minh định lí: dùng lập luận để từ GT suy ra KL. Bước đầu tiên là viết GT, KL."
+            ]
+          }
         ]
       },
       {

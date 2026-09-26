@@ -1,0 +1,274 @@
+[
+  {
+    "id": "dl11-001",
+    "type": "mcq",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "NB",
+    "stem": "Định lí thường được phát biểu dưới dạng nào?",
+    "options": ["Nếu … thì …", "Hoặc … hoặc …", "Không … mà …", "Vừa … vừa …"],
+    "answer": 0,
+    "explanation": "Định lí thường được phát biểu dưới dạng \"Nếu … thì …\". Phần sau \"Nếu\" là giả thiết, phần sau \"thì\" là kết luận."
+  },
+  {
+    "id": "dl11-002",
+    "type": "mcq",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "NB",
+    "stem": "Cho định lí: \"Nếu hai góc đối đỉnh thì hai góc đó bằng nhau.\" Giả thiết của định lí là:",
+    "options": ["Hai góc đối đỉnh", "Hai góc đó bằng nhau", "Hai góc kề bù", "Hai góc có tổng 180°"],
+    "answer": 0,
+    "hints": ["Giả thiết là phần nằm giữa chữ \"Nếu\" và chữ \"thì\"."],
+    "explanation": "Giả thiết là phần sau \"Nếu\": hai góc đối đỉnh. Kết luận là phần sau \"thì\": hai góc đó bằng nhau."
+  },
+  {
+    "id": "dl11-003",
+    "type": "mcq",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "NB",
+    "stem": "Cho định lí: \"Nếu Ot là tia phân giác của góc xOy thì xOt = tOy.\" Kết luận của định lí là:",
+    "options": ["xOt = tOy", "Ot là tia phân giác của góc xOy", "Ot nằm ngoài góc xOy", "xOy = 180°"],
+    "answer": 0,
+    "hints": ["Kết luận là phần nằm sau chữ \"thì\"."],
+    "explanation": "Kết luận là phần sau \"thì\": xOt = tOy. Phần \"Ot là tia phân giác của góc xOy\" là giả thiết."
+  },
+  {
+    "id": "dl11-004",
+    "type": "mcq",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "TH",
+    "stem": "Cho định lí: \"Hai đường thẳng phân biệt a, b cùng song song với đường thẳng c thì a ∥ b.\" Giả thiết của định lí là:",
+    "options": ["a, b phân biệt; a ∥ c; b ∥ c", "a ∥ b", "a ⊥ c; b ⊥ c", "a cắt b"],
+    "answer": 0,
+    "hints": ["Viết lại dạng \"Nếu … thì …\": Nếu a, b phân biệt và cùng song song với c thì a ∥ b."],
+    "explanation": "Viết lại: \"Nếu a, b phân biệt, a ∥ c và b ∥ c thì a ∥ b.\" GT: a, b phân biệt; a ∥ c; b ∥ c. KL: a ∥ b."
+  },
+  {
+    "id": "dl11-005",
+    "type": "mcq",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "TH",
+    "stem": "Cho định lí: \"Nếu một đường thẳng cắt hai đường thẳng song song thì hai góc so le trong bằng nhau.\" Kết luận của định lí là:",
+    "options": [
+      "Hai góc so le trong bằng nhau",
+      "Hai đường thẳng song song",
+      "Một đường thẳng cắt hai đường thẳng song song",
+      "Hai góc đồng vị bằng nhau"
+    ],
+    "answer": 0,
+    "hints": ["Tìm chữ \"thì\" trong câu, phần phía sau là kết luận."],
+    "explanation": "Kết luận là phần sau \"thì\": hai góc so le trong bằng nhau. Giả thiết là: một đường thẳng cắt hai đường thẳng song song."
+  },
+  {
+    "id": "dl11-006",
+    "type": "mcq",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "TH",
+    "stem": "Phát biểu định lí \"Hai góc đối đỉnh thì bằng nhau\" dưới dạng \"Nếu … thì …\":",
+    "options": [
+      "Nếu hai góc đối đỉnh thì hai góc đó bằng nhau",
+      "Nếu hai góc bằng nhau thì hai góc đó đối đỉnh",
+      "Nếu hai góc kề bù thì hai góc đó bằng nhau",
+      "Nếu hai góc bằng nhau thì hai góc đó kề bù"
+    ],
+    "answer": 0,
+    "hints": ["Điều đã biết (hai góc đối đỉnh) đặt sau \"Nếu\"; điều suy ra (bằng nhau) đặt sau \"thì\"."],
+    "explanation": "Điều đã cho là \"hai góc đối đỉnh\", điều suy ra là \"bằng nhau\". Đổi chỗ thành \"Nếu hai góc bằng nhau thì đối đỉnh\" là sai."
+  },
+  {
+    "id": "dl11-007",
+    "type": "true-false",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "NB",
+    "stem": "Định lí là một khẳng định được suy ra từ những khẳng định được coi là đúng.",
+    "answer": true,
+    "explanation": "Đúng. Đây là khái niệm định lí."
+  },
+  {
+    "id": "dl11-008",
+    "type": "true-false",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "NB",
+    "stem": "Trong định lí dạng \"Nếu … thì …\", phần nằm sau chữ \"thì\" là giả thiết.",
+    "answer": false,
+    "hints": ["Sau \"Nếu\" là điều đã cho; sau \"thì\" là điều phải suy ra."],
+    "explanation": "Sai. Phần sau \"thì\" là KẾT LUẬN. Phần giữa \"Nếu\" và \"thì\" mới là giả thiết."
+  },
+  {
+    "id": "dl11-009",
+    "type": "true-false",
+    "lesson": "7-11",
+    "skills": ["dinhli.chung-minh"],
+    "level": "NB",
+    "stem": "Chứng minh định lí là dùng lập luận để từ giả thiết suy ra kết luận.",
+    "answer": true,
+    "explanation": "Đúng. Chứng minh định lí là dùng lập luận (dựa vào các khẳng định đã biết là đúng) để từ giả thiết suy ra kết luận."
+  },
+  {
+    "id": "dl11-010",
+    "type": "true-false",
+    "lesson": "7-11",
+    "skills": ["dinhli.chung-minh"],
+    "level": "TH",
+    "stem": "Đo trên một hình vẽ thấy đúng là đã chứng minh được định lí.",
+    "answer": false,
+    "hints": ["Đo trên một hình chỉ kiểm tra được cho đúng hình đó. Các hình khác thì sao?"],
+    "explanation": "Sai. Đo trên một hình chỉ kiểm tra được cho hình đó, và phép đo có sai số. Muốn chứng minh phải dùng lập luận, đúng cho mọi hình thỏa mãn giả thiết."
+  },
+  {
+    "id": "dl11-011",
+    "type": "true-false",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "TH",
+    "stem": "\"Nếu hai góc bằng nhau thì hai góc đó đối đỉnh\" là một định lí.",
+    "answer": false,
+    "hints": ["Hai góc vuông ở hai góc của quyển vở có bằng nhau không? Chúng có đối đỉnh không?"],
+    "explanation": "Sai. Khẳng định này không đúng: hai góc vuông ở hai góc quyển vở bằng nhau nhưng không đối đỉnh. Định lí đúng là chiều ngược lại: hai góc đối đỉnh thì bằng nhau."
+  },
+  {
+    "id": "dl11-012",
+    "type": "fill-blank",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "NB",
+    "stem": "Khi tóm tắt định lí, GT là viết tắt của {{}}, KL là viết tắt của {{}}.",
+    "blanks": [
+      {"accept": ["giả thiết", "gia thiet"]},
+      {"accept": ["kết luận", "ket luan"]}
+    ],
+    "hints": ["G… T…: điều đã cho. K… L…: điều phải suy ra."],
+    "explanation": "GT là giả thiết (điều đã cho), KL là kết luận (điều phải suy ra)."
+  },
+  {
+    "id": "dl11-013",
+    "type": "multi-select",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "TH",
+    "stem": "Cho định lí: \"Nếu a ∥ b và c ⊥ a thì c ⊥ b.\" Chọn TẤT CẢ các ý thuộc giả thiết.",
+    "options": ["a ∥ b", "c ⊥ a", "c ⊥ b", "a ⊥ b"],
+    "answers": [0, 1],
+    "hints": ["Giả thiết nằm giữa \"Nếu\" và \"thì\"; có thể gồm nhiều ý nối bằng chữ \"và\"."],
+    "explanation": "GT: a ∥ b và c ⊥ a. KL: c ⊥ b. \"a ⊥ b\" không có trong định lí (và sai, vì a ∥ b)."
+  },
+  {
+    "id": "dl11-p4-01",
+    "type": "match",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl", "dinhli.chung-minh"],
+    "level": "NB",
+    "stem": "Nối mỗi từ với ý nghĩa của nó.",
+    "pairs": [
+      {"left": "Giả thiết (GT)", "right": "Điều đã cho, nằm sau chữ \"Nếu\""},
+      {"left": "Kết luận (KL)", "right": "Điều phải suy ra, nằm sau chữ \"thì\""},
+      {"left": "Chứng minh định lí", "right": "Lập luận đi từ GT đến KL"}
+    ],
+    "extra": ["Đo góc trên hình vẽ"],
+    "hints": ["Nhớ: Nếu [GT] thì [KL]."],
+    "explanation": "GT là điều đã cho (sau \"Nếu\"), KL là điều phải suy ra (sau \"thì\"), chứng minh là lập luận từ GT suy ra KL. Đo góc trên hình không phải là chứng minh."
+  },
+  {
+    "id": "dl11-p4-02",
+    "type": "classify",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "TH",
+    "stem": "Cho định lí: \"Nếu đường thẳng c cắt hai đường thẳng song song a và b thì hai góc đồng vị bằng nhau.\" Mỗi ý dưới đây là giả thiết hay kết luận?",
+    "groups": ["Giả thiết (GT)", "Kết luận (KL)"],
+    "items": [
+      {"text": "a ∥ b", "group": 0},
+      {"text": "c cắt a và b", "group": 0},
+      {"text": "Hai góc đồng vị bằng nhau", "group": 1}
+    ],
+    "hints": ["Tìm chữ \"thì\": phía trước là GT, phía sau là KL."],
+    "explanation": "GT: c cắt hai đường thẳng a, b và a ∥ b. KL: hai góc đồng vị bằng nhau."
+  },
+  {
+    "id": "dl11-p4-03",
+    "type": "classify",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "TH",
+    "stem": "Khẳng định nào là định lí (luôn đúng), khẳng định nào sai?",
+    "groups": ["Định lí đúng", "Khẳng định sai"],
+    "items": [
+      {"text": "Hai góc đối đỉnh thì bằng nhau", "group": 0},
+      {"text": "Hai góc kề bù có tổng bằng 180°", "group": 0},
+      {"text": "Hai đường thẳng phân biệt cùng song song với đường thẳng thứ ba thì song song với nhau", "group": 0},
+      {"text": "Hai góc bằng nhau thì đối đỉnh", "group": 1},
+      {"text": "Hai góc so le trong luôn bằng nhau", "group": 1}
+    ],
+    "hints": ["Hai góc so le trong chỉ bằng nhau khi hai đường thẳng song song."],
+    "explanation": "Ba khẳng định đầu là định lí. \"Hai góc bằng nhau thì đối đỉnh\" sai (hai góc vuông ở hai góc quyển vở). \"So le trong luôn bằng nhau\" sai: chỉ đúng khi hai đường thẳng song song."
+  },
+  {
+    "id": "dl11-p4-04",
+    "type": "order",
+    "lesson": "7-11",
+    "skills": ["dinhli.chung-minh"],
+    "level": "TH",
+    "stem": "Chứng minh định lí: \"Nếu a ∥ b và c ⊥ a thì c ⊥ b\" (c cắt a tại A, cắt b tại B). Sắp xếp các bước chứng minh.",
+    "steps": [
+      "GT: a ∥ b, c ⊥ a. KL: c ⊥ b.",
+      "Vì c ⊥ a nên góc A₁ = 90°.",
+      "Mà a ∥ b nên B₁ = A₁ = 90° (hai góc đồng vị).",
+      "Vậy c ⊥ b."
+    ],
+    "hints": ["Bước đầu tiên luôn là viết GT, KL.", "Phải biết A₁ = 90° trước thì mới suy ra được B₁."],
+    "explanation": "Viết GT, KL → từ c ⊥ a có A₁ = 90° → a ∥ b nên góc đồng vị B₁ = A₁ = 90° → kết luận c ⊥ b."
+  },
+  {
+    "id": "dl11-p4-05",
+    "type": "order",
+    "lesson": "7-11",
+    "skills": ["dinhli.chung-minh", "doidinh.tinh-chat"],
+    "level": "TH",
+    "stem": "Chứng minh định lí: \"Hai góc đối đỉnh thì bằng nhau\" (xx' cắt yy' tại O). Sắp xếp các bước chứng minh.",
+    "steps": [
+      "GT: xOy và x'Oy' là hai góc đối đỉnh. KL: xOy = x'Oy'.",
+      "xOy + yOx' = 180° và x'Oy' + yOx' = 180° (các cặp góc kề bù).",
+      "Suy ra xOy + yOx' = x'Oy' + yOx'.",
+      "Vậy xOy = x'Oy'."
+    ],
+    "hints": ["Bước đầu tiên luôn là viết GT, KL.", "Dùng góc yOx' kề bù với cả hai góc."],
+    "explanation": "Viết GT, KL → hai cặp góc kề bù đều có tổng 180° → hai tổng bằng nhau → bớt đi góc yOx' chung, được xOy = x'Oy'."
+  },
+  {
+    "id": "dl11-p4-06",
+    "type": "find-error",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "TH",
+    "stem": "Định lí: \"Nếu hai góc kề bù thì tổng của chúng bằng 180°.\" Bạn An tóm tắt như sau:",
+    "lines": [
+      "GT: Hai góc kề bù.",
+      "KL: Hai góc đó bằng nhau."
+    ],
+    "answer": 1,
+    "hints": ["Đọc lại phần sau chữ \"thì\" trong định lí."],
+    "explanation": "Dòng 2 sai: kết luận là \"tổng của hai góc bằng 180°\", không phải \"hai góc bằng nhau\"."
+  },
+  {
+    "id": "dl11-p4-07",
+    "type": "find-error",
+    "lesson": "7-11",
+    "skills": ["dinhli.gt-kl"],
+    "level": "TH",
+    "stem": "Định lí: \"Nếu a ∥ b và c ⊥ a thì c ⊥ b.\" Bạn Bình tóm tắt như sau:",
+    "lines": [
+      "GT: a ∥ b, c ⊥ b.",
+      "KL: c ⊥ a."
+    ],
+    "answer": 0,
+    "hints": ["So sánh ý \"c ⊥ …\" trong GT của bạn Bình với định lí."],
+    "explanation": "Dòng 1 sai: bạn Bình đổi chỗ c ⊥ a và c ⊥ b. Đúng là GT: a ∥ b, c ⊥ a; KL: c ⊥ b."
+  }
+]
