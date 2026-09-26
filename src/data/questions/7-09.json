@@ -1,0 +1,364 @@
+[
+  {
+    "id": "ss9-001",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.cap-goc"],
+    "level": "NB",
+    "figure": "parallel/pa01",
+    "stem": "Đường thẳng c cắt hai đường thẳng a, b tại H và K. Hai góc được đánh dấu trên hình là cặp góc gì?",
+    "options": ["Cặp góc so le trong", "Cặp góc đồng vị", "Cặp góc đối đỉnh", "Cặp góc kề bù"],
+    "answer": 0,
+    "hints": ["Hai góc đều nằm ở khoảng giữa a và b.", "Một góc ở bên phải c, góc kia ở bên trái c: nằm \"so le\" (hai phía)."],
+    "explanation": "Hai góc nằm giữa a và b (\"trong\") và ở hai phía khác nhau của c (\"so le\") nên là cặp góc so le trong."
+  },
+  {
+    "id": "ss9-002",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.cap-goc"],
+    "level": "NB",
+    "figure": "parallel/pa02",
+    "stem": "Đường thẳng c cắt hai đường thẳng a, b tại H và K. Hai góc được đánh dấu trên hình là cặp góc gì?",
+    "options": ["Cặp góc đồng vị", "Cặp góc so le trong", "Cặp góc đối đỉnh", "Cặp góc kề bù"],
+    "answer": 0,
+    "hints": ["Nhìn vị trí mỗi góc: góc tại H và góc tại K có cùng nằm \"phía trên, bên trái\" của giao điểm không?"],
+    "explanation": "Góc tại H và góc tại K nằm ở vị trí giống nhau (cùng phía trên đường thẳng tương ứng, cùng bên trái c) nên là cặp góc đồng vị."
+  },
+  {
+    "id": "ss9-003",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.cap-goc"],
+    "level": "TH",
+    "figure": "parallel/pa05",
+    "stem": "Đường thẳng c cắt hai đường thẳng a, b tại H và K. Hai góc được đánh dấu trên hình là cặp góc gì?",
+    "options": ["Cặp góc trong cùng phía", "Cặp góc so le trong", "Cặp góc đồng vị", "Cặp góc đối đỉnh"],
+    "answer": 0,
+    "hints": ["Hai góc đều nằm giữa a và b.", "Hai góc cùng ở bên phải c hay ở hai phía của c?"],
+    "explanation": "Hai góc nằm giữa a và b (\"trong\") và cùng ở bên phải c (\"cùng phía\") nên là cặp góc trong cùng phía."
+  },
+  {
+    "id": "ss9-004",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "NB",
+    "figure": "parallel/pa03",
+    "stem": "Trên hình, vì sao a ∥ b?",
+    "options": [
+      "Vì a và b cùng vuông góc với c",
+      "Vì a và b cùng cắt c",
+      "Vì a và b cùng dài bằng nhau",
+      "Vì a vuông góc với b"
+    ],
+    "answer": 0,
+    "hints": ["Hình có hai dấu góc vuông. Mỗi dấu góc vuông cho biết điều gì?"],
+    "explanation": "a ⊥ c và b ⊥ c. Hai đường thẳng phân biệt cùng vuông góc với một đường thẳng thứ ba thì song song với nhau, nên a ∥ b."
+  },
+  {
+    "id": "ss9-005",
+    "type": "true-false",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "TH",
+    "figure": "parallel/pa08",
+    "stem": "Quan sát hình: cặp góc so le trong bằng 110° và 100°. Ta kết luận được a ∥ b.",
+    "answer": false,
+    "hints": ["Dấu hiệu nhận biết cần cặp góc so le trong như thế nào?"],
+    "explanation": "Sai. Muốn kết luận a ∥ b thì cặp góc so le trong phải BẰNG NHAU. Ở đây 110° ≠ 100° nên a không song song với b (trên hình a và b sẽ cắt nhau ở bên trái)."
+  },
+  {
+    "id": "ss9-006",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "TH",
+    "figure": "parallel/pa10",
+    "stem": "Quan sát hình: cặp góc đồng vị bằng 60° và 70°. Khẳng định nào đúng?",
+    "options": [
+      "a không song song với b vì 60° ≠ 70°",
+      "a ∥ b vì hai góc đều là góc nhọn",
+      "a ∥ b vì c cắt cả a và b",
+      "a ⊥ b"
+    ],
+    "answer": 0,
+    "hints": ["Chỉ khi cặp góc đồng vị bằng nhau mới kết luận được a ∥ b."],
+    "explanation": "Cặp góc đồng vị không bằng nhau (60° ≠ 70°) nên a không song song với b."
+  },
+  {
+    "id": "ss9-007",
+    "type": "true-false",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "NB",
+    "figure": "parallel/pa01",
+    "stem": "Trên hình, nếu hai góc được đánh dấu bằng nhau thì a ∥ b.",
+    "answer": true,
+    "hints": ["Hai góc được đánh dấu là cặp góc so le trong."],
+    "explanation": "Đúng. Hai góc được đánh dấu là cặp góc so le trong. Một cặp góc so le trong bằng nhau thì a ∥ b."
+  },
+  {
+    "id": "ss9-008",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.cap-goc"],
+    "level": "NB",
+    "stem": "Đường thẳng c cắt hai đường thẳng a và b tại hai điểm khác nhau. Có tất cả bao nhiêu góc được tạo thành (không kể góc bẹt)?",
+    "options": ["8", "4", "6", "2"],
+    "answer": 0,
+    "hints": ["Tại mỗi giao điểm có 4 góc. Có 2 giao điểm."],
+    "explanation": "Tại mỗi giao điểm có 4 góc, có 2 giao điểm nên có 4 · 2 = 8 góc."
+  },
+  {
+    "id": "ss9-009",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "NB",
+    "stem": "Kí hiệu \"đường thẳng a song song với đường thẳng b\" là:",
+    "options": ["a ∥ b", "a ⊥ b", "a = b", "a ∈ b"],
+    "answer": 0,
+    "explanation": "a song song với b viết là a ∥ b. Kí hiệu a ⊥ b nghĩa là a vuông góc với b."
+  },
+  {
+    "id": "ss9-010",
+    "type": "true-false",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "NB",
+    "stem": "Hai đường thẳng song song là hai đường thẳng không có điểm chung.",
+    "answer": true,
+    "explanation": "Đúng. Hai đường thẳng (phân biệt, cùng nằm trên một mặt phẳng) không có điểm chung thì song song."
+  },
+  {
+    "id": "ss9-011",
+    "type": "true-false",
+    "lesson": "7-09",
+    "skills": ["songsong.cap-goc"],
+    "level": "NB",
+    "stem": "Hai góc so le trong nằm ở hai phía khác nhau của đường thẳng c.",
+    "answer": true,
+    "hints": ["\"So le\" nghĩa là nằm xen kẽ, mỗi góc một phía."],
+    "explanation": "Đúng. Hai góc so le trong nằm giữa a và b, và ở hai phía khác nhau của đường thẳng c."
+  },
+  {
+    "id": "ss9-012",
+    "type": "true-false",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "NB",
+    "stem": "Hai đường thẳng cùng cắt một đường thẳng thứ ba thì song song với nhau.",
+    "answer": false,
+    "hints": ["Vẽ thử hai đường thẳng cắt nhau, rồi vẽ một đường thẳng thứ ba cắt cả hai."],
+    "explanation": "Sai. Hai đường thẳng cắt nhau vẫn có thể cùng cắt một đường thẳng thứ ba. Phải có thêm điều kiện về góc (so le trong bằng nhau hoặc đồng vị bằng nhau)."
+  },
+  {
+    "id": "ss9-013",
+    "type": "true-false",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "NB",
+    "stem": "Hai đường thẳng phân biệt cùng vuông góc với một đường thẳng thứ ba thì song song với nhau.",
+    "answer": true,
+    "explanation": "Đúng. Khi a ⊥ c và b ⊥ c thì cặp góc đồng vị đều bằng 90°, nên a ∥ b."
+  },
+  {
+    "id": "ss9-014",
+    "type": "true-false",
+    "lesson": "7-09",
+    "skills": ["songsong.cap-goc"],
+    "level": "TH",
+    "stem": "Khi đường thẳng c cắt hai đường thẳng a, b bất kì, hai góc đồng vị luôn bằng nhau.",
+    "answer": false,
+    "hints": ["Xem lại hình có cặp góc đồng vị 60° và 70°."],
+    "explanation": "Sai. Hai góc đồng vị chỉ bằng nhau khi a ∥ b. Nếu a và b cắt nhau thì cặp góc đồng vị có thể khác nhau, ví dụ 60° và 70°."
+  },
+  {
+    "id": "ss9-015",
+    "type": "true-false",
+    "lesson": "7-09",
+    "skills": ["songsong.cap-goc"],
+    "level": "TH",
+    "stem": "Đường thẳng c cắt hai đường thẳng a, b. Nếu có một cặp góc so le trong bằng nhau thì mỗi cặp góc đồng vị cũng bằng nhau.",
+    "answer": true,
+    "hints": ["Đây là tính chất trong SGK: một cặp so le trong bằng nhau kéo theo các cặp còn lại."],
+    "explanation": "Đúng. Nếu có một cặp góc so le trong bằng nhau thì cặp so le trong còn lại bằng nhau và các cặp góc đồng vị cũng bằng nhau."
+  },
+  {
+    "id": "ss9-016",
+    "type": "multi-select",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "TH",
+    "stem": "Đường thẳng c cắt hai đường thẳng a, b. Chọn TẤT CẢ các điều kiện giúp kết luận a ∥ b.",
+    "options": [
+      "Có một cặp góc so le trong bằng nhau",
+      "Có một cặp góc đồng vị bằng nhau",
+      "a ⊥ c và b ⊥ c",
+      "a và b cùng cắt c",
+      "Có một cặp góc trong cùng phía bằng nhau"
+    ],
+    "answers": [0, 1, 2],
+    "hints": ["Nhớ lại dấu hiệu: so le trong BẰNG nhau, đồng vị BẰNG nhau.", "Cặp góc trong cùng phía phải có tổng 180° chứ không phải bằng nhau."],
+    "explanation": "So le trong bằng nhau, đồng vị bằng nhau, hoặc cùng vuông góc với c đều cho a ∥ b. Chỉ \"cùng cắt c\" thì chưa đủ. Cặp góc trong cùng phía phải bù nhau (tổng 180°), bằng nhau thì chưa chắc."
+  },
+  {
+    "id": "ss9-t01",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "NB",
+    "vars": {"a": [30, 150, 5]},
+    "where": ["a != 90"],
+    "stem": "Đường thẳng c cắt hai đường thẳng a, b. Có một cặp góc so le trong đều bằng {a}°. Khẳng định nào đúng?",
+    "options": ["a ∥ b", "a ⊥ b", "a và b cắt nhau", "Chưa kết luận được"],
+    "answer": 0,
+    "hints": ["Cặp góc so le trong bằng nhau thì…?"],
+    "explanation": "Một cặp góc so le trong bằng nhau (cùng bằng {a}°) nên a ∥ b."
+  },
+  {
+    "id": "ss9-t02",
+    "type": "fill-blank",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "NB",
+    "vars": {"a": [35, 145, 5]},
+    "stem": "Đường thẳng c cắt a và b. Một góc so le trong bằng {a}°. Để a ∥ b thì góc so le trong còn lại phải bằng {{}}°.",
+    "blanks": [{"accept": ["{a}"]}],
+    "hints": ["Dấu hiệu: cặp góc so le trong bằng nhau."],
+    "explanation": "Để a ∥ b thì cặp góc so le trong phải bằng nhau, nên góc còn lại bằng {a}°."
+  },
+  {
+    "id": "ss9-t03",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "NB",
+    "vars": {"a": [35, 85, 5]},
+    "where": ["a != 45"],
+    "stem": "Đường thẳng c cắt a và b. Một góc bằng {a}°. Để a ∥ b thì góc đồng vị với nó phải bằng bao nhiêu?",
+    "options": ["{a}°", "{=180 - a}°", "{=90 - a}°", "{=360 - a}°"],
+    "answer": 0,
+    "hints": ["Dấu hiệu: cặp góc đồng vị bằng nhau."],
+    "explanation": "Để a ∥ b thì cặp góc đồng vị phải bằng nhau, nên góc cần tìm bằng {a}°. ({=180 - a}° là số đo góc kề bù, không phải góc đồng vị.)"
+  },
+  {
+    "id": "ss9-t04",
+    "type": "fill-blank",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "TH",
+    "vars": {"a": [40, 140, 5]},
+    "where": ["a != 90"],
+    "stem": "Đường thẳng c cắt a và b. Một góc trong cùng phía bằng {a}°. Để a ∥ b thì góc trong cùng phía còn lại phải bằng {{}}°.",
+    "blanks": [{"accept": ["{=180 - a}"]}],
+    "hints": ["Cặp góc trong cùng phía phải BÙ nhau (tổng 180°) thì a ∥ b.", "Tính 180° − {a}°."],
+    "explanation": "Hai góc trong cùng phía phải có tổng 180°, nên góc còn lại bằng 180° − {a}° = {=180 - a}°."
+  },
+  {
+    "id": "ss9-t05",
+    "type": "mcq",
+    "lesson": "7-09",
+    "skills": ["songsong.cap-goc", "songsong.dau-hieu", "kebu.tinh-goc"],
+    "level": "VD",
+    "vars": {"a": [40, 140, 5]},
+    "where": ["a != 90"],
+    "stem": "Đường thẳng c cắt a tại H, cắt b tại K. Góc H₁ và góc K₁ là một cặp góc so le trong, H₁ = {a}°. Góc K₂ kề bù với góc K₁ và K₂ = {=180 - a}°. Khẳng định nào đúng?",
+    "options": [
+      "K₁ = {a}° nên a ∥ b",
+      "K₁ = {=180 - a}° nên a ∥ b",
+      "K₁ = {a}° nên a không song song với b",
+      "K₁ = {=180 - a}° nên a không song song với b"
+    ],
+    "answer": 0,
+    "hints": ["Bước 1: K₁ và K₂ kề bù nên K₁ = 180° − K₂.", "Bước 2: so sánh K₁ với H₁ (cặp so le trong)."],
+    "explanation": "K₁ = 180° − {=180 - a}° = {a}°. Vậy K₁ = H₁ = {a}°, tức là một cặp góc so le trong bằng nhau, nên a ∥ b."
+  },
+  {
+    "id": "ss9-p4-01",
+    "type": "match",
+    "lesson": "7-09",
+    "skills": ["songsong.cap-goc"],
+    "level": "NB",
+    "stem": "Đường thẳng c cắt hai đường thẳng a, b. Nối mỗi cặp góc với vị trí của nó.",
+    "pairs": [
+      {"left": "Hai góc so le trong", "right": "Nằm giữa a và b, ở hai phía của c"},
+      {"left": "Hai góc đồng vị", "right": "Ở cùng một vị trí tại hai giao điểm"},
+      {"left": "Hai góc trong cùng phía", "right": "Nằm giữa a và b, cùng một phía của c"}
+    ],
+    "extra": ["Chung đỉnh, cạnh này là tia đối của cạnh kia"],
+    "hints": ["\"Trong\" = nằm giữa a và b. \"So le\" = hai phía của c. \"Cùng phía\" = một phía của c."],
+    "explanation": "So le trong: giữa a, b và ở hai phía của c. Đồng vị: vị trí giống nhau tại hai giao điểm. Trong cùng phía: giữa a, b và cùng một phía của c. \"Chung đỉnh, cạnh là tia đối\" là hai góc đối đỉnh."
+  },
+  {
+    "id": "ss9-p4-02",
+    "type": "classify",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "TH",
+    "stem": "Đường thẳng c cắt hai đường thẳng a, b. Mỗi thông tin dưới đây có đủ để kết luận a ∥ b không?",
+    "groups": ["Kết luận được a ∥ b", "Chưa kết luận được"],
+    "items": [
+      {"text": "Một cặp góc so le trong: 65° và 65°", "group": 0},
+      {"text": "Một cặp góc đồng vị: 120° và 120°", "group": 0},
+      {"text": "a ⊥ c và b ⊥ c", "group": 0},
+      {"text": "Một cặp góc so le trong: 70° và 110°", "group": 1},
+      {"text": "Một cặp góc đồng vị: 60° và 70°", "group": 1},
+      {"text": "a và b cùng cắt c", "group": 1}
+    ],
+    "hints": ["So le trong hoặc đồng vị phải BẰNG nhau.", "Chỉ biết \"cùng cắt c\" thì chưa đủ."],
+    "explanation": "Kết luận được a ∥ b khi có cặp so le trong bằng nhau, cặp đồng vị bằng nhau, hoặc a, b cùng vuông góc với c. Hai góc khác nhau (70° và 110°, 60° và 70°) hoặc chỉ biết cùng cắt c thì chưa kết luận được."
+  },
+  {
+    "id": "ss9-p4-03",
+    "type": "order",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "TH",
+    "vars": {"a": [40, 140, 5]},
+    "where": ["a != 90"],
+    "stem": "Đường thẳng c cắt a tại H, cắt b tại K, có một cặp góc so le trong đều bằng {a}°. Sắp xếp các bước chứng minh a ∥ b.",
+    "steps": [
+      "Đường thẳng c cắt a tại H và cắt b tại K.",
+      "Cặp góc so le trong tại H và K đều bằng {a}°.",
+      "Mà một cặp góc so le trong bằng nhau thì hai đường thẳng song song (dấu hiệu nhận biết).",
+      "Vậy a ∥ b."
+    ],
+    "hints": ["Bắt đầu bằng hình vẽ (c cắt a, b), rồi đến số liệu, sau đó là lý do, cuối cùng mới kết luận."],
+    "explanation": "Thứ tự: nêu c cắt a, b → cặp góc so le trong bằng nhau ({a}°) → áp dụng dấu hiệu nhận biết → kết luận a ∥ b."
+  },
+  {
+    "id": "ss9-p4-04",
+    "type": "find-error",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "TH",
+    "vars": {"a": [40, 80, 5]},
+    "stem": "Đường thẳng c cắt a và b, có một cặp góc đồng vị bằng {a}° và {=180 - a}°. Bạn An lập luận như sau:",
+    "lines": [
+      "Cặp góc đồng vị bằng {a}° và {=180 - a}°.",
+      "Ta có {a}° + {=180 - a}° = 180°.",
+      "Hai góc đồng vị bù nhau nên a ∥ b."
+    ],
+    "answer": 2,
+    "hints": ["Hai dòng đầu tính đúng. Cặp góc đồng vị phải bằng nhau hay bù nhau thì a ∥ b?"],
+    "explanation": "Dòng 3 sai: cặp góc đồng vị phải BẰNG nhau thì mới có a ∥ b. Ở đây {a}° ≠ {=180 - a}° nên a không song song với b."
+  },
+  {
+    "id": "ss9-p4-05",
+    "type": "find-error",
+    "lesson": "7-09",
+    "skills": ["songsong.dau-hieu"],
+    "level": "TH",
+    "vars": {"a": [50, 80, 5]},
+    "stem": "Đường thẳng c cắt a và b, có một cặp góc trong cùng phía đều bằng {a}°. Bạn Bình lập luận như sau:",
+    "lines": [
+      "Hai góc trong cùng phía đều bằng {a}°.",
+      "Hai góc này bằng nhau nên a ∥ b."
+    ],
+    "answer": 1,
+    "hints": ["Cặp góc trong cùng phía phải thế nào thì a ∥ b: bằng nhau hay có tổng 180°?"],
+    "explanation": "Dòng 2 sai: cặp góc trong cùng phía phải có tổng 180° thì a ∥ b. Ở đây {a}° + {a}° = {=2 * a}° ≠ 180° nên a không song song với b."
+  }
+]

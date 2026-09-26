@@ -57,7 +57,17 @@
               "Tia phân giác Oz của góc xOy: Oz nằm giữa Ox, Oy và xOz = zOy = xOy : 2."
             ]
           },
-          { "id": "7-09", "name": "Bài 9. Hai đường thẳng song song và dấu hiệu nhận biết", "skills": ["songsong.cap-goc", "songsong.dau-hieu"] },
+          {
+            "id": "7-09", "name": "Bài 9. Hai đường thẳng song song và dấu hiệu nhận biết",
+            "skills": ["songsong.cap-goc", "songsong.dau-hieu"],
+            "recap": [
+              "Đường thẳng c cắt a và b tạo thành 8 góc (mỗi giao điểm 4 góc).",
+              "Hai góc so le trong: nằm giữa a và b, ở hai phía của c.",
+              "Hai góc đồng vị: ở cùng một vị trí tại hai giao điểm.",
+              "Dấu hiệu: một cặp góc so le trong bằng nhau (hoặc một cặp góc đồng vị bằng nhau) thì a ∥ b.",
+              "Hai đường thẳng phân biệt cùng vuông góc với đường thẳng thứ ba thì song song."
+            ]
+          },
           {
             "id": "7-10", "name": "Bài 10. Tiên đề Euclid. Tính chất của hai đường thẳng song song",
             "skills": ["songsong.tien-de", "songsong.tinh-chat"],
