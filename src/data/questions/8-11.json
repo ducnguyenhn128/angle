@@ -339,5 +339,62 @@
     "answer": false,
     "hints": ["Đọc kĩ dấu hiệu trong SGK: bắt đầu bằng chữ “hình thang” hay “tứ giác”?"],
     "explanation": "Sai. Dấu hiệu chỉ đúng với HÌNH THANG: hình thang có hai đường chéo bằng nhau là hình thang cân. Một tứ giác không có cạnh nào song song thì không phải hình thang."
+  },
+  {
+    "id": "ht-p4-01",
+    "type": "classify",
+    "lesson": "8-11",
+    "skills": ["thangcan.tinh-chat"],
+    "level": "TH",
+    "stem": "Tính chất nào đúng với MỌI hình thang cân? Xếp mỗi ý vào đúng nhóm.",
+    "groups": ["Luôn đúng", "Không luôn đúng"],
+    "items": [
+      {"text":"Hai cạnh bên bằng nhau","group":0},
+      {"text":"Hai đường chéo bằng nhau","group":0},
+      {"text":"Hai góc kề một đáy bằng nhau","group":0},
+      {"text":"Hai đường chéo vuông góc","group":1},
+      {"text":"Hai cạnh đáy bằng nhau","group":1},
+      {"text":"Bốn góc bằng nhau","group":1}
+    ],
+    "hints": [
+      "Hình thang cân có: hai cạnh bên bằng nhau, hai đường chéo bằng nhau, hai góc kề một đáy bằng nhau."
+    ],
+    "explanation": "Hình thang cân luôn có hai cạnh bên bằng nhau, hai đường chéo bằng nhau, hai góc kề một đáy bằng nhau. Hai đường chéo thường không vuông góc, hai đáy thường không bằng nhau, bốn góc thường không bằng nhau."
+  },
+  {
+    "id": "ht-p4-02",
+    "type": "find-error",
+    "lesson": "8-11",
+    "skills": ["thangcan.tinh-chat"],
+    "level": "TH",
+    "vars": {"a":[50, 80, 5]},
+    "shape": {"kind":"thang-can", "marks":["parallel"], "angleLabels":{"D":"{a}°", "C":"?"}},
+    "stem": "Hình thang cân ABCD (AB ∥ CD) có D = {a}°. Tính góc C. Bạn Dũng giải như sau:",
+    "lines": [
+      "ABCD là hình thang cân, đáy CD, nên C + D = 180°.",
+      "Suy ra C = 180° − {a}° = {=180 - a}°."
+    ],
+    "answer": 0,
+    "hints": [
+      "C và D là hai góc kề cùng một đáy CD. Trong hình thang cân, hai góc này thế nào với nhau?"
+    ],
+    "explanation": "Dòng 1 sai: trong hình thang cân, hai góc kề một đáy BẰNG nhau, nên C = D = {a}°. (Hai góc có tổng 180° là A và D, vì chúng kề cùng một cạnh bên AD.)"
+  },
+  {
+    "id": "ht-p4-03",
+    "type": "order",
+    "lesson": "8-11",
+    "skills": ["thangcan.dau-hieu"],
+    "level": "TH",
+    "stem": "Hình thang ABCD (AB ∥ CD) có hai đường chéo AC = BD. Chứng minh ABCD là hình thang cân. Sắp xếp các bước theo đúng thứ tự.",
+    "steps": [
+      "Xét hình thang ABCD (AB ∥ CD)",
+      "có hai đường chéo AC = BD (giả thiết)",
+      "nên ABCD là hình thang cân (hình thang có hai đường chéo bằng nhau)."
+    ],
+    "hints": [
+      "Bắt đầu bằng \"Xét…\", sau đó nêu điều đã biết, cuối cùng là kết luận kèm lý do."
+    ],
+    "explanation": "Xét hình thang ABCD (AB ∥ CD) có AC = BD, nên ABCD là hình thang cân theo dấu hiệu: hình thang có hai đường chéo bằng nhau là hình thang cân."
   }
 ]

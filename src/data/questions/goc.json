@@ -131,5 +131,44 @@
     "level": "TH",
     "hints": ["Mỗi cặp tia tạo thành 1 góc. Hãy đếm số cặp: Ox–Oy, Ox–Oz, …"],
     "explanation": "Mỗi cặp tia tạo thành một góc. Có 3 tia nên có 3·2 : 2 = 3 góc."
+  },
+  {
+    "id": "goc-p4-01",
+    "type": "classify",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "level": "NB",
+    "stem": "Xếp mỗi góc vào đúng nhóm.",
+    "groups": ["Góc nhọn", "Góc vuông", "Góc tù"],
+    "items": [
+      {"text":"Góc 35°","group":0},
+      {"text":"Góc 89°","group":0},
+      {"text":"Góc 90°","group":1},
+      {"text":"Góc 91°","group":2},
+      {"text":"Góc 120°","group":2},
+      {"text":"Góc 150°","group":2}
+    ],
+    "hints": [
+      "So sánh số đo với 90°: nhỏ hơn 90° là góc nhọn, bằng 90° là góc vuông, lớn hơn 90° (và nhỏ hơn 180°) là góc tù."
+    ],
+    "explanation": "35° và 89° nhỏ hơn 90° nên là góc nhọn. 90° là góc vuông. 91°, 120°, 150° lớn hơn 90° và nhỏ hơn 180° nên là góc tù."
+  },
+  {
+    "id": "goc-p4-02",
+    "type": "match",
+    "lesson": "goc",
+    "skills": ["goc.phan-loai"],
+    "level": "NB",
+    "stem": "Nối mỗi loại góc với số đo của nó.",
+    "pairs": [
+      {"left":"Góc nhọn","right":"Lớn hơn 0° và nhỏ hơn 90°"},
+      {"left":"Góc vuông","right":"Bằng 90°"},
+      {"left":"Góc tù","right":"Lớn hơn 90° và nhỏ hơn 180°"},
+      {"left":"Góc bẹt","right":"Bằng 180°"}
+    ],
+    "hints": [
+      "Mốc để so sánh là 90° (góc vuông) và 180° (góc bẹt)."
+    ],
+    "explanation": "Góc nhọn: 0° < góc < 90°. Góc vuông = 90°. Góc tù: 90° < góc < 180°. Góc bẹt = 180°."
   }
 ]

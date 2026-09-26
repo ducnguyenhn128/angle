@@ -197,6 +197,12 @@ Chức năng dành cho **học sinh trung bình và yếu, lớp 7 và lớp 8**
 | `multi-select` | `options: string[]`, `answers: number[]`. App tự hiện "Chọn N đáp án" |
 | `fill-blank` | `stem` chứa ô `{{}}`, `blanks: [{ accept: string[], tol?: number }]` |
 | `hotspot` | `shape` (bắt buộc), `pick: ('vertex' \| 'side' \| 'diagonal' \| 'angle')[]`, `answers: string[]`. Mã phần tử: đỉnh `A`, cạnh `AB`, đường chéo `AC`, góc `∠A`. Có 1 đáp án thì chạm là chấm luôn |
+| `classify` | `groups: string[]` (2–3 nhóm), `items: [{ text?, shape?, group }]` (3–8 mục; `group` là chỉ số nhóm; mục có thể là hình tứ giác). HS chạm nút nhóm dưới mỗi mục |
+| `match` | `pairs: [{ left, right }]` (2–4 cặp), `extra?: string[]` (phương án nhiễu bên phải). HS chạm ô rồi chạm phương án |
+| `order` | `steps: string[]` (3–5 bước, viết theo ĐÚNG thứ tự; app tự trộn). Các bước phải có thứ tự duy nhất, tránh hai bước "giả thiết" đổi chỗ được cho nhau |
+| `find-error` | `lines: string[]` (2–5 dòng lời giải), `answer: number` (chỉ số dòng sai ĐẦU TIÊN). Các dòng giữ nguyên thứ tự |
+
+Với `classify`, `match`, `order`: ở chế độ Luyện tập, khi làm sai app giữ lại phần đúng, xoá phần sai để học sinh làm lại phần đó.
 
 Mặc định phương án được trộn khi hiển thị; đặt `"shuffle": false` để giữ nguyên thứ tự. Với câu điền chỗ trống, đáp án được chuẩn hoá trước khi chấm: bỏ `°`, `độ`, chữ `góc`, bỏ dấu cách, không phân biệt hoa thường, dấu phẩy thập phân được hiểu như dấu chấm.
 

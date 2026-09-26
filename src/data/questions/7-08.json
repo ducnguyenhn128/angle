@@ -291,5 +291,76 @@
     "blanks": [{"accept": ["{=a / 2}"]}],
     "hints": ["Tia phân giác chia góc thành hai phần bằng nhau.", "Tính {a}° : 2."],
     "explanation": "xOz = xOy : 2 = {a}° : 2 = {=a / 2}°."
+  },
+  {
+    "id": "kbdd-p4-01",
+    "type": "match",
+    "lesson": "7-08",
+    "skills": ["kebu.dinh-nghia", "doidinh.tinh-chat", "phangiac.dinh-nghia"],
+    "level": "NB",
+    "stem": "Nối mỗi khái niệm với tính chất đúng của nó.",
+    "pairs": [
+      {"left":"Hai góc kề bù","right":"Có tổng bằng 180°"},
+      {"left":"Hai góc đối đỉnh","right":"Bằng nhau"},
+      {"left":"Oz là tia phân giác của góc xOy","right":"xOz = zOy = xOy : 2"}
+    ],
+    "extra": ["Có tổng bằng 90°"],
+    "hints": [
+      "Kề bù → cộng lại được góc bẹt. Đối đỉnh → bằng nhau. Phân giác → chia đôi góc."
+    ],
+    "explanation": "Hai góc kề bù có tổng 180°. Hai góc đối đỉnh thì bằng nhau. Tia phân giác chia góc thành hai góc bằng nhau, mỗi góc bằng một nửa góc ban đầu. \"Tổng bằng 90°\" không đúng với khái niệm nào ở đây."
+  },
+  {
+    "id": "kbdd-p4-02",
+    "type": "find-error",
+    "lesson": "7-08",
+    "skills": ["kebu.tinh-goc"],
+    "level": "TH",
+    "vars": {"a":[40, 140, 5]},
+    "where": ["a != 90"],
+    "stem": "Hai góc xOy và yOz kề bù, xOy = {a}°. Tính yOz. Bạn An giải như sau:",
+    "lines": [
+      "Vì xOy và yOz là hai góc kề bù nên xOy + yOz = 180°.",
+      "Suy ra yOz = 180° − {a}°.",
+      "Vậy yOz = {=190 - a}°."
+    ],
+    "answer": 2,
+    "hints": [
+      "Hai dòng đầu dùng đúng tính chất. Hãy tự tính lại 180° − {a}°."
+    ],
+    "explanation": "Dòng 3 tính sai: 180° − {a}° = {=180 - a}°, không phải {=190 - a}°."
+  },
+  {
+    "id": "kbdd-p4-03",
+    "type": "find-error",
+    "lesson": "7-08",
+    "skills": ["doidinh.tinh-chat"],
+    "level": "TH",
+    "vars": {"a":[30, 80, 5]},
+    "stem": "Hai góc xOy và x'Oy' đối đỉnh, xOy = {a}°. Tính x'Oy'. Bạn Bình giải như sau:",
+    "lines": [
+      "xOy và x'Oy' là hai góc đối đỉnh.",
+      "Hai góc đối đỉnh thì có tổng bằng 180°.",
+      "Suy ra x'Oy' = 180° − {a}° = {=180 - a}°."
+    ],
+    "answer": 1,
+    "hints": [
+      "Nhớ lại: hai góc đối đỉnh thì bằng nhau hay bù nhau?"
+    ],
+    "explanation": "Dòng 2 sai: hai góc đối đỉnh thì BẰNG nhau (hai góc KỀ BÙ mới có tổng 180°). Vậy x'Oy' = xOy = {a}°."
+  },
+  {
+    "id": "pg-p4-01",
+    "type": "order",
+    "lesson": "7-08",
+    "skills": ["phangiac.tinh-goc"],
+    "level": "TH",
+    "vars": {"a":[40, 160, 20]},
+    "stem": "Oz là tia phân giác của góc xOy, xOy = {a}°. Tính xOz. Sắp xếp các bước giải theo đúng thứ tự.",
+    "steps": ["Vì Oz là tia phân giác của góc xOy", "nên xOz = xOy : 2", "= {a}° : 2", "= {=a / 2}°."],
+    "hints": [
+      "Bắt đầu bằng lý do (vì sao…), sau đó viết công thức, cuối cùng mới thay số và tính."
+    ],
+    "explanation": "Vì Oz là tia phân giác của góc xOy nên xOz = xOy : 2 = {a}° : 2 = {=a / 2}°."
   }
 ]

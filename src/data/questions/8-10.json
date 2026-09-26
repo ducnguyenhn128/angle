@@ -292,5 +292,55 @@
     "stem": "Tứ giác lồi luôn nằm về một phía của đường thẳng chứa bất kì cạnh nào của nó.",
     "answer": true,
     "explanation": "Đúng. Đó chính là cách hiểu tứ giác lồi trong SGK."
+  },
+  {
+    "id": "tg-p4-01",
+    "type": "match",
+    "lesson": "8-10",
+    "skills": ["tugiac.khai-niem"],
+    "level": "NB",
+    "shape": {"kind":"tu-giac", "marks":["diagonals"]},
+    "stem": "Quan sát tứ giác ABCD. Nối mỗi ý với đoạn thẳng đúng.",
+    "pairs": [
+      {"left":"Cạnh đối của cạnh AB","right":"CD"},
+      {"left":"Cạnh đối của cạnh BC","right":"AD"},
+      {"left":"Đường chéo đi qua đỉnh A","right":"AC"},
+      {"left":"Đường chéo đi qua đỉnh B","right":"BD"}
+    ],
+    "hints": [
+      "Hai cạnh đối không có đỉnh chung. Đường chéo nối hai đỉnh không kề nhau."
+    ],
+    "explanation": "Cạnh đối của AB là CD, cạnh đối của BC là AD (không chung đỉnh). Hai đường chéo là AC (qua A và C) và BD (qua B và D)."
+  },
+  {
+    "id": "tg-p4-02",
+    "type": "order",
+    "lesson": "8-10",
+    "skills": ["tugiac.khai-niem"],
+    "level": "TH",
+    "vars": {"a":[60, 120, 10], "b":[60, 110, 10], "c":[60, 110, 10]},
+    "where": ["a + b + c >= 200", "a + b + c <= 290"],
+    "shape": {"kind":"tu-giac", "angleLabels":{"A":"{a}°", "B":"{b}°", "C":"{c}°", "D":"?"}},
+    "stem": "Tứ giác ABCD có A = {a}°, B = {b}°, C = {c}°. Tính góc D. Sắp xếp các bước giải theo đúng thứ tự.",
+    "steps": ["Tổng bốn góc của tứ giác ABCD bằng 360°.", "Suy ra D = 360° − (A + B + C)", "= 360° − ({a}° + {b}° + {c}°)", "= {=360 - a - b - c}°."],
+    "hints": [
+      "Bước đầu tiên luôn là nêu tính chất: tổng bốn góc của tứ giác bằng bao nhiêu?"
+    ],
+    "explanation": "Tổng bốn góc của tứ giác bằng 360°, nên D = 360° − (A + B + C) = 360° − ({a}° + {b}° + {c}°) = {=360 - a - b - c}°."
+  },
+  {
+    "id": "tg-p4-03",
+    "type": "find-error",
+    "lesson": "8-10",
+    "skills": ["tugiac.khai-niem"],
+    "level": "TH",
+    "vars": {"a":[70, 110, 10], "b":[70, 110, 10], "c":[60, 100, 10]},
+    "stem": "Tứ giác ABCD có A = {a}°, B = {b}°, C = {c}°. Tính góc D. Bạn Chi giải như sau:",
+    "lines": ["Tổng bốn góc của tứ giác bằng 180°.", "Suy ra D = 180° − ({a}° + {b}° + {c}°)."],
+    "answer": 0,
+    "hints": [
+      "Tổng ba góc của TAM GIÁC bằng 180°. Còn tứ giác thì sao?"
+    ],
+    "explanation": "Dòng 1 sai: tổng bốn góc của tứ giác bằng 360° (180° là tổng ba góc của tam giác). Đúng là D = 360° − ({a}° + {b}° + {c}°) = {=360 - a - b - c}°."
   }
 ]

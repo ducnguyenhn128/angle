@@ -330,5 +330,80 @@
     "answer": false,
     "hints": ["Quan sát hình: góc B = góc D. Các cạnh đối có song song không?"],
     "explanation": "Sai. Tứ giác trên hình có góc B = góc D nhưng không phải hình bình hành. Dấu hiệu đúng là: CÁC góc đối bằng nhau (cả hai cặp: góc A = góc C và góc B = góc D)."
+  },
+  {
+    "id": "hbh-p4-01",
+    "type": "classify",
+    "lesson": "8-12",
+    "skills": ["hbh.dau-hieu"],
+    "level": "TH",
+    "stem": "Dựa vào các ký hiệu trên hình, xếp mỗi hình vào đúng nhóm.",
+    "groups": ["Hình bình hành", "Không phải hình bình hành"],
+    "items": [
+      {"shape":{"kind":"hbh","marks":["parallel"]},"text":"Hai cặp cạnh đối song song","group":0},
+      {"shape":{"kind":"hbh","marks":["sides"]},"text":"Hai cặp cạnh đối bằng nhau","group":0},
+      {"shape":{"kind":"hbh","marks":["diagonals","diag-marks"]},"text":"Hai đường chéo cắt nhau tại trung điểm mỗi đường","group":0},
+      {"shape":{"kind":"hinh-thang","marks":["parallel"]},"text":"Chỉ một cặp cạnh đối song song","group":1},
+      {"shape":{"kind":"dieu","marks":["sides"]},"text":"Hai cặp cạnh KỀ bằng nhau","group":1}
+    ],
+    "hints": [
+      "Dấu hiệu HBH: hai cặp cạnh ĐỐI song song, hoặc hai cặp cạnh ĐỐI bằng nhau, hoặc hai đường chéo cắt nhau tại trung điểm mỗi đường."
+    ],
+    "explanation": "Ba hình đầu thoả một dấu hiệu nhận biết hình bình hành. Hình thang chỉ có một cặp cạnh đối song song. Hình cánh diều có các cạnh KỀ bằng nhau chứ không phải cạnh ĐỐI, nên không phải hình bình hành."
+  },
+  {
+    "id": "hbh-p4-02",
+    "type": "match",
+    "lesson": "8-12",
+    "skills": ["hbh.tinh-chat"],
+    "level": "NB",
+    "stem": "Nối mỗi yếu tố của hình bình hành với tính chất đúng của nó.",
+    "pairs": [
+      {"left":"Các cạnh đối","right":"Song song và bằng nhau"},
+      {"left":"Các góc đối","right":"Bằng nhau"},
+      {"left":"Hai đường chéo","right":"Cắt nhau tại trung điểm mỗi đường"},
+      {"left":"Hai góc kề một cạnh","right":"Có tổng bằng 180°"}
+    ],
+    "extra": ["Vuông góc với nhau"],
+    "hints": [
+      "Hai góc kề một cạnh (ví dụ A và B) là hai góc trong cùng phía của hai đường thẳng song song."
+    ],
+    "explanation": "Trong hình bình hành: các cạnh đối song song và bằng nhau; các góc đối bằng nhau; hai đường chéo cắt nhau tại trung điểm mỗi đường; hai góc kề một cạnh có tổng 180°. Hai đường chéo thường KHÔNG vuông góc."
+  },
+  {
+    "id": "hbh-p4-03",
+    "type": "order",
+    "lesson": "8-12",
+    "skills": ["hbh.dau-hieu"],
+    "level": "TH",
+    "stem": "Tứ giác ABCD có AB ∥ CD và AB = CD. Chứng minh ABCD là hình bình hành. Sắp xếp các bước theo đúng thứ tự.",
+    "steps": [
+      "Xét tứ giác ABCD",
+      "có AB ∥ CD và AB = CD (giả thiết)",
+      "nên ABCD là hình bình hành (tứ giác có hai cạnh đối song song và bằng nhau)."
+    ],
+    "hints": [
+      "Bắt đầu bằng \"Xét…\", sau đó nêu điều đã biết, cuối cùng là kết luận kèm lý do."
+    ],
+    "explanation": "Xét tứ giác ABCD có AB ∥ CD và AB = CD, nên ABCD là hình bình hành theo dấu hiệu: tứ giác có hai cạnh đối song song và bằng nhau."
+  },
+  {
+    "id": "hbh-p4-04",
+    "type": "find-error",
+    "lesson": "8-12",
+    "skills": ["hbh.tinh-chat"],
+    "level": "TH",
+    "vars": {"a":[50, 80, 5]},
+    "shape": {"kind":"hbh", "marks":["parallel"], "angleLabels":{"A":"{a}°", "C":"?"}},
+    "stem": "Hình bình hành ABCD có A = {a}°. Tính góc C. Bạn Hà giải như sau:",
+    "lines": [
+      "ABCD là hình bình hành nên C = A (hai góc đối bằng nhau).",
+      "Suy ra C = 180° − {a}° = {=180 - a}°."
+    ],
+    "answer": 1,
+    "hints": [
+      "Dòng 1 nói C = A. Vậy C phải bằng bao nhiêu?"
+    ],
+    "explanation": "Dòng 2 sai: C = A = {a}°. Góc bằng 180° − {a}° = {=180 - a}° là góc B (hoặc D), là góc KỀ với A."
   }
 ]

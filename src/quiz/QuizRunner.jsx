@@ -44,7 +44,7 @@ export default function QuizRunner({ questions, mode = 'test', onQuit, onFinish 
   const unusable = broken || !type || !Render;
 
   const submit = (r = response) => {
-    if (submitted || unusable || !type.isAnswered(r)) return;
+    if (submitted || unusable || !type.isAnswered(r, q)) return;
     let res;
     try {
       res = type.grade(q, r);
@@ -61,6 +61,8 @@ export default function QuizRunner({ questions, mode = 'test', onQuit, onFinish 
       if (typeof r === 'number') {
         setEliminated((e) => [...e, r]);
         setResponse(null);
+      } else if (type.retain) {
+        setResponse(type.retain(q, r, res));
       } else if (q.type === 'hotspot') {
         setResponse([]);
       } else {
@@ -164,7 +166,9 @@ export default function QuizRunner({ questions, mode = 'test', onQuit, onFinish 
                 animate={{ opacity: 1, y: 0 }}
                 className="text-center text-sm font-semibold text-orange-300"
               >
-                Chưa đúng rồi — em thử lại lần nữa nhé! 💪
+                {type.retain
+                  ? 'Chưa đúng hết — phần đúng được giữ lại, em làm lại phần còn trống nhé! 💪'
+                  : 'Chưa đúng rồi — em thử lại lần nữa nhé! 💪'}
               </motion.p>
             )}
 
@@ -201,7 +205,7 @@ export default function QuizRunner({ questions, mode = 'test', onQuit, onFinish 
               {!type.autoSubmit && !submitted && (
                 <button
                   onClick={() => submit()}
-                  disabled={!type.isAnswered(response)}
+                  disabled={!type.isAnswered(response, q)}
                   className="px-6 py-2.5 rounded-lg bg-neon-blue/15 border border-neon-blue/40 text-neon-blue font-semibold hover:bg-neon-blue/25 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                   Kiểm tra

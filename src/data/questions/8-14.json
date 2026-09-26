@@ -436,5 +436,96 @@
     "answers": [0, 1, 2],
     "hints": ["Tính chất này là của hình bình hành. Hình nào dưới đây cũng là hình bình hành?"],
     "explanation": "Hình chữ nhật và hình thoi đều là hình bình hành nên có tính chất này. Hình thang cân có hai đường chéo bằng nhau nhưng thường không cắt nhau tại trung điểm."
+  },
+  {
+    "id": "thoi-p4-01",
+    "type": "match",
+    "lesson": "8-14",
+    "skills": ["thoi.dau-hieu", "vuong.dau-hieu", "hcn.dau-hieu"],
+    "level": "TH",
+    "stem": "Nối mỗi dấu hiệu với hình được nhận biết.",
+    "pairs": [
+      {"left":"Tứ giác có các cạnh đối song song","right":"Hình bình hành"},
+      {"left":"Hình bình hành có một góc vuông","right":"Hình chữ nhật"},
+      {"left":"Hình bình hành có hai cạnh kề bằng nhau","right":"Hình thoi"},
+      {"left":"Hình chữ nhật có hai cạnh kề bằng nhau","right":"Hình vuông"}
+    ],
+    "hints": [
+      "Góc vuông → hình chữ nhật. Cạnh kề bằng nhau → hình thoi (từ HBH) hoặc hình vuông (từ HCN)."
+    ],
+    "explanation": "Tứ giác có các cạnh đối song song là HBH. HBH có một góc vuông là HCN. HBH có hai cạnh kề bằng nhau là hình thoi. HCN có hai cạnh kề bằng nhau là hình vuông."
+  },
+  {
+    "id": "thoi-p4-02",
+    "type": "classify",
+    "lesson": "8-14",
+    "skills": ["thoi.dinh-nghia", "vuong.dinh-nghia", "hcn.dinh-nghia"],
+    "level": "NB",
+    "stem": "Dựa vào các ký hiệu trên hình, xếp mỗi hình vào đúng nhóm.",
+    "groups": ["Hình chữ nhật", "Hình thoi", "Hình vuông"],
+    "items": [
+      {"shape":{"kind":"hcn","marks":["right"]},"group":0},
+      {"shape":{"kind":"hcn","marks":["right","sides"]},"group":0},
+      {"shape":{"kind":"thoi","marks":["sides"]},"group":1},
+      {"shape":{"kind":"thoi","marks":["sides","angles"]},"group":1},
+      {"shape":{"kind":"vuong","marks":["right","sides"]},"group":2}
+    ],
+    "hints": [
+      "Bốn góc vuông → hình chữ nhật. Bốn cạnh bằng nhau → hình thoi. Có cả hai → hình vuông."
+    ],
+    "explanation": "Hình có bốn góc vuông (các cạnh không bằng nhau hết) là hình chữ nhật. Hình có bốn cạnh bằng nhau (không có góc vuông) là hình thoi. Hình có bốn góc vuông VÀ bốn cạnh bằng nhau là hình vuông."
+  },
+  {
+    "id": "thoi-p4-03",
+    "type": "order",
+    "lesson": "8-14",
+    "skills": ["thoi.tinh-chat"],
+    "level": "TH",
+    "vars": {"a":[40, 80, 10]},
+    "shape": {"kind":"thoi", "marks":["sides"], "angleLabels":{"A":"{a}°", "B":"?"}},
+    "stem": "Hình thoi ABCD có A = {a}°. Tính góc B. Sắp xếp các bước giải theo đúng thứ tự.",
+    "steps": [
+      "ABCD là hình thoi nên cũng là hình bình hành.",
+      "Do đó AD ∥ BC, suy ra A + B = 180°.",
+      "B = 180° − {a}°",
+      "= {=180 - a}°."
+    ],
+    "hints": [
+      "Hình thoi là một hình bình hành đặc biệt. Hai góc kề một cạnh của hình bình hành có tổng bao nhiêu?"
+    ],
+    "explanation": "Hình thoi là hình bình hành nên hai góc kề cạnh AB có tổng 180°: B = 180° − {a}° = {=180 - a}°."
+  },
+  {
+    "id": "thoi-p4-04",
+    "type": "find-error",
+    "lesson": "8-14",
+    "skills": ["thoi.dinh-nghia"],
+    "level": "NB",
+    "vars": {"a":[3, 12, 1]},
+    "stem": "Hình thoi ABCD có cạnh AB = {a} cm. Tính chu vi. Bạn Lan giải như sau:",
+    "lines": [
+      "Hình thoi có bốn cạnh bằng nhau.",
+      "Chu vi hình thoi = {a} · 2 = {=2 * a} (cm)."
+    ],
+    "answer": 1,
+    "hints": [
+      "Chu vi là tổng độ dài của tất cả các cạnh. Hình thoi có mấy cạnh?"
+    ],
+    "explanation": "Dòng 2 sai: hình thoi có 4 cạnh bằng nhau nên chu vi = {a} · 4 = {=4 * a} (cm)."
+  },
+  {
+    "id": "hv-p4-01",
+    "type": "find-error",
+    "lesson": "8-14",
+    "skills": ["thoi.dau-hieu"],
+    "level": "TH",
+    "shape": {"kind":"dieu", "marks":["diagonals", "diag-marks"]},
+    "stem": "Tứ giác ABCD có hai đường chéo vuông góc với nhau. Bạn Tuấn lập luận như sau:",
+    "lines": ["Tứ giác ABCD có hai đường chéo AC ⊥ BD", "nên ABCD là hình thoi."],
+    "answer": 1,
+    "hints": [
+      "Quan sát hình: hai đường chéo vuông góc nhưng các cạnh có bằng nhau hết không?"
+    ],
+    "explanation": "Dòng 2 sai: tứ giác có hai đường chéo vuông góc chưa chắc là hình thoi (ví dụ hình cánh diều trên hình). Phải là HÌNH BÌNH HÀNH có hai đường chéo vuông góc mới là hình thoi."
   }
 ]

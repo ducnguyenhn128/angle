@@ -20,6 +20,12 @@
  *   multi-select options: string[], answers: number[], shuffle?: boolean
  *   fill-blank   stem chứa các ô "{{}}", blanks: [{ accept: string[], tol?: number, suffix?: string }]
  *   hotspot      shape (bắt buộc), pick: ('vertex'|'side'|'diagonal'|'angle')[], answers: string[] (mã phần tử)
+ *   classify     groups: string[] (2–3 nhóm), items: [{ text?, shape?, group }] (3–8 mục, group = chỉ số nhóm)
+ *   match        pairs: [{ left, right }] (2–4 cặp), extra?: string[] (phương án nhiễu bên phải)
+ *   order        steps: string[] (3–5 bước, theo đúng thứ tự) — hiển thị bị trộn
+ *   find-error   lines: string[] (các dòng lời giải), answer: number (chỉ số dòng sai)
+ *
+ * retain(rq, response, result) (tuỳ chọn): ở chế độ luyện tập, khi làm lại thì giữ phần đúng, xoá phần sai.
  *
  * shape (tuỳ chọn với mọi dạng): tứ giác vẽ từ dữ liệu — xem src/quiz/shapes.js
  */
@@ -248,6 +254,115 @@ export const QUESTION_TYPES = {
     },
     isAnswered: (response) => Array.isArray(response) && response.length > 0,
   },
+
+  classify: {
+    label: 'Phân loại',
+    autoSubmit: false,
+    validate(q, errs) {
+      if (!Array.isArray(q.groups) || q.groups.length < 2 || q.groups.length > 3) errs.push('groups phải có 2–3 nhóm');
+      else if (new Set(q.groups).size !== q.groups.length) errs.push('groups có tên nhóm bị trùng');
+      if (!Array.isArray(q.items) || q.items.length < 3 || q.items.length > 8) {
+        errs.push('items phải có 3–8 mục');
+        return;
+      }
+      q.items.forEach((it, i) => {
+        if (!it.text && !it.shape) errs.push(`items[${i}] cần text hoặc shape`);
+        if (!Number.isInteger(it.group) || it.group < 0 || it.group >= (q.groups?.length ?? 0)) {
+          errs.push(`items[${i}].group phải là chỉ số hợp lệ trong groups`);
+        }
+        if (it.shape) validateShape(it.shape, errs);
+      });
+      const texts = q.items.filter((it) => it.text && !it.shape).map((it) => it.text);
+      if (new Set(texts).size !== texts.length) errs.push('items có mục bị trùng');
+    },
+    prepare: (q) => ({
+      groups: q.groups,
+      items: shuffleArr(q.items.map((it) => ({
+        text: it.text ?? '',
+        shapeData: it.shape ? buildShape(it.shape) : null,
+        group: it.group,
+      }))),
+    }),
+    // response: mảng, phần tử i = chỉ số nhóm HS xếp mục i vào
+    grade: (rq, response = []) => {
+      const each = rq.items.map((it, i) => response[i] === it.group);
+      return { correct: each.every(Boolean), each };
+    },
+    isAnswered: (response, rq) => Array.isArray(response) && rq.items.every((_, i) => response[i] != null),
+    retain: (rq, response, res) => response.map((g, i) => (res.each[i] ? g : null)),
+  },
+
+  match: {
+    label: 'Ghép nối',
+    autoSubmit: false,
+    validate(q, errs) {
+      if (!Array.isArray(q.pairs) || q.pairs.length < 2 || q.pairs.length > 4) {
+        errs.push('pairs phải có 2–4 cặp');
+        return;
+      }
+      if (!q.pairs.every((p) => p.left && p.right)) errs.push('mỗi cặp cần left và right');
+      const lefts = q.pairs.map((p) => p.left);
+      const rights = [...q.pairs.map((p) => p.right), ...(q.extra ?? [])];
+      if (new Set(lefts).size !== lefts.length) errs.push('có vế trái bị trùng');
+      if (new Set(rights).size !== rights.length) errs.push('có vế phải (kể cả extra) bị trùng');
+    },
+    prepare: (q) => ({
+      lefts: shuffleArr(q.pairs.map((p, key) => ({ text: p.left, key }))),
+      rights: shuffleArr([
+        ...q.pairs.map((p, key) => ({ text: p.right, key })),
+        ...(q.extra ?? []).map((text) => ({ text, key: -1 })),
+      ]),
+    }),
+    // response: mảng, phần tử i = chỉ số vế phải được ghép với vế trái thứ i
+    grade: (rq, response = []) => {
+      const each = rq.lefts.map((l, i) => rq.rights[response[i]]?.key === l.key);
+      return { correct: each.every(Boolean), each };
+    },
+    isAnswered: (response, rq) => Array.isArray(response) && rq.lefts.every((_, i) => response[i] != null),
+    retain: (rq, response, res) => response.map((r, i) => (res.each[i] ? r : null)),
+  },
+
+  order: {
+    label: 'Sắp xếp các bước',
+    autoSubmit: false,
+    validate(q, errs) {
+      if (!Array.isArray(q.steps) || q.steps.length < 3 || q.steps.length > 5) errs.push('steps phải có 3–5 bước');
+      else if (new Set(q.steps).size !== q.steps.length) errs.push('steps có bước bị trùng');
+    },
+    prepare: (q) => {
+      const steps = q.steps.map((text, pos) => ({ text, pos }));
+      let mixed = shuffleArr(steps);
+      // Không để thứ tự hiển thị trùng đúng thứ tự đáp án
+      while (mixed.every((s, i) => s.pos === i)) mixed = shuffleArr(steps);
+      return { steps: mixed };
+    },
+    // response: mảng chỉ số bước (theo thứ tự hiển thị) mà HS đã xếp, từ bước 1 trở đi
+    grade: (rq, response = []) => {
+      const each = rq.steps.map((_, i) => rq.steps[response[i]]?.pos === i);
+      return { correct: each.every(Boolean), each };
+    },
+    isAnswered: (response, rq) => Array.isArray(response) && response.length === rq.steps.length,
+    // Giữ lại các bước đúng liên tiếp từ đầu
+    retain: (rq, response, res) => {
+      const k = res.each.indexOf(false);
+      return response.slice(0, k < 0 ? response.length : k);
+    },
+  },
+
+  'find-error': {
+    label: 'Tìm bước sai',
+    autoSubmit: true,
+    validate(q, errs) {
+      if (!Array.isArray(q.lines) || q.lines.length < 2 || q.lines.length > 5) errs.push('lines phải có 2–5 dòng');
+      else if (!(Number.isInteger(q.answer) && q.answer >= 0 && q.answer < q.lines.length)) {
+        errs.push('answer phải là chỉ số hợp lệ trong lines');
+      }
+    },
+    // Giữ nguyên thứ tự các dòng lời giải
+    prepare: (q) => ({ options: q.lines.map((text, i) => ({ text, correct: i === q.answer })) }),
+    grade: (rq, response) => ({ correct: rq.options[response]?.correct === true }),
+    isAnswered: (response) => response != null,
+  },
 };
 
 function validateConcrete(q, errs) {
@@ -304,7 +419,8 @@ export function validateQuestion(q, lessonIds) {
       if (!seen.has(e)) errs.push(`với ${JSON.stringify(env)}: ${e}`);
       seen.add(e);
     }
-    if (/\{=?[^{}]+\}/.test(JSON.stringify([inst.stem, inst.options, inst.explanation]).replaceAll(BLANK, ''))) {
+    const texts = [inst.stem, inst.options, inst.explanation, inst.items, inst.pairs, inst.steps, inst.lines];
+    if (/\{=?[^{}]+\}/.test(JSON.stringify(texts).replaceAll(BLANK, ''))) {
       errs.push('còn biến chưa được thay (kiểm tra tên biến trong {…})');
       break;
     }

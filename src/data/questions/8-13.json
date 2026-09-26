@@ -297,5 +297,64 @@
     "answer": false,
     "hints": ["Nhớ lại: trung tuyến ứng với cạnh huyền bằng bao nhiêu phần cạnh huyền?"],
     "explanation": "Sai. Đường trung tuyến ứng với cạnh huyền bằng NỬA cạnh huyền. Ví dụ cạnh huyền 10 cm thì trung tuyến dài 5 cm."
+  },
+  {
+    "id": "hcn-p4-01",
+    "type": "classify",
+    "lesson": "8-13",
+    "skills": ["hcn.dau-hieu"],
+    "level": "TH",
+    "stem": "Xếp mỗi tứ giác vào đúng nhóm.",
+    "groups": ["Là hình chữ nhật", "Chưa chắc là hình chữ nhật"],
+    "items": [
+      {"text":"Tứ giác có ba góc vuông","group":0},
+      {"text":"Hình bình hành có một góc vuông","group":0},
+      {"text":"Hình bình hành có hai đường chéo bằng nhau","group":0},
+      {"text":"Tứ giác có hai đường chéo bằng nhau","group":1},
+      {"text":"Tứ giác có một góc vuông","group":1},
+      {"text":"Hình thang có một góc vuông","group":1}
+    ],
+    "hints": [
+      "Chỉ \"hai đường chéo bằng nhau\" hay \"một góc vuông\" là chưa đủ — phải là HÌNH BÌNH HÀNH có thêm điều đó."
+    ],
+    "explanation": "Tứ giác có ba góc vuông, hình bình hành có một góc vuông, hình bình hành có hai đường chéo bằng nhau đều là hình chữ nhật. Tứ giác có hai đường chéo bằng nhau có thể là hình thang cân; tứ giác hay hình thang có một góc vuông có thể là hình thang vuông."
+  },
+  {
+    "id": "hcn-p4-02",
+    "type": "order",
+    "lesson": "8-13",
+    "skills": ["hcn.tinh-chat"],
+    "level": "TH",
+    "vars": {"a":[4, 14, 2]},
+    "shape": {"kind":"hcn", "marks":["right", "diagonals"]},
+    "stem": "Hình chữ nhật ABCD có AC = {a} cm, O là giao điểm hai đường chéo. Tính OB. Sắp xếp các bước giải theo đúng thứ tự.",
+    "steps": [
+      "ABCD là hình chữ nhật nên hai đường chéo bằng nhau và cắt nhau tại trung điểm O của mỗi đường.",
+      "Do đó BD = AC = {a} cm.",
+      "OB = BD : 2",
+      "= {=a / 2} cm."
+    ],
+    "hints": [
+      "Muốn tính OB phải biết BD trước. Muốn biết BD thì dùng tính chất đường chéo hình chữ nhật."
+    ],
+    "explanation": "Hai đường chéo hình chữ nhật bằng nhau nên BD = AC = {a} cm. O là trung điểm BD nên OB = BD : 2 = {=a / 2} cm."
+  },
+  {
+    "id": "hcn-p4-03",
+    "type": "find-error",
+    "lesson": "8-13",
+    "skills": ["hcn.dau-hieu"],
+    "level": "TH",
+    "shape": {"kind":"thang-can", "marks":["diagonals"]},
+    "stem": "Tứ giác ABCD có hai đường chéo AC = BD. Bạn Minh lập luận như sau:",
+    "lines": [
+      "Tứ giác ABCD có hai đường chéo AC và BD bằng nhau",
+      "nên ABCD là hình chữ nhật."
+    ],
+    "answer": 1,
+    "hints": [
+      "Hình thang cân cũng có hai đường chéo bằng nhau. Nó có phải hình chữ nhật không?"
+    ],
+    "explanation": "Dòng 2 sai: tứ giác có hai đường chéo bằng nhau chưa chắc là hình chữ nhật (ví dụ hình thang cân trên hình). Phải là HÌNH BÌNH HÀNH có hai đường chéo bằng nhau mới là hình chữ nhật."
   }
 ]

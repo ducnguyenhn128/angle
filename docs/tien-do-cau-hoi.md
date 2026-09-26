@@ -17,24 +17,24 @@ Cập nhật: 25/09/2026 · Nhánh: `master` (đã gộp từ `feature/cau-hoi-t
 | Màn chọn đề | Chọn khối (Ôn nền tảng / Lớp 7 / Lớp 8) → chương → bài; chọn dạng câu, mức độ (NB / TH / VD / VDC), số câu (5 / 10 / 15 / 20). Bài chưa có câu hỏi hiện mờ, ghi "sắp có" |
 | 2 chế độ | **Luyện tập**: sai được làm lại 1 lần, phương án đã chọn sai bị gạch, gợi ý tự mở, có câu động viên. **Kiểm tra**: mỗi câu trả lời 1 lần, chấm thang 10 |
 | Hỗ trợ học sinh yếu | Gợi ý theo bậc cho từng câu · thẻ **"Nhắc lại kiến thức"** cho từng bài (xem được trước và trong khi làm) · lời giải thích sau mỗi câu · nhận xét theo điểm · nút **"Luyện lại câu sai"** (câu được sinh lại với số liệu hoặc thứ tự phương án mới) |
-| 5 dạng câu | Trắc nghiệm 1 đáp án · Đúng/Sai · Chọn nhiều đáp án (ghi rõ "Chọn N đáp án") · Điền vào chỗ trống (tự chuẩn hoá: `65`, `65°`, `65 độ`, `65,0` đều được chấp nhận) · **Chạm vào hình** (chạm vào đỉnh, cạnh, đường chéo, góc) |
+| 9 dạng câu | Trắc nghiệm 1 đáp án · Đúng/Sai · Chọn nhiều đáp án (ghi rõ "Chọn N đáp án") · Điền vào chỗ trống (tự chuẩn hoá: `65`, `65°`, `65 độ`, `65,0` đều được chấp nhận) · **Chạm vào hình** (chạm vào đỉnh, cạnh, đường chéo, góc) · **Phân loại** · **Ghép nối** · **Sắp xếp các bước** · **Tìm bước sai** (xem mục 1.4) |
 | Mẫu câu có tham số | Viết `{a}`, `{=180 - a}` trong câu hỏi; mỗi lần ra đề có số liệu mới. Điều kiện `where` loại các bộ số không hợp lệ |
 | Hình tứ giác vẽ từ dữ liệu | `QuadFigure` vẽ 9 loại hình: tứ giác, hình thang, hình thang vuông, hình thang cân, HBH, HCN, hình thoi, hình vuông, hình cánh diều. Ký hiệu bật theo nhóm: cạnh bằng, song song, góc vuông, góc bằng, đường chéo, nửa đường chéo bằng. Có nhãn số đo, nhãn độ dài, tô màu nổi bật. Hình sinh ngẫu nhiên nhưng **không vô tình mang tính chất của loại hình "mạnh hơn"** (đã kiểm tra 2000 lần cho mỗi loại) |
 | Dùng lại các level cũ | Câu có hình của Level 1–9 (loại góc, ước lượng, đếm góc, kề bù/đối đỉnh, phân giác, song song, tam giác) được trộn vào đề của bài tương ứng |
 | Kiểm tra ngân hàng câu | `npm run validate-questions`: kiểm tra đúng cấu trúc, id không trùng, hình có tồn tại; với mẫu câu thì **thử toàn bộ bộ số** để bắt phương án trùng hoặc biến chưa khai báo |
 | Chống trắng màn hình | Câu bị lỗi khi vẽ hoặc khi chấm hiện thông báo kèm nút **"Bỏ qua câu này"**; câu bỏ qua không tính điểm. Câu lỗi ngay lúc tạo đề thì bị loại khỏi đề. Nếu mọi câu đều lỗi thì quay về màn chọn đề |
 
-### 1.2 Nội dung: 179 câu (trong đó 26 mẫu câu có tham số)
+### 1.2 Nội dung: 203 câu (trong đó 36 mẫu câu có tham số)
 
 | Bài | Số câu | Mẫu câu | Dạng câu | Mức độ |
 |---|---|---|---|---|
-| Ôn nền tảng: Góc · Các loại góc | 12 | 0 | TN 3 · Đ/S 3 · Chọn nhiều 2 · Điền 4 | NB 8 · TH 4 |
-| Lớp 7, Bài 8: Góc ở vị trí đặc biệt. Tia phân giác | 26 | 3 | TN 8 · Đ/S 7 · Chọn nhiều 2 · Điền 9 | NB 16 · TH 7 · VD 3 |
-| Lớp 8, Bài 10: Tứ giác | 24 | 3 | Chạm 6 · TN 5 · Đ/S 8 · Chọn nhiều 2 · Điền 3 | NB 18 · TH 6 |
-| Lớp 8, Bài 11: Hình thang cân | 28 | 5 | Chạm 3 · TN 9 · Đ/S 10 · Chọn nhiều 2 · Điền 4 | NB 14 · TH 14 |
-| Lớp 8, Bài 12: Hình bình hành | 27 | 5 | Chạm 2 · TN 7 · Đ/S 10 · Chọn nhiều 3 · Điền 5 | NB 11 · TH 15 · VD 1 |
-| Lớp 8, Bài 13: Hình chữ nhật | 25 | 5 | Chạm 1 · TN 6 · Đ/S 10 · Chọn nhiều 3 · Điền 5 | NB 9 · TH 15 · VD 1 |
-| Lớp 8, Bài 14: Hình thoi và hình vuông | 37 | 5 | Chạm 1 · TN 9 · Đ/S 14 · Chọn nhiều 6 · Điền 7 | NB 14 · TH 23 |
+| Ôn nền tảng: Góc · Các loại góc | 14 | 0 | TN 3 · Đ/S 3 · Chọn nhiều 2 · Điền 4 · Phân loại 1 · Ghép nối 1 | NB 10 · TH 4 |
+| Lớp 7, Bài 8: Góc ở vị trí đặc biệt. Tia phân giác | 30 | 6 | TN 8 · Đ/S 7 · Chọn nhiều 2 · Điền 9 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 2 | NB 17 · TH 10 · VD 3 |
+| Lớp 8, Bài 10: Tứ giác | 27 | 5 | Chạm 6 · TN 5 · Đ/S 8 · Chọn nhiều 2 · Điền 3 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 1 | NB 19 · TH 8 |
+| Lớp 8, Bài 11: Hình thang cân | 31 | 6 | Chạm 3 · TN 9 · Đ/S 10 · Chọn nhiều 2 · Điền 4 · Phân loại 1 · Sắp xếp 1 · Tìm bước sai 1 | NB 14 · TH 17 |
+| Lớp 8, Bài 12: Hình bình hành | 31 | 6 | Chạm 2 · TN 7 · Đ/S 10 · Chọn nhiều 3 · Điền 5 · Phân loại 1 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 1 | NB 12 · TH 18 · VD 1 |
+| Lớp 8, Bài 13: Hình chữ nhật | 28 | 6 | Chạm 1 · TN 6 · Đ/S 10 · Chọn nhiều 3 · Điền 5 · Phân loại 1 · Sắp xếp 1 · Tìm bước sai 1 | NB 9 · TH 18 · VD 1 |
+| Lớp 8, Bài 14: Hình thoi và hình vuông | 42 | 7 | Chạm 1 · TN 9 · Đ/S 14 · Chọn nhiều 6 · Điền 7 · Phân loại 1 · Ghép nối 1 · Sắp xếp 1 · Tìm bước sai 2 | NB 16 · TH 26 |
 
 Các bài chỉ có câu sinh tự động từ level cũ (trắc nghiệm có hình, chưa có gợi ý): *Ôn nền tảng: Đường thẳng · Tia · Đoạn thẳng*, *Ôn nền tảng: Đường vuông góc · Đường cao*, *Lớp 7 Bài 10: Tiên đề Euclid*, *Lớp 7 Bài 12: Tổng các góc trong tam giác*.
 
@@ -43,6 +43,23 @@ Nội dung chương Tứ giác:
 - Không dùng Pythagore hay đường trung bình, vì theo sách Kết nối tri thức hai phần này học sau chương Tứ giác.
 - Các ngộ nhận hay gặp đều có câu Đúng/Sai kèm **hình phản ví dụ**, ví dụ "hai đường chéo bằng nhau là HCN" đi kèm hình thang cân, "hai đường chéo vuông góc là hình thoi" đi kèm hình cánh diều.
 - **Bổ sung 25/09/2026 — 45 câu lý thuyết** (Đúng/Sai, trắc nghiệm định nghĩa, chọn nhiều tính chất/dấu hiệu), mức NB/TH, câu nào cũng có giải thích, câu TH có gợi ý. Nội dung: cạnh kề/đối, đường chéo; tổng 4 góc (4 góc nhọn, 3 góc nhọn); định nghĩa từng hình; tính chất đường chéo và góc; hình này có phải hình kia không; dấu hiệu nhận biết. Hình phản ví dụ mới: cánh diều cho "một cặp góc đối bằng nhau là HBH" và "hai cạnh kề bằng nhau là hình thoi"; hình thang vuông cho "một góc vuông là HCN".
+
+### 1.4 Bước 2 (P4): 4 dạng câu mới — 25/09/2026
+
+Mọi thao tác đều là **chạm để chọn**, không cần kéo thả (dùng tốt trên điện thoại, dễ với học sinh yếu).
+
+| Dạng | Cách làm | Chấm & luyện lại |
+|---|---|---|
+| Phân loại (`classify`) | Dưới mỗi mục (chữ hoặc hình tứ giác) có 2–3 nút nhóm | Chấm từng mục; hiện nhóm đúng |
+| Ghép nối (`match`) | Chạm ô của dòng rồi chạm phương án (mặc định điền ô trống đầu tiên); có thể có phương án nhiễu | Chấm từng cặp; hiện đáp án đúng |
+| Sắp xếp các bước (`order`) | Chạm lần lượt bước 1, 2, 3…; chạm bước đã xếp để bỏ ra | Chấm từng vị trí; hiện thứ tự đúng |
+| Tìm bước sai (`find-error`) | Chạm vào dòng sai đầu tiên của lời giải | Như trắc nghiệm: chọn sai thì dòng đó bị gạch |
+
+Ở chế độ Luyện tập, 3 dạng đầu **giữ lại phần đúng, xoá phần sai** để học sinh làm lại phần đó (dạng Sắp xếp giữ các bước đúng liên tiếp từ đầu). Nút "Kiểm tra" chỉ bật khi đã điền đủ.
+
+**Nội dung: 24 câu** (10 mẫu câu có tham số), phân bố ở các bài Góc, 7-08, 8-10 → 8-14: Phân loại 5 · Ghép nối 5 · Sắp xếp 6 · Tìm bước sai 8. Các câu Tìm bước sai tập trung vào lỗi hay gặp: nhầm đối đỉnh/kề bù, tổng góc tứ giác là 180°, nhầm góc đối/góc kề của HBH, hai góc kề đáy của thang cân, "hai đường chéo bằng nhau → HCN", "hai đường chéo vuông góc → hình thoi" (kèm hình phản ví dụ), chu vi hình thoi.
+
+Kiểm tra: `validate-questions` 203 câu 0 lỗi; mô phỏng trả lời đúng / sai / làm lại 200 lần cho mỗi câu mới, 0 lỗi; lint và build đạt.
 
 ### 1.3 Commit
 
@@ -70,8 +87,8 @@ Cả 5 dạng câu đều được làm tới. Đã thử cài lỗi giả vào 
 
 ### 2.2 Chưa làm
 
-- **Dạng câu:** Ghép nối (Matching), Phân loại (Classification), Sắp xếp các bước (Ordering, 3–4 bước), Tìm bước sai (Error Detection).
-  - Đã quyết định bỏ Assertion–Reason, bài nhiều ý và phản ví dụ mức VDC, vì không phù hợp học sinh yếu.
+- **Dạng câu:** đã đủ 4 dạng dự kiến (mục 1.4). Đã quyết định bỏ Assertion–Reason, bài nhiều ý và phản ví dụ mức VDC, vì không phù hợp học sinh yếu.
+  - Mới có 1–2 câu mỗi dạng mới cho mỗi bài; chưa thử trên trình duyệt thật và điện thoại.
 - **Lớp 7:**
   - Chưa có câu soạn sẵn cho Bài 9–11 (chương III), chương IV (Bài 13–16, tam giác bằng nhau), chương IX (Bài 31–35), chương X (Bài 36–37).
   - Chưa có `TriangleFigure` để vẽ tam giác có ký hiệu.
@@ -84,7 +101,7 @@ Cả 5 dạng câu đều được làm tới. Đã thử cài lỗi giả vào 
 - **Tỉ lệ mức độ ở chương Tứ giác** là NB 66 · TH 73 · VD 2 (sau khi thêm 45 câu lý thuyết thì NB tăng từ 46% lên 47%), vẫn lệch về TH so với mục tiêu NB 50% · TH 35% · VD 15%. Nguyên nhân là các câu "dấu hiệu nhận biết" đang xếp vào TH. Cần giáo viên quyết định giữ nhãn hay đổi, và có cần thêm câu VD 2 bước không.
 - **Số đo ghi trên hình không đúng tỉ lệ** (giống hình minh hoạ trong sách). Nếu học sinh yếu bị rối, có thể đổi sang cách dựng hình trước rồi lấy số đo thật từ hình để ra đề.
 - **Câu sinh tự động từ level cũ** chưa có gợi ý và chưa gắn mức độ. Bộ lọc mức độ không áp dụng cho các câu này.
-- **Giáo viên chưa duyệt** nội dung 179 câu.
+- **Giáo viên chưa duyệt** nội dung 203 câu.
 
 ---
 
@@ -101,7 +118,7 @@ Cả 5 dạng câu đều được làm tới. Đã thử cài lỗi giả vào 
 - Thêm câu "Ôn tập chương III" trộn cả 5 bài.
 - Tuỳ góp ý: dựng hình đúng tỉ lệ với số đo.
 
-### Bước 2 (P4): Thêm dạng câu mới
+### Bước 2 (P4): Thêm dạng câu mới — ĐÃ LÀM (xem mục 1.4)
 | Dạng | Dùng cho | Ví dụ |
 |---|---|---|
 | Phân loại (2–3 nhóm) | Tứ giác, loại góc | Kéo các hình vào nhóm "Hình bình hành" hoặc "Không phải hình bình hành" |
